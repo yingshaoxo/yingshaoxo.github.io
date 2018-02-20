@@ -1,0 +1,45 @@
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../static/github-markdown.css">
+<title>FFmpeg speed up video</title>
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+        padding: 10px;
+    }
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+
+        font-size: 20px; 
+    }
+
+    @media (max-width: 767px) {
+        .markdown-body {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<article class="markdown-body">
+<h1>FFmpeg speed up video</h1>
+
+<p>Speed up and smaller:</p>
+
+<p><code>ffmpeg -i input.mp4 -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a]" -map "[v]" -map "[a]" output.mp4</code></p>
+
+<p>Speed up and bigger:</p>
+
+<p><code>ffmpeg -i in.mp4 -vf "setpts=0.5*PTS" -r 50 -c:v mpeg4 -b:v 1500k -af "atempo=2" out.mp4</code></p>
+
+</article>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML">
+</script>

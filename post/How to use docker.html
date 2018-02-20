@@ -1,0 +1,64 @@
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../static/github-markdown.css">
+<title>How to use docker</title>
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+        padding: 10px;
+    }
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+
+        font-size: 20px; 
+    }
+
+    @media (max-width: 767px) {
+        .markdown-body {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<article class="markdown-body">
+<h1>How to use docker</h1>
+
+<h5>Normally, you can get all commands by typing:</h5>
+
+<p><code>docker</code></p>
+
+<h5>See how many containers you got right now:</h5>
+
+<p><code>docker ps -a</code></p>
+
+<h5>Example</h5>
+
+<p><code>docker run -it --publish 6606:80 --volume ${HOME}/Kivy-Chat:/Kivy-Chat --workdir /Kivy-Chat argensis/python3-kivy:nopip ls</code></p>
+
+<p><code>--publish 6606:80</code>
+container 80 part to host 6606 port</p>
+
+<p><code>-volume ${HOME}/Kivy-Chat:/Kivy-Chat</code>
+forwarding Host <code>${HOME}/Kivy-Chat</code> to container <code>Kivy-Chat</code></p>
+
+<p><code>--workdir /Kivy-Chat</code>
+set container workdir to <code>Kivy-Chat</code></p>
+
+<p><code>argensis/python3-kivy:nopip</code>
+image name</p>
+
+<p><code>ls</code>
+just command name, is also could be <code>python -c "print('hello, docker')"</code></p>
+
+</article>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML">
+</script>

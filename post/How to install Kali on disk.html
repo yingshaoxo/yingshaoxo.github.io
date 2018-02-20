@@ -1,0 +1,59 @@
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../static/github-markdown.css">
+<title>How to install Kali on disk</title>
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+        padding: 10px;
+    }
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+
+        font-size: 20px; 
+    }
+
+    @media (max-width: 767px) {
+        .markdown-body {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<article class="markdown-body">
+<h1>How to install Kali on disk</h1>
+
+<blockquote>
+  <p>Kali installation, It's all about choice.</p>
+</blockquote>
+
+<ol>
+<li><p>format your disk using PE system, we need a clear disk, or something will going wrong</p></li>
+<li><p>use <code>refus</code>  to make USB driver</p></li>
+<li><p>just to be safe, use MBR based mix mode</p></li>
+<li><p>use <code>dd</code> mode to defend Wi-Fi firmware missing (iso file belongs to Windows, and Windows is bad on drivers)</p></li>
+<li><p>if you can disable secure boot, you can use UEFI in installation, else just use BIOS</p></li>
+<li><p>if you failed, try more option in -1 and 3 step.</p></li>
+<li><p>links may help</p>
+
+<p>https://null-byte.wonderhowto.com/forum/fix-failed-detect-and-mount-cd-rom-problem-when-installing-kali-linux-0177158/</p>
+
+<p>https://forums.kali.org/showthread.php?35926-Executing-grub-install-dummy-failed</p>
+
+<p>https://wiki.deepin.org/index.php?title=Repair_Boot</p>
+
+<p>https://www.linux.com/learn/how-rescue-non-booting-grub-2-Linux</p></li>
+</ol>
+
+</article>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML">
+</script>

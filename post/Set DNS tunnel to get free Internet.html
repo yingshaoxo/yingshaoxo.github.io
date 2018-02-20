@@ -1,0 +1,58 @@
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../static/github-markdown.css">
+<title>Set DNS tunnel to get free Internet</title>
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+        padding: 10px;
+    }
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+
+        font-size: 20px; 
+    }
+
+    @media (max-width: 767px) {
+        .markdown-body {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<article class="markdown-body">
+<h1>Set DNS tunnel to get free Internet</h1>
+
+<ol>
+<li><p>setup</p>
+
+<p>https://qiuri.org/806.html</p>
+
+<p>https://www.rawidn.com/posts/how-to-use-dns-tunnel.html</p>
+
+<p>when you ready, do this test (put sub.your_domain.com in): http://code.kryo.se/iodine/check-it</p></li>
+<li><p>in server: </p>
+
+<p><code>iodined -f -p 5353 -P password your_local_server_ip(192.168.100.1) sub.your_domain.com</code></p>
+
+<p><code>iptables -t nat -A PREROUTING -i eth0 -p udp --dport 53 -j DNAT --to :5353</code></p></li>
+<li><p>in local: </p>
+
+<p><code>sudo iodine -f -P password your_server_ip sub.your_domain.com</code></p></li>
+<li><p>around the corner</p>
+
+<p>set ssr, enjoy it.</p></li>
+</ol>
+
+</article>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML">
+</script>
