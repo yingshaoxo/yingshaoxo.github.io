@@ -1,0 +1,101 @@
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/github-markdown.css">
+<title>Apache virtualhost setting for web-sockets</title>
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+        padding: 10px;
+    }
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+
+        font-size: 20px; 
+    }
+
+    @media (max-width: 767px) {
+        .markdown-body {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<article class="markdown-body">
+<h1>Apache virtualhost setting for web-sockets</h1>
+
+<h5>Environment</h5>
+
+<ol>
+<li><p>A records in DNS manager</p>
+
+<p>| Type | Name | Value |</p>
+
+<p>| A | blog | your_server_ip |</p>
+
+<p>| A | math | your_server_ip |</p></li>
+<li><p>Set up apache2 with this https://certbot.eff.org/</p></li>
+<li><p>Add necessary module</p></li>
+</ol>
+
+<pre><code>a2enmod proxy proxy_http proxy_wstunnel proxy_balancer lbmethod_byrequests
+
+systemctl restart apache2
+</code></pre>
+
+<h5>HTML Codes</h5>
+
+<pre><code>        var ws_link = 'ws://' + location.hostname + "/ws/";
+
+        if (window.location.protocol === 'https:') {
+            ws_link = 'wss://' + location.hostname + "/wss/";
+        }
+
+        var ws = new WebSocket(ws_link);
+</code></pre>
+
+<h5>Apache Codes (at /etc/apache2/sites-available/000-default.conf)</h5>
+
+<pre><code>&lt;VirtualHost *:80&gt;
+        ServerName blog.yingshaoxo.xyz
+
+        ProxyRequests Off
+        ProxyPreserveHost On
+
+        ProxyPass        "/" "http://127.0.0.1:2018/"
+        ProxyPassReverse "/" "http://127.0.0.1:2018/"
+&lt;/VirtualHost&gt;
+
+&lt;VirtualHost *:80&gt;
+        ServerName math.yingshaoxo.xyz
+
+        ProxyRequests Off
+        ProxyPreserveHost On
+
+        ProxyPass "/ws/" "ws://127.0.0.1:5277/"
+        ProxyPassReverse "/ws/" "ws://127.0.0.1:5277/"
+
+        ProxyPass "/wss/" "ws://127.0.0.1:5277/"
+        ProxyPassReverse "/wss/" "ws://127.0.0.1:5277/"
+
+        ProxyPass        "/" "http://127.0.0.1:5000/"
+        ProxyPassReverse "/" "http://127.0.0.1:5000/"
+&lt;/VirtualHost&gt;
+</code></pre>
+
+<h5>Finnaly</h5>
+
+<pre><code>systemctl restart apache2
+</code></pre>
+
+</article>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML">
+</script>
