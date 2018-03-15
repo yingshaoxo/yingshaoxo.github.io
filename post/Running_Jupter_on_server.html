@@ -1,0 +1,64 @@
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/github-markdown.css">
+<title>Running_Jupter_on_server</title>
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+        padding: 10px;
+    }
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+
+        font-size: 20px; 
+    }
+
+    @media (max-width: 767px) {
+        .markdown-body {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<article class="markdown-body">
+<h1>Running_Jupter_on_server</h1>
+
+<h4>1. install</h4>
+
+<pre><code>sudo -H pip install jupyter 
+</code></pre>
+
+<h4>2. create config</h4>
+
+<pre><code>jupyter notebook --generate-config
+</code></pre>
+
+<h4>3. set password</h4>
+
+<pre><code>jupyter notebook password
+</code></pre>
+
+<h4>4. set ip</h4>
+
+<pre><code>vim ~/.jupyter/jupyter_notebook_config.json
+</code></pre>
+
+<pre><code>{
+  "NotebookApp": {
+    "ip": "0.0.0.0",
+  }
+}
+</code></pre>
+
+</article>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML">
+</script>
