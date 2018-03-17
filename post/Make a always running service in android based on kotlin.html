@@ -1,0 +1,106 @@
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/github-markdown.css">
+<title>Make a always running service in android based on kotlin</title>
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+        padding: 10px;
+    }
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+
+        font-size: 20px; 
+    }
+
+    @media (max-width: 767px) {
+        .markdown-body {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<article class="markdown-body">
+<h1>Make a always running service in android based on kotlin</h1>
+
+<h3>0. What is <code>service</code>?</h3>
+
+<p>You could see <code>service</code> as a always running program</p>
+
+<hr />
+
+<h3>1. Basic idea or resources</h3>
+
+<p>Official but you can't understand: <a href="https://developer.android.com/training/run-background-service/create-service.html">Google Developer Guide</a></p>
+
+<p>Unofficial but reachable: <a href="https://www.tutorialspoint.com/android/android_services.htm">tutorials_point</a></p>
+
+<hr />
+
+<h3>2. Getting started</h3>
+
+<ul>
+<li>Create a kotlin file which names <code>MyService.kt</code>, and put the following codes:</li>
+</ul>
+
+<pre><code>class MyService : Service() {
+    @Nullable
+    override fun onBind(intent: Intent): IBinder? {
+        return null
+    }
+
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        // Let it continue running until it is stopped.
+        Toast.makeText(this, "Service Started", Toast.LENGTH_LONG).show()
+        return START_STICKY
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Toast.makeText(this, "Service Destroyed", Toast.LENGTH_LONG).show()
+    }
+}
+</code></pre>
+
+<ul>
+<li>Change <code>AndroidManifast.xml</code>, add following after <code>&lt;/activity&gt;</code>:</li>
+</ul>
+
+<pre><code>&lt;service android:name=".MyService" /&gt;
+</code></pre>
+
+<ul>
+<li>Add following to a <code>.kt</code> file(means activity or Kotlin file) where you wanna call your <code>service</code></li>
+</ul>
+
+<pre><code>    // The View is just a widget in your UI xml
+
+    fun startService(view: View) {
+        startService(Intent(baseContext, MyService::class.java))
+    }
+
+    fun stopService(view: View) {
+        stopService(Intent(baseContext, MyService::class.java))
+    }
+</code></pre>
+
+<hr />
+
+<h3>3. Good to go</h3>
+
+<p>Now you are able to run your <code>service</code> using <code>startService</code> function</p>
+
+<p>For example: <code>startService(yingshaoxo_layout)</code>, have fun!</p>
+
+</article>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML">
+</script>
