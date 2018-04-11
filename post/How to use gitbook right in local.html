@@ -1,0 +1,65 @@
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/github-markdown.css">
+<title>How to use gitbook right in local</title>
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+        padding: 10px;
+    }
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+
+        font-size: 20px; 
+    }
+
+    @media (max-width: 767px) {
+        .markdown-body {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<article class="markdown-body">
+<h1>How to use gitbook right in local</h1>
+
+<ol>
+<li><p>Set up <code>node.js</code> env</p>
+
+<pre><code>sudo apt-get install nodejs npm
+</code></pre></li>
+<li><p>Install Gitbook</p>
+
+<pre><code>sudo npm install -g gitbook-cli
+export PATH=$PATH:/opt/node/bin
+</code></pre></li>
+<li><p>Clone your <code>Gitbook</code> project from <code>Github</code></p>
+
+<pre><code>git clone your_github_project_address
+cd your_github_project_address
+</code></pre></li>
+<li><p>Install necessary gitbook plugins</p>
+
+<pre><code>gitbook install ./
+</code></pre></li>
+<li><p><code>Build and View</code> or <code>Output as pdf</code></p>
+
+<pre><code>gitbook build .
+gitbook serve .
+
+gitbook pdf .
+</code></pre></li>
+</ol>
+
+</article>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML">
+</script>
