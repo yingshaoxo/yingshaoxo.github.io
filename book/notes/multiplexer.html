@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Electrical Engineering · GitBook</title>
+        <title>Multiplexer · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="electrical-engineering/the-terminologys.html" />
+    <link rel="next" href="principles-of-communications.html" />
     
     
-    <link rel="prev" href="high-level-math/differential.html" />
+    <link rel="prev" href="number_system.html" />
     
 
     </head>
@@ -559,7 +559,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="electrical-engineering.html">
+        <li class="chapter " data-level="1.3" data-path="electrical-engineering.html">
             
                 <a href="electrical-engineering.html">
             
@@ -1185,7 +1185,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="multiplexer.html">
+        <li class="chapter active" data-level="1.5.5" data-path="multiplexer.html">
             
                 <a href="multiplexer.html">
             
@@ -1278,7 +1278,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Electrical Engineering</a>
+        <a href="." >Multiplexer</a>
     </h1>
 </div>
 
@@ -1293,7 +1293,38 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h1 id="multiplexer-or-data-selector">Multiplexer (or Data selector)</h1>
+<p>Multiplexer or a data selector contains the following:</p>
+<ol>
+<li>n number of inputs of the multiplexer</li>
+<li>only one output of the multiplexer</li>
+<li>m select/Address lines</li>
+<li>one strobe/enable input (optional)</li>
+</ol>
+<hr>
+<p><img src="assets/multiplexer.png" alt=""></p>
+<p>All inputs and outputs should be purely logical or binary input.</p>
+<p>For <code>n : 1</code> multiplexer, each input will be selected at the single output at any instant of time, depends upon the input applied to the select/address inputs. Switching circuit connects a particular input to the output</p>
+<p>Here <code>m</code> and <code>n</code> are related by <script type="math/tex; ">2^m = n</script></p>
+<p>So for a <code>4 : 1</code> multiplexer, <code>the number of inputs</code> is <code>4</code> and <code>m = 2</code> (<script type="math/tex; ">2^2 = 4</script>)</p>
+<hr>
+<p><img src="assets/mutiplexer_74LS151.png" alt=""></p>
+<p>A&#x3001;B&#x3001;C &#x4E09;&#x4E2A;<code>pin(&#x7BA1;&#x811A;)</code>&#x662F;3&#x4E2A;<code>2&#x8FDB;&#x5236;&#x6570;(0 or 1)</code>&#xFF0C;&#x88AB;&#x7528;&#x6765;&#x8868;&#x793A;<script type="math/tex; ">D_{number}</script>&#x4E2D;&#x7684;<code>10&#x8FDB;&#x5236;</code> <code>number</code></p>
+<p>&#x4E4B;&#x6240;&#x4EE5;&#x8BF4; <script type="math/tex; ">D_{number}</script> &#x662F;<code>input</code>&#xFF0C; &#x662F;&#x56E0;&#x4E3A;&#x5F53;&#x4F60;&#x7684; A&#x3001;B&#x3001;C&#x3000;&#x4E09;&#x4E2A;<code>pin(&#x7BA1;&#x811A;)</code>&#x8F93;&#x5165;&#x7684;<code>2&#x8FDB;&#x5236;</code>&#x521A;&#x597D;&#x8868;&#x793A; <script type="math/tex; ">D_{number}</script> &#x4E2D;&#x7684; <script type="math/tex; ">number</script> <code>10&#x8FDB;&#x5236;</code>&#x65F6;&#xFF0C;<code>OUTPUT Y</code>&#x4F1A;&#x8F93;&#x51FA;&#x5BF9;&#x5E94;&#x7684; <script type="math/tex; ">D_{number}</script> &#x7684;&#x9AD8;&#x4F4E;&#x7535;&#x5E73;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<p><code>A</code>&#x3001;<code>B</code>&#x3001;<code>C</code>&#x90FD;&#x7ED9;<code>0</code>&#xFF0C;<code>D0</code>&#x7ED9;1&#xFF0C;&#x90A3;&#x4E48;<code>Y</code>&#x5C31;&#x8F93;&#x51FA;<code>1</code></p>
+<p>&#x8FD9;&#x6837;&#x5C31;&#x5B9E;&#x73B0;&#x4E86;&#x6570;&#x636E;&#x9009;&#x62E9;&#x5668;&#x987E;&#x540D;&#x601D;&#x4E49;&#x7684;&#x529F;&#x80FD;: &#x901A;&#x8FC7;<code>A</code>&#x3001;<code>B</code>&#x3001;<code>C</code>&#x4E09;&#x4E2A;&#x8F93;&#x5165;&#xFF0C;&#x63A7;&#x5236;<code>Y&#x7AEF;&#x53E3;</code>&#x8F93;&#x51FA;<em>&#x5BF9;&#x5E94;&#x7684;<code>D0</code>~<code>D7</code>&#x7684;&#x8F93;&#x5165;&#x503C;</em></p>
+<hr>
+<p>Let us consider, a <code>4 : 1</code> multiplexer having <code>4</code> inputs, <code>2</code> select lines, one output, one strobe inputs. <code>Strobe inputs</code> should be grounded for enabling the multiplexer and can perform its intended function.</p>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x82F1;&#x6587;&#x4E66;&#x4E0A;&#x5199;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x8BA9; <code>Strobe pin</code> &#x8F93;&#x5165;<code>0</code>&#xFF0C;<code>mutiplexer</code>&#x6B63;&#x5E38;&#x5DE5;&#x4F5C;&#xFF1B;&#x8F93;&#x5165;<code>1</code>&#xFF0C;&#x505C;&#x6B62;&#x5DE5;&#x4F5C;</p>
+<p>&#x4F46;&#x6839;&#x636E;&#x56FD;&#x60C5;&#x548C;&#x5927;&#x5B66;&#x7684;&#x6559;&#x5B66;&#x6C34;&#x5E73;&#x4EE5;&#x53CA;&#x82F1;&#x8BED;&#x7FFB;&#x8BD1;&#x80FD;&#x529B;&#xFF0C;&#x56FD;&#x5185;&#x7684;&#x6559;&#x79D1;&#x4E66;&#x53EF;&#x80FD;&#x4E0D;&#x4E00;&#x6837;</p>
+<hr>
+<p>Commercial multiplexers will be</p>
+<p><code>2 : 1</code>, <code>4 : 1</code>, <code>8 : 1</code>, <code>16 : 1</code>, <code>...</code></p>
+<p><code>m = 1</code>, <code>m = 2</code>, <code>m = 3</code>, <code>m = 4</code></p>
+<p>&#x8FD9;&#x91CC;&#x662F;&#x8BB2;&#x7684;&#x662F;&#xFF0C;&#x5546;&#x7528;&#x7684;<code>mutiplexer</code>&#x6709;&#x4EE5;&#x4E0A;&#x79CD;&#x7C7B;</p>
+<hr>
+<p>&#x56FD;&#x5185;&#x6570;&#x5B50;&#x7535;&#x5B50;&#x8BFE;&#x7A0B;&#x4E3A;&#x4E86;&#x8282;&#x7701;&#x7535;&#x5B50;&#x5143;&#x4EF6;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x8BA9;&#x4F60;&#x7528; <code>multiplexer</code> &#x505A;<code>&#x4E09;&#x4EBA;&#x8868;&#x51B3;&#x7535;&#x8DEF;</code>&#x7684;&#x5B9E;&#x9A8C;&#xFF0C;&#x539F;&#x7406;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x539F;&#x6765;&#x7684;&#x8F93;&#x5165;&#x53D8;&#x6210;<code>A</code>&#x3001;<code>B</code>&#x3001;<code>C</code>&#xFF0C;&#x539F;&#x6765;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;<code>1</code>&#x6216;<code>0</code>&#x7684;&#x5730;&#x65B9;<em>&#x7528;<code>&#x628A;D&#x8FDE;&#x8D77;&#x6765;</code>&#x65B9;&#x6CD5;&#x6279;&#x91CF;&#x7684;&#x8F93;&#x5165;<code>1</code>&#x6216;<code>0</code></em></p>
+
                                 
                                 </section>
                             
@@ -1320,12 +1351,12 @@
 
             
                 
-                <a href="high-level-math/differential.html" class="navigation navigation-prev " aria-label="Previous page: Differential">
+                <a href="number_system.html" class="navigation navigation-prev " aria-label="Previous page: Number system">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="electrical-engineering/the-terminologys.html" class="navigation navigation-next " aria-label="Next page: The Terminologys">
+                <a href="principles-of-communications.html" class="navigation navigation-next " aria-label="Next page: Principles of Communications">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1336,7 +1367,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Electrical Engineering","level":"1.3","depth":1,"next":{"title":"The Terminologys","level":"1.3.1","depth":2,"path":"electrical-engineering/the-terminologys.md","ref":"electrical-engineering/the-terminologys.md","articles":[]},"previous":{"title":"Differential","level":"1.2.4.3","depth":3,"path":"high-level-math/differential.md","ref":"high-level-math/differential.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"electrical-engineering.md","mtime":"2018-04-11T03:04:20.263Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-16T06:53:43.573Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Multiplexer","level":"1.5.5","depth":2,"next":{"title":"Principles of Communications","level":"1.6","depth":1,"path":"principles-of-communications.md","ref":"principles-of-communications.md","articles":[{"title":"Overviews","level":"1.6.1","depth":2,"path":"overviews.md","ref":"overviews.md","articles":[]},{"title":"PCM","level":"1.6.2","depth":2,"path":"pcm.md","ref":"pcm.md","articles":[]}]},"previous":{"title":"Number system","level":"1.5.4","depth":2,"path":"number_system.md","ref":"number_system.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"multiplexer.md","mtime":"2018-04-16T06:53:15.682Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-16T06:53:43.573Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
