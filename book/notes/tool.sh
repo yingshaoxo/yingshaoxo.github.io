@@ -13,12 +13,12 @@ push() {
 
 publish() {
     push
-    mkdir ../yingshaoxo.github.io/book
-    mkdir ../yingshaoxo.github.io/book/notes
-    cp _book/* ../yingshaoxo.github.io/book/notes -fr
-    cd ../yingshaoxo.github.io
+    mkdir ../../Python/yingshaoxo.github.io/book
+    mkdir ../../Python/yingshaoxo.github.io/book/notes
+    cp _book/* ../../Python/yingshaoxo.github.io/book/notes -fr
+    cd ../../Python/yingshaoxo.github.io
     bash tool.sh push
-    cd ../University_Notes
+    cd ../../School/University_Notes
 }
 
 if [ "$1" == "run" ]; then
