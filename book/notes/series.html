@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Common Emitter Configuration · GitBook</title>
+        <title>Series · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="biasing.html" />
+    <link rel="next" href="electrical-engineering.html" />
     
     
-    <link rel="prev" href="amplifying-circuit/bipolar-junction-transistor.html" />
+    <link rel="prev" href="high-level-math/multiple_integral.html" />
     
 
     </head>
@@ -567,7 +567,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="series.html">
+        <li class="chapter active" data-level="1.2.5" data-path="series.html">
             
                 <a href="series.html">
             
@@ -1148,7 +1148,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.5.2" data-path="common_emitter_configuration.html">
+        <li class="chapter " data-level="1.4.5.2" data-path="common_emitter_configuration.html">
             
                 <a href="common_emitter_configuration.html">
             
@@ -1395,7 +1395,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Common Emitter Configuration</a>
+        <a href="." >Series</a>
     </h1>
 </div>
 
@@ -1410,18 +1410,69 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="common-emitter">Common Emitter</h1>
-<p>In electronics, a common-emitter amplifier is one of three basic single-stage bipolar-junction-transistor (BJT) amplifier topologies, typically used as the voltage amplifier.</p>
-<p>In this circuit the base terminal of the transistor serves as the input, the collector is the output, and the emitter is common to both (for example, it may be tied to ground reference or a power supply rail), hence its name.</p>
-<p><img src="assets/NPN_common_emitter.png" alt=""></p>
+                                <h1 id="series-&#x6570;&#x7EA7;">Series (&#x6570;&#x7EA7;)</h1>
 <hr>
-<p><img src="assets/Common_emitter_configuration.png" alt=""></p>
-<p>A change in base current <script type="math/tex; ">\Delta I_B</script> produces a corresponding change in collector current, <script type="math/tex; ">\Delta I_C</script>, and the common emitter gain <script type="math/tex; ">\beta</script> is then defined by</p>
-<p><script type="math/tex; mode=display">
-\beta = \frac{\text{Change in collector current}} {\text{Change in base current}} = \frac{\Delta I_C}{\Delta I_B} |_{V_{CE}\text{ = CONSTANT}}
-</script></p>
+<p>Series is actually the sum of some array (or list).</p>
+<p><script type="math/tex; ">\sum_{n=1}^{4} n = 1 + 2 + 3 + 4</script></p>
+<p><script type="math/tex; ">\sum_{n=1}^{\infty} n = 1 + 2 + 3 + 4 + ... </script></p>
 <hr>
-<p>&#x4E4B;&#x6240;&#x4EE5;&#x8BB2;<code>&#x5171;&#x5C04;&#x7535;&#x8DEF;</code>&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x540E;&#x9762;&#x5927;&#x591A;&#x6570;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x80FD;&#x9047;&#x5230;&#x7684;&#x7535;&#x8DEF;&#x90FD;&#x662F;&#x8FD9;&#x4E2A;&#xFF0C;&#x800C;&#x4E14;&#x540E;&#x9762;&#x77E5;&#x8BC6;&#x7684;&#x5927;&#x4F53;&#x6846;&#x67B6;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x53EA;&#x662F;&#x7EC6;&#x8282;&#x4E0D;&#x4E00;&#x6837;</p>
+<p>Say if we got an series:</p>
+<p><script type="math/tex; ">\sum_{n=1}^{\infty} u_n = u_1 + u_2 + u_3 + u_4 + ... + u_{\infty}</script></p>
+<p>If we can find a way to represent its sum, for example,</p>
+<p><script type="math/tex; ">S_n = u_1 + u_2 + u_3 + u_4 + ... + u_n</script></p>
+<p>If <script type="math/tex; ">S_n</script> exists and it&apos;s not <script type="math/tex; ">\infty</script>, then we could say <script type="math/tex; ">S_n</script> approaching to a constant</p>
+<p>Also, in the same way, we could say as n goes up, <script type="math/tex; ">\sum_{n=1}^{\infty} u_n</script> converges to a constant</p>
+<p>In other words, the series <script type="math/tex; ">\sum_{n=1}^{\infty} u_n</script> converges; or <script type="math/tex; ">\sum_{n=1}^{\infty} u_n</script> is a convergent series</p>
+<hr>
+<p>converge
+&#x6536;&#x655B;</p>
+<p>diverge
+&#x53D1;&#x6563;</p>
+<hr>
+<p>Let&apos;s get started!</p>
+<p><script type="math/tex; ">\sum_{n=1}^{\infty} u_n \text{ converges} \Leftrightarrow \lim_{n \to \infty}{u_n} = 0</script></p>
+<p><script type="math/tex; ">\sum_{n=1}^{\infty} u_n \text{ diverges} \Leftrightarrow \lim_{n \to \infty}{u_n} \not= 0</script></p>
+<p>We all know <script type="math/tex; ">u_n</script> is the last item in a series, if the sum of that series want to be a constant, the last item must equal to 0, so <script type="math/tex; ">\lim_{n \to \infty}{u_n}</script> has to be 0</p>
+<p>If it&apos;s not, well, as if the last item of that series not 0, the sum of that series is uncertain, so we say the series diverges</p>
+<hr>
+<p>Geometric Series (&#x51E0;&#x4F55;&#x7EA7;&#x6570;)</p>
+<p><script type="math/tex; ">\sum_{n=0}^{\infty} q^n</script></p>
+<p>When <script type="math/tex; ">|q| < 1</script>, <code>converges</code></p>
+<p>Why? Just think about it, as <code>n</code> goes up, everytime, the last item of this series times a value which less than 1, so the item will be smaller and smaller, in the end, the last item of that series became zero, that means, the sum of this series is a constant, also, we could say it converges, that series is a convergent series.</p>
+<p>When <script type="math/tex; ">|q| \ge 1</script>, <code>diverges</code></p>
+<p>Why? Just think about it, as <code>n</code> goes up, everytime, the last item of this series times a value which greater or equal to 1, so the item will be bigger and bigger, in the end, the last item of that series becomes infinite, that means, the sum of this series is also infinity, so, we say it diverges, that series is a divergent series.</p>
+<hr>
+<p>p-series (p&#x7EA7;&#x6570;)</p>
+<p><script type="math/tex; ">\sum_{n=1}^{\infty} \frac{1}{n^p}</script></p>
+<p>When <script type="math/tex; ">p > 1</script>, <code>converges</code> (&#x6536;&#x655B;)</p>
+<p>Why? If <script type="math/tex; ">p > 1</script>, everytime as <code>n</code> goes up, <script type="math/tex; ">n^p</script> gets bigger and bigger, until infinite, so <script type="math/tex; ">\frac{1}{\infty} = 0</script>. The sum of that series has limitation, it&apos;s a constant, so the series converges.</p>
+<p>When <script type="math/tex; ">p \le 1</script>, <code>diverges</code> (&#x53D1;&#x6563;)</p>
+<p>Why? If <script type="math/tex; ">p \le 1</script>, everytime as <code>n</code> goes up, <script type="math/tex; ">n^p</script> gets smaller and smaller, until 0, so <script type="math/tex; ">\frac{1}{0} = \infty</script>. The sum of that series does not have a limitation, it&apos;s infinite, so the series diverges.</p>
+<hr>
+<p>Positive series (&#x6B63;&#x5411;&#x7EA7;&#x6570;)</p>
+<p>A series with terms that are all positive.</p>
+<p><script type="math/tex; ">\sum_{n=1}^{\infty} u_n \text{ , } (u_n > 0)</script></p>
+<p><script type="math/tex; ">\text{Set }  \text{ } l = \lim_{n \to \infty}{\frac{u_{n+1}}{u_n}}</script></p>
+<p>when <script type="math/tex; ">l < 1</script> , <script type="math/tex; ">u_{n+1} < u_n</script> , <code>converges</code></p>
+<p>when <script type="math/tex; ">l > 1</script> , <script type="math/tex; ">u_{n+1} < u_n</script> , <code>diverges</code></p>
+<p>when <script type="math/tex; ">l = 1</script> , <script type="math/tex; ">u_{n+1} = u_n</script> , <code>uncertain</code></p>
+<hr>
+<p>alternating series (&#x4EA4;&#x9519;&#x7EA7;&#x6570;)</p>
+<p><script type="math/tex; ">\sum_{n=0}^{\infty} (-1)^n a_n</script></p>
+<p>The signs of the general terms alternate between positive and negative.</p>
+<p>If the following conditions are met, <code>converges</code> (otherwise, diverges):</p>
+<ol>
+<li><script type="math/tex; ">u_n \ge u_{n+1}</script></li>
+<li><script type="math/tex; ">\lim_{n \to \infty} u_n = 0</script></li>
+</ol>
+<p>~The first condition said, the last item must be less than before, that&apos;s good, in that case, we will not get an infinite number in the last item~</p>
+<p>The second condition just like normal series</p>
+<hr>
+<p>harmonic series</p>
+<p><script type="math/tex; ">\sum_{n=1}^{\infty} \frac{1}{n} = \frac{1}{1} + \frac{1}{2} + \frac{1}{3} + ...</script></p>
+<p>It&apos;s a <code>divergent</code> series</p>
+<hr>
+<p>All these series, converges if and only if the associated sequence of partial sums converges.</p>
 
                                 
                                 </section>
@@ -1449,12 +1500,12 @@
 
             
                 
-                <a href="amplifying-circuit/bipolar-junction-transistor.html" class="navigation navigation-prev " aria-label="Previous page: Bipolar Junction Transistor">
+                <a href="high-level-math/multiple_integral.html" class="navigation navigation-prev " aria-label="Previous page: Multiple integral">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="biasing.html" class="navigation navigation-next " aria-label="Next page: Biasing">
+                <a href="electrical-engineering.html" class="navigation navigation-next " aria-label="Next page: Electrical Engineering">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1465,7 +1516,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Common Emitter Configuration","level":"1.4.5.2","depth":3,"next":{"title":"Biasing","level":"1.4.5.3","depth":3,"path":"biasing.md","ref":"biasing.md","articles":[]},"previous":{"title":"Bipolar Junction Transistor","level":"1.4.5.1","depth":3,"path":"amplifying-circuit/bipolar-junction-transistor.md","ref":"amplifying-circuit/bipolar-junction-transistor.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"common_emitter_configuration.md","mtime":"2018-05-07T10:26:26.546Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-08T12:16:52.110Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Series","level":"1.2.5","depth":2,"next":{"title":"Electrical Engineering","level":"1.3","depth":1,"path":"electrical-engineering.md","ref":"electrical-engineering.md","articles":[{"title":"The Terminologys","level":"1.3.1","depth":2,"path":"electrical-engineering/the-terminologys.md","ref":"electrical-engineering/the-terminologys.md","articles":[]},{"title":"DC","level":"1.3.2","depth":2,"path":"electrical-engineering/dc.md","ref":"electrical-engineering/dc.md","articles":[{"title":"The circuit rule","level":"1.3.2.1","depth":3,"path":"electrical-engineering/dc/the-circuit-rule.md","ref":"electrical-engineering/dc/the-circuit-rule.md","articles":[]},{"title":"KCL and KVL","level":"1.3.2.2","depth":3,"path":"electrical-engineering/dc/kcl-and-kvl.md","ref":"electrical-engineering/dc/kcl-and-kvl.md","articles":[]},{"title":"Superposition","level":"1.3.2.3","depth":3,"path":"electrical-engineering/dc/superposition.md","ref":"electrical-engineering/dc/superposition.md","articles":[]}]},{"title":"AC","level":"1.3.3","depth":2,"path":"electrical-engineering/ac.md","ref":"electrical-engineering/ac.md","articles":[{"title":"Intuition","level":"1.3.3.1","depth":3,"path":"electrical-engineering/ac/intuition.md","ref":"electrical-engineering/ac/intuition.md","articles":[]},{"title":"Resistor","level":"1.3.3.2","depth":3,"path":"electrical-engineering/ac/resistor.md","ref":"electrical-engineering/ac/resistor.md","articles":[]},{"title":"Inductor","level":"1.3.3.3","depth":3,"path":"electrical-engineering/ac/inductor.md","ref":"electrical-engineering/ac/inductor.md","articles":[]},{"title":"Capacitor","level":"1.3.3.4","depth":3,"path":"electrical-engineering/ac/capacitor.md","ref":"electrical-engineering/ac/capacitor.md","articles":[]},{"title":"AC circuit","level":"1.3.3.5","depth":3,"path":"electrical-engineering/ac/ac-circuit.md","ref":"electrical-engineering/ac/ac-circuit.md","articles":[]},{"title":"三相电","level":"1.3.3.6","depth":3,"path":"electrical-engineering/ac/san-xiang-dian.md","ref":"electrical-engineering/ac/san-xiang-dian.md","articles":[{"title":"星形联结","level":"1.3.3.6.1","depth":4,"path":"electrical-engineering/ac/xing-xing-lian-jie.md","ref":"electrical-engineering/ac/xing-xing-lian-jie.md","articles":[]},{"title":"三角形联结","level":"1.3.3.6.2","depth":4,"path":"electrical-engineering/ac/san-jiao-xing-lian-jie.md","ref":"electrical-engineering/ac/san-jiao-xing-lian-jie.md","articles":[]},{"title":"实际电路","level":"1.3.3.6.3","depth":4,"path":"electrical-engineering/ac/shi-ji-dian-lu.md","ref":"electrical-engineering/ac/shi-ji-dian-lu.md","articles":[]}]}]},{"title":"Voltage and Current Rule in Circuit","level":"1.3.4","depth":2,"path":"electrical-engineering/voltage-and-current-rule-in-circuit.md","ref":"electrical-engineering/voltage-and-current-rule-in-circuit.md","articles":[]},{"title":"Response","level":"1.3.5","depth":2,"path":"electrical-engineering/response.md","ref":"electrical-engineering/response.md","articles":[{"title":"Foundations","level":"1.3.5.1","depth":3,"path":"electrical-engineering/response/foundations.md","ref":"electrical-engineering/response/foundations.md","articles":[]},{"title":"零输入响应","level":"1.3.5.2","depth":3,"path":"electrical-engineering/response/ling-shu-ru-xiang-ying.md","ref":"electrical-engineering/response/ling-shu-ru-xiang-ying.md","articles":[]},{"title":"零状态响应","level":"1.3.5.3","depth":3,"path":"electrical-engineering/response/ling-zhuang-tai-xiang-ying.md","ref":"electrical-engineering/response/ling-zhuang-tai-xiang-ying.md","articles":[]},{"title":"一阶电路的全响应","level":"1.3.5.4","depth":3,"path":"electrical-engineering/response/yi-jie-dian-lu-de-quan-xiang-ying.md","ref":"electrical-engineering/response/yi-jie-dian-lu-de-quan-xiang-ying.md","articles":[]}]}]},"previous":{"title":"Multiple integral","level":"1.2.4.4","depth":3,"path":"high-level-math/multiple_integral.md","ref":"high-level-math/multiple_integral.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"series.md","mtime":"2018-05-08T12:15:32.331Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-08T12:16:52.110Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
