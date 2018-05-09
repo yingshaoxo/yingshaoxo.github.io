@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Overviews · GitBook</title>
+        <title>Integrated Operational Amplifier · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="pcm.html" />
     
-    
-    <link rel="prev" href="principles-of-communications.html" />
+    <link rel="prev" href="negative-feedback_amplifier.html" />
     
 
     </head>
@@ -1213,7 +1211,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5.7" data-path="integrated_operational_amplifier.html">
+        <li class="chapter active" data-level="1.4.5.7" data-path="integrated_operational_amplifier.html">
             
                 <a href="integrated_operational_amplifier.html">
             
@@ -1347,7 +1345,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.6.1" data-path="overviews.html">
+        <li class="chapter " data-level="1.6.1" data-path="overviews.html">
             
                 <a href="overviews.html">
             
@@ -1408,7 +1406,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Overviews</a>
+        <a href="." >Integrated Operational Amplifier</a>
     </h1>
 </div>
 
@@ -1423,30 +1421,32 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="the-diagram-of-a-communication-system">The diagram of a communication system</h2>
-<p><img src="assets/the_diagram_of_a_communication_system.png" alt=""></p>
+                                <h1 id="integrated-operational-amplifier-&#x96C6;&#x6210;&#x8FD0;&#x7B97;&#x653E;&#x5927;&#x5668;">Integrated Operational Amplifier (&#x96C6;&#x6210;&#x8FD0;&#x7B97;&#x653E;&#x5927;&#x5668;)</h1>
+<p>In China:</p>
+<p>The <script type="math/tex; ">\infty</script> &#x8868;&#x793A;&#x7406;&#x60F3;&#x4E2D;&#x7684;&#x65E0;&#x9650;&#x653E;&#x5927;</p>
+<p><img src="assets/Integrated_Operational_Amplifier.png" alt=""></p>
+<p>In United States:</p>
+<p><img src="assets/Integrated_Operational_Amplifier2.png" alt=""></p>
 <hr>
-<h2 id="frequency-bands-with-designations">Frequency Bands with Designations</h2>
-<p><img src="assets/frequency_bands.png" alt=""></p>
-<hr>
-<h3 id="there-are-two-kinds-of-communication-by-&#x4F20;&#x8F93;&#x4FE1;&#x53F7;&#x7684;&#x4E0D;&#x540C;-&#x6A21;&#x62DF;&#x7535;&#x5B50;-&#x548C;-&#x6570;&#x5B57;&#x7535;&#x5B50;">There are two kinds of communication by &#x4F20;&#x8F93;&#x4FE1;&#x53F7;&#x7684;&#x4E0D;&#x540C;: <code>&#x6A21;&#x62DF;&#x7535;&#x5B50;</code> &#x548C; <code>&#x6570;&#x5B57;&#x7535;&#x5B50;</code></h3>
-<p>&#x4ECE;&#x6211;&#x7684;&#x89D2;&#x5EA6;&#x770B;&#xFF0C;</p>
-<p><code>&#x6A21;&#x7535;</code> is kind of like &#x5927;&#x81EA;&#x7136;&#x4E2D;&#x7684;&#x4FE1;&#x53F7;&#xFF0C;&#x6CE2;&#x5F62;&#x7C7B;&#x4F3C; <code>sine</code>&#xFF0C; &#x53EF;&#x65E0;&#x9650;&#x7EC6;&#x5206;&#x3001;&#x91C7;&#x96C6;&#xFF08;&#x56E0;&#x4E3A;&#x4EBA;&#x7684;&#x8BA4;&#x8BC6;&#x57FA;&#x4E8E;&#x5BF9;&#x6BD4;&#xFF0C;&#x800C;&#x5BF9;&#x6BD4;&#x662F;&#x65E0;&#x7A77;&#x65E0;&#x5C3D;&#x7684;&#xFF09;
-<img src="assets/sine_wave.png" alt=""></p>
-<p><code>&#x6570;&#x7535;</code> &#x662F;&#x7ECF;&#x8FC7;&#x4EBA;&#x5904;&#x7406;&#x8FC7;&#x7684;&#x66F4;&#x7CBE;&#x786E;&#x7684;&#x4FE1;&#x53F7;&#x8868;&#x793A;&#xFF0C;&#x5B83;&#x901A;&#x8FC7;&#x9AD8;&#x4E0E;&#x4F4E;&#x7684;&#x53D8;&#x5316;&#x4F20;&#x8F93; <code>&#x65B9;&#x6CE2;</code> (&#x9AD8;&#x7535;&#x5E73;&#x4E3A; 1, &#x4F4E;&#x7535;&#x5E73;&#x4E3A; 0)
-<img src="assets/squre_wave.png" alt=""></p>
-<hr>
-<h3 id="&#x65E0;&#x804A;&#x7684;&#x8868;&#x8FBE;&#x5F0F;-&#x4E0E;-&#x8BA1;&#x7B97;">&#x65E0;&#x804A;&#x7684;&#x8868;&#x8FBE;&#x5F0F; &#x4E0E; &#x8BA1;&#x7B97;</h3>
-<p>&#x4FE1;&#x606F;&#x901F;&#x7387;(&#x4F20;&#x4FE1;&#x7387;): <script type="math/tex; ">R_b</script> or <script type="math/tex; ">Rate_{bit}</script></p>
+<p>&#x8FD9;&#x91CC;&#x8865;&#x4E00;&#x4E2A;&#x6982;&#x5FF5;&#xFF1A;</p>
 <blockquote>
-<p>a small piece, part, or quantity of something.</p>
+<p>&#x7535;&#x6D41;&#x4E3A;0&#x65F6;&#x53EF;&#x4EE5;&#x6709;&#x7535;&#x538B;</p>
+<p>&#x89E3;&#x91CA;&#xFF1A; &#x7535;&#x538B;&#x4E00;&#x76F4;&#x6709;&#x4F46;&#x6CA1;&#x56DE;&#x8DEF;&#x3001;&#x6CA1;&#x8D1F;&#x8F7D;&#xFF0C;&#x7535;&#x963B;&#x65E0;&#x7A77;&#x5927;&#xFF0C;&#x7535;&#x6D41;&#x4E3A;0</p>
 </blockquote>
-<p>&#x7801;&#x5143;&#x901F;&#x7387;(&#x4F20;&#x7801;&#x7387;): <script type="math/tex; ">R_B</script> or <script type="math/tex; ">Rate_{baud}</script></p>
-<blockquote>
-<p>a unit of transmission speed equal to the number of times a signal changes state per second.</p>
-</blockquote>
-<p><script type="math/tex; ">R_b = R_B \cdot log_2{M}</script> , (M &#x4E3A;<code>&#x51E0;&#x8FDB;&#x5236;&#x7CFB;&#x7EDF;</code>&#x7684;<code>&#x51E0;</code>)</p>
-<p><script type="math/tex; ">T = \frac{1}{R_B}</script> , (T &#x4E3A;<code>&#x7801;&#x5143;&#x5BBD;&#x5EA6;</code>)</p>
+<hr>
+<p>Inversed_Integrated_Operational_Amplifier</p>
+<p><img src="assets/Inversed_Integrated_Operational_Amplifier.png" alt=""></p>
+<p><script type="math/tex; mode=display">
+\begin{align*}
+&\because i_+ = 0 \text{ , } \therefore u_+ = 0
+\\ \\
+&\because u_+ = u_- \text{ , } \therefore u_- = 0
+\\ \\
+&\text{ } i_1 = \frac{u_i - u_-}{R_1} = \frac{u_i}{R_1} \text{ , } i_f = \frac{u_- - u_o}{R_f} = \frac{-u_o}{R_f}
+\\ \\
+&\because u_- \text{ and } i_- = 0 \text{, } i_1 = i_f \text{ , } \therefore u_o = -\frac{R_f}{R_1} u_i
+\end{align*}
+</script></p>
 
                                 
                                 </section>
@@ -1474,14 +1474,10 @@
 
             
                 
-                <a href="principles-of-communications.html" class="navigation navigation-prev " aria-label="Previous page: Principles of Communications">
+                <a href="negative-feedback_amplifier.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Negative-feedback amplifier">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="pcm.html" class="navigation navigation-next " aria-label="Next page: PCM">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1490,7 +1486,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Overviews","level":"1.6.1","depth":2,"next":{"title":"PCM","level":"1.6.2","depth":2,"path":"pcm.md","ref":"pcm.md","articles":[]},"previous":{"title":"Principles of Communications","level":"1.6","depth":1,"path":"principles-of-communications.md","ref":"principles-of-communications.md","articles":[{"title":"Overviews","level":"1.6.1","depth":2,"path":"overviews.md","ref":"overviews.md","articles":[]},{"title":"PCM","level":"1.6.2","depth":2,"path":"pcm.md","ref":"pcm.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"overviews.md","mtime":"2018-05-03T05:18:17.703Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-09T11:13:22.681Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Integrated Operational Amplifier","level":"1.4.5.7","depth":3,"next":{"title":"Digital Electronic Technology","level":"1.5","depth":1,"ref":"","articles":[{"title":"Logic Gate","level":"1.5.1","depth":2,"path":"logic-gate.md","ref":"logic-gate.md","articles":[]},{"title":"Logic expressions","level":"1.5.2","depth":2,"path":"logic-expressions.md","ref":"logic-expressions.md","articles":[]},{"title":"Karnaugh map","level":"1.5.3","depth":2,"path":"karnaugh-map.md","ref":"karnaugh-map.md","articles":[]},{"title":"Number system","level":"1.5.4","depth":2,"path":"number_system.md","ref":"number_system.md","articles":[]},{"title":"Multiplexer","level":"1.5.5","depth":2,"path":"multiplexer.md","ref":"multiplexer.md","articles":[]},{"title":"Flip-flop","level":"1.5.6","depth":2,"path":"flip-flop.md","ref":"flip-flop.md","articles":[]}]},"previous":{"title":"Negative-feedback amplifier","level":"1.4.5.6","depth":3,"path":"negative-feedback_amplifier.md","ref":"negative-feedback_amplifier.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"integrated_operational_amplifier.md","mtime":"2018-05-09T04:41:31.223Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-09T11:13:22.681Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
