@@ -94,6 +94,22 @@ systemctl restart apache2
 <pre><code>systemctl restart apache2
 </code></pre>
 
+<hr />
+
+<p>By the way, if you only need one page frome others, this will be fine</p>
+
+<pre><code>&lt;VirtualHost *:80&gt;
+        ServerName net.yingshaoxo.xyz
+
+        SSLProxyEngine on
+
+        ProxyPass        "/" "https://www.baidu.com"
+        ProxyPassReverse "/" "https://www.baidu.com"
+
+        ErrorLog /etc/apache2/sites-available/error.log
+&lt;/VirtualHost&gt;
+</code></pre>
+
 </article>
 
 <script type="text/javascript" async
