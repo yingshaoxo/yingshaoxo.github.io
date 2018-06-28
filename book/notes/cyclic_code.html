@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Negative-feedback amplifier · GitBook</title>
+        <title>Cyclic code · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="integrated_operational_amplifier.html" />
     
-    
-    <link rel="prev" href="mess.html" />
+    <link rel="prev" href="hdb3.html" />
     
 
     </head>
@@ -1232,7 +1230,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.5.6" data-path="negative-feedback_amplifier.html">
+        <li class="chapter " data-level="1.4.5.6" data-path="negative-feedback_amplifier.html">
             
                 <a href="negative-feedback_amplifier.html">
             
@@ -1418,7 +1416,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.4" data-path="cyclic_code.html">
+        <li class="chapter active" data-level="1.6.4" data-path="cyclic_code.html">
             
                 <a href="cyclic_code.html">
             
@@ -1466,7 +1464,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Negative-feedback amplifier</a>
+        <a href="." >Cyclic code</a>
     </h1>
 </div>
 
@@ -1481,38 +1479,47 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="negative-feedback-amplifier-&#x8D1F;&#x53CD;&#x9988;&#x653E;&#x5927;&#x7535;&#x8DEF;">Negative-feedback amplifier (&#x8D1F;&#x53CD;&#x9988;&#x653E;&#x5927;&#x7535;&#x8DEF;)</h1>
+                                <h1 id="cyclic-code">Cyclic code</h1>
+<p><code>(7, 4)</code>&#x5FAA;&#x73AF;&#x7801;&#x7684;&#x751F;&#x591A;&#x9879;&#x5F0F; <script type="math/tex; ">g(x)=x^3+x^2+1</script> , &#x5219;<code>D(1010)</code>&#x7684;&#x7CFB;&#x5FAA;&#x73AF;&#x7801;&#x662F;&#x591A;&#x5C11;&#xFF1F;</p>
+<p>1.
+<script type="math/tex; mode=display">
+\begin{align*}
+1010 \Rightarrow d(x) = x^3 + x^1
+\end{align*}
+</script></p>
+<p>2.
+<script type="math/tex; mode=display">
+\begin{align*}
+&x^{7 - 4} \cdot d(x)
+\\ \\
+=&x^3 \cdot (x^3 + x)
+\\ \\
+=&x^6 + x^4
+\end{align*}
+</script></p>
+<p>3.
+<script type="math/tex; mode=display">
+\begin{align*}
+&rem[(x^6 + x^4), g(x)] = 1
+\\ \\
+&\text{rem( a , b ) returns the remainder after division of a by b}
+\end{align*}
+</script></p>
+<p>4.
+<script type="math/tex; mode=display">
+\begin{align*}
+c(x) &= x^6 + x^4 + 1
+\\
+&\Downarrow
+\\
+10&10001
+\end{align*}
+</script></p>
 <hr>
-<p><img src="assets/negative-feedback amplifier.png" alt=""></p>
-<p>&#x53CD;&#x9988;&#x4E8B;&#x5B9E;&#x4E0A;&#x5C31;&#x662F;&#x9760;&#x786C;&#x4EF6;&#x7279;&#x6027;&#xFF0C;&#x7528;&#x8F93;&#x51FA;&#x5F71;&#x54CD;&#x8F93;&#x5165;</p>
-<p>&#x8FD9;&#x91CC;&#x7684; picture &#x663E;&#x793A;&#x4E86; <script type="math/tex; ">x_f</script> &#x5982;&#x4F55;&#x593A;&#x53D6; <script type="math/tex; ">$x_i</script> &#x7684;&#x4E00;&#x90E8;&#x5206;&#x8D44;&#x6E90;&#xFF0C;&#x4ECE;&#x800C;&#x524A;&#x5F31;<code>&#x539F;&#x8F93;&#x5165;</code>&#x7684;&#x8FC7;&#x7A0B;</p>
-<p>&#x7528;&#x516C;&#x5F0F;&#x8868;&#x8FBE;&#x5C31;&#x662F;&#xFF1A;</p>
-<p><script type="math/tex; ">X_i - x_f = x_id</script></p>
-<p><script type="math/tex; ">x_{id}</script> &#x662F;&#x6211;&#x4EEC;&#x6700;&#x7EC8;&#x7684;&#x8F93;&#x5165;&#x503C;&#xFF0C;&#x7531;&#x6B64;&#x53EF;&#x89C1; <script type="math/tex; ">x_f</script> &#x786E;&#x5B9E;&#x524A;&#x5F31;&#x4E86; <script type="math/tex; ">x_id</script></p>
-<hr>
-<h4 id="&#x53CD;&#x9988;&#x7C7B;&#x578B;&#x5224;&#x522B;">&#x53CD;&#x9988;&#x7C7B;&#x578B;&#x5224;&#x522B;</h4>
-<h5 id="1">1.</h5>
-<p>&#x53CD;&#x9988;&#x652F;&#x8DEF;&#x4E0A;&#x6709;&#x7535;&#x5BB9; -&gt; &#x76F4;&#x6D41;</p>
-<p>&#x53CD;&#x9988;&#x652F;&#x8DEF;&#x4E0A;&#x6CA1;&#x6709;&#x7535;&#x5BB9; -&gt; &#x4EA4;&#x6D41;</p>
-<h5 id="2">2.</h5>
-<p>&#x4EE4; <script type="math/tex; ">U_o = 0</script>, &#x53CD;&#x9988;&#x4FE1;&#x53F7;&#x6D88;&#x5931; -&gt; &#x7535;&#x538B;&#x53CD;&#x9988;</p>
-<p>&#x4EE4; <script type="math/tex; ">U_o = 0</script>, &#x53CD;&#x9988;&#x4FE1;&#x53F7;&#x5B58;&#x5728; -&gt; &#x7535;&#x6D41;&#x53CD;&#x9988;</p>
-<h5 id="3">3.</h5>
-<p>&#x53CD;&#x9988;&#x652F;&#x8DEF;&#x4E0E;<code>&#x8F93;&#x5165;&#x7AEF;</code>&#x6709;&#x8282;&#x70B9; -&gt; &#x5E76;&#x8054;&#x53CD;&#x9988;</p>
-<p>&#x53CD;&#x9988;&#x652F;&#x8DEF;&#x4E0E;<code>&#x8F93;&#x5165;&#x7AEF;</code>&#x65E0;&#x8282;&#x70B9; -&gt; &#x4E32;&#x8054;&#x53CD;&#x9988;</p>
-<h4 id="4">4.</h4>
-<p><script type="math/tex; ">X_i - x_f = x_id</script> , &#x8D1F;&#x53CD;&#x9988;</p>
-<p><script type="math/tex; ">X_i + x_f = x_id</script> , &#x6B63;&#x53CD;&#x9988;</p>
-<hr>
-<h4 id="&#x8D1F;&#x53CD;&#x9988;&#x5BF9;&#x653E;&#x5927;&#x7535;&#x8DEF;&#x7684;&#x5F71;&#x54CD;">&#x8D1F;&#x53CD;&#x9988;&#x5BF9;&#x653E;&#x5927;&#x7535;&#x8DEF;&#x7684;&#x5F71;&#x54CD;</h4>
-<ol>
-<li><p><code>&#x4E32;&#x8054;</code>&#x8D1F;&#x53CD;&#x9988; <code>&#x589E;&#x52A0;</code> <code>&#x8F93;&#x5165;&#x963B;&#x6297;</code>&#xFF1B;<code>&#x5E76;&#x8054;</code>&#x8D1F;&#x53CD;&#x9988; <code>&#x51CF;&#x5C0F;</code> <code>&#x8F93;&#x5165;&#x963B;&#x6297;</code></p>
-</li>
-<li><p><code>&#x7535;&#x6D41;</code>&#x8D1F;&#x53CD;&#x9988; <code>&#x589E;&#x52A0;</code> <code>&#x8F93;&#x51FA;&#x963B;&#x6297;</code>&#xFF1B;<code>&#x7535;&#x538B;</code>&#x8D1F;&#x53CD;&#x9988; <code>&#x51CF;&#x5C0F;</code> <code>&#x8F93;&#x51FA;&#x963B;&#x6297;</code></p>
-</li>
-<li><p><code>&#x8D1F;&#x53CD;&#x9988;</code>&#x80FD;&#x591F;&#x589E;&#x52A0;<code>&#x653E;&#x5927;&#x7535;&#x8DEF;</code> <code>&#x7A33;&#x5B9A;&#x6027;</code></p>
-</li>
-</ol>
+<h3 id="hamming-code">hamming code</h3>
+<p><script type="math/tex; ">n = 2^r - 1</script></p>
+<p><code>n</code> represents the length of codes</p>
+<p><code>r</code> represents the &#x76D1;&#x7763;&#x7801;&#xFF08;&#x4E0D;&#x4F20;&#x9012;&#x4FE1;&#x606F;&#xFF0C;&#x53EA;&#x4E3A;&#x7EA0;&#x9519;&#x800C;&#x52A0;&#x7684;&#x4E1C;&#x897F;&#xFF09;</p>
 
                                 
                                 </section>
@@ -1540,14 +1547,10 @@
 
             
                 
-                <a href="mess.html" class="navigation navigation-prev " aria-label="Previous page: Mess">
+                <a href="hdb3.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: HDB3">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="integrated_operational_amplifier.html" class="navigation navigation-next " aria-label="Next page: Integrated Operational Amplifier">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1556,7 +1559,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Negative-feedback amplifier","level":"1.4.5.6","depth":3,"next":{"title":"Integrated Operational Amplifier","level":"1.4.5.7","depth":3,"path":"integrated_operational_amplifier.md","ref":"integrated_operational_amplifier.md","articles":[]},"previous":{"title":"Mess","level":"1.4.5.5","depth":3,"path":"mess.md","ref":"mess.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"negative-feedback_amplifier.md","mtime":"2018-06-28T12:50:38.621Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-28T13:05:53.708Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Cyclic code","level":"1.6.4","depth":2,"previous":{"title":"HDB3","level":"1.6.3","depth":2,"path":"hdb3.md","ref":"hdb3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"cyclic_code.md","mtime":"2018-06-28T13:04:57.585Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-28T13:05:53.708Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
