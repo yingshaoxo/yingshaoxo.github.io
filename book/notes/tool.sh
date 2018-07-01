@@ -1,5 +1,8 @@
 #!/bin/bash
 
+run() {
+    gitbook build .
+}
 pull() {
     git fetch --all
     git reset --hard origin/master
