@@ -1,0 +1,92 @@
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/github-markdown.css">
+<title>How to use Javascript to build real project</title>
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+        padding: 10px;
+    }
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+
+        font-size: 20px; 
+    }
+
+    @media (max-width: 767px) {
+        .markdown-body {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<article class="markdown-body">
+<h1>How to use Javascript to build real project</h1>
+
+<h1>what is <code>Javascript</code>?</h1>
+
+<p>For most of the people, they may think JavaScript is nothing but a browser language, yes, but furthermore, it can be a common purpose programming language too.</p>
+
+<h1>So how do you use it?</h1>
+
+<h3>1. run it at a browser</h3>
+
+<p>open your browser like <code>firefox</code> or <code>chrome</code>, press <code>F12</code>, you shell see a debug window. Click <code>Console</code>, you will see a <code>terminal-like</code> layout, yes, that's it, you can run <code>basic Javascript codes</code> in it.</p>
+
+<h3>2. we do it locally. (Actually writing it at local)</h3>
+
+<ol>
+<li><p>you shell know what is <code>npm</code> and what is <code>yarn</code>. Basically, they do the same things. But <code>yarn</code> is a newer tool for managing <code>Javascript packages</code></p></li>
+<li><p>let's creat a <code>Javascript project</code> first. </p>
+
+<blockquote>
+  <ol>
+  <li><p>install <code>npm</code> or <code>yarn</code> by <code>sudo apt install npm</code> or <code>sudo apt install yarn</code></p></li>
+  <li><p>go to your terminal, <code>mkdir our_javascript_project</code>,  <code>cd our_javascript_project</code></p></li>
+  <li><p>use <code>npm init -y</code> or <code>yarn init -y</code> to initialize your project (you will get a file which names <code>package.json</code>, that's the <code>core configuration</code> for your <code>Javascript Project</code>)</p></li>
+  <li><p>now, let's create our <code>index.js</code> file with <code>vim index.js</code>, typing following: <code>console.log("hello, world!")</code>, save it</p></li>
+  </ol>
+</blockquote></li>
+<li><p>instead of downloading your packages(like <code>yarn</code> or <code>npm</code> will do), if you want to run your <code>JavaScript</code> codes, you have to <code>import</code> your package, especially, compile your codes to the native codes that every browser can run. So this time, we have to use a new tool, <code>parcel</code></p>
+
+<blockquote>
+  <ol>
+  <li><p>install <code>parcel</code> by this command: <code>sudo yarn global add parcel-bundler</code> (you can google the installation instruction too)</p></li>
+  <li><p>create a html page which contains <code>&lt;script src="./index.js"&gt;&lt;/script&gt;</code></p></li>
+  <li><p>render this page using <code>parcel index.html</code></p></li>
+  <li><p>now open the local serving link, for example, <code>http://localhost:1234</code>, press <code>F12</code>, you'll see the <code>hello, world</code> was printed at your browser console, great!</p></li>
+  </ol>
+</blockquote></li>
+<li><p>see, what if we want to add a new package to this project, what we should do now?</p>
+
+<blockquote>
+  <p>just use <code>yarn add your_package_name</code>, that should do it</p>
+</blockquote></li>
+<li><p>and, what if I want to get a single static website, which can run in any browser without the <code>yarn, parcel</code> tools, what I should do?</p>
+
+<blockquote>
+  <p>well, try this: <code>parcel build index.html</code></p>
+  
+  <p>after that, you can see a new folder <code>dist</code> has been created in your project folder. Inside it, it's your static website, cheer!</p>
+</blockquote></li>
+</ol>
+
+<h3>3. Beyond all of these, is endless packages and their own special usage, like <code>react</code>, <code>vue</code></h3>
+
+<pre><code>congratulations! you have learned all you should know to make a JavaScript project!
+
+I'll see you soon, don't forget to support me, I am poor in Money: [PayPal](https://www.paypal.me/yingshaoxo)
+</code></pre>
+
+</article>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML">
+</script>
