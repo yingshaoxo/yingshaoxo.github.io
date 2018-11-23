@@ -23,6 +23,7 @@ import {
     EmailIcon,
 } from 'react-share';
 
+import { Link } from 'evergreen-ui'
 
 class Hello_Component extends Component {
     constructor(props) {
