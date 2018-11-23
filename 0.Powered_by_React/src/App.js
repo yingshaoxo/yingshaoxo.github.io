@@ -424,7 +424,6 @@ class App extends Component {
         return (
             <div>
                 <Helmet>
-                    <meta charset="utf-8" />
                     <title>yingshaoxo | 技术宅</title>
                     <meta name="author" content="yingshaoxo" />
                     <meta name="description" content="yingshaoxo, born in 1998, love IT and AI. Want to be a great ML engineer. So I just keep learning and practice everyday." />
