@@ -2,6 +2,7 @@
   "name": "yingshaoxo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "@material-ui/core": "^3.5.1",
     "evergreen-ui": "^4.0.2",
