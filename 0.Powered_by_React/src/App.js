@@ -411,6 +411,9 @@ class Top_Tabs extends React.Component {
 
 
 class App extends Component {
+    componentDidMount(){
+        document.title = "yingshaoxo | 技术宅"
+    }
     render() {
         return (
             <Top_Tabs></Top_Tabs>
