@@ -2,15 +2,27 @@ import React, { Component } from 'react';
 import './App.scss';
 
 import { Dialog, Text, Avatar, Paragraph, Pane } from 'evergreen-ui'
-import { Tablist, Button, toaster } from 'evergreen-ui'
+import { Button, toaster } from 'evergreen-ui'
 import { TextInput, Autocomplete } from 'evergreen-ui'
 import { SideSheet } from 'evergreen-ui'
 
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import MenuItem from '@material-ui/core/MenuItem';
-import Select from '@material-ui/core/Select';
 import SwipeableViews from 'react-swipeable-views';
+
+import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile
+} from "react-device-detect";
+
+import {
+    TwitterIcon,
+    TelegramIcon,
+    EmailIcon,
+} from 'react-share';
+
 
 class Hello_Component extends Component {
     constructor(props) {
@@ -34,7 +46,7 @@ class Hello_Component extends Component {
                 isShown={this.state.isShown}
                 title="A msg from yingshaoxo"
                 onCloseComplete={() => this.setState({ isShown: false })}
-                confirmLabel="Nice to see you, too"
+                confirmLabel="Nice to see you"
                 hasCancel={false}
                 >
                     <Text size={900}>Hello, welcome to my world!</Text>
@@ -72,6 +84,121 @@ class Search_Bar extends Component {
     }
 }
 
+
+class My_Paragraph extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            children: this.props.children,
+        }
+    }
+
+    render() {
+        return (
+            <Paragraph
+                size = {200}
+                marginBottom = {30}
+            >
+                {this.state.children}
+            </Paragraph>
+        )
+    }
+}
+
+class Icon_Container extends Component {
+    render() {
+        return (
+            <div
+                style={{
+                    margin:15
+                }}
+                onClick={this.props.onClick}
+            >
+                {this.props.children}
+            </div>
+        )
+    }
+}
+
+class Introduction extends Component {
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+        return (
+            <div
+                style={{
+                    display: 'flex',
+                    flexDirection: "column",
+                    justifyContent: 'center',
+                    alignItems: this.props.alignItems,
+                    height: this.props.height,
+                }}
+            >
+                <My_Paragraph>
+                    Born in 1998, University Student Maybe.
+                </My_Paragraph>
+                <My_Paragraph>
+                    Interested in almost EVERYTHING about IT and AI.
+                </My_Paragraph>
+                <My_Paragraph>
+                    A So-called GEEK.
+                </My_Paragraph>
+                <My_Paragraph>
+                    Want to make some friends sharing the SAME interests.
+                </My_Paragraph>
+                <My_Paragraph>
+                    Superhero fan.
+                </My_Paragraph>
+                <My_Paragraph>
+                    Favourite Character is Captain America ←
+                </My_Paragraph>
+                <My_Paragraph>
+                    Dream about building a great AI to make the world a better place.
+                </My_Paragraph>
+                <My_Paragraph>
+                    Exciting!
+                </My_Paragraph>
+
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: "row",
+                        justifyContent: 'center',
+                        alignItems: "center",
+                    }}
+                >
+                    <Icon_Container
+                        onClick={() => {
+                            window.open("https://twitter.com/yingshaoxo", "_blank")
+                        }}
+                    >
+                        <TwitterIcon></TwitterIcon>
+                    </Icon_Container>
+                    <Icon_Container
+                        onClick={() => {
+                            toaster.success('yingshaoxo@gmail.com', {
+                                duration: 10 
+                            })
+                        }}
+                    >
+                        <EmailIcon></EmailIcon>
+                    </Icon_Container>
+                    <Icon_Container
+                        onClick={() => {
+                            window.open("https://t.me/EasyProgrammingLanguage", "_blank")
+                        }}
+                    >
+                        <TelegramIcon></TelegramIcon>
+                    </Icon_Container>
+                </div>
+            </div>
+        )
+    }
+}
+
 class Page_Center extends Component {
     constructor(props) {
         super(props)
@@ -84,39 +211,73 @@ class Page_Center extends Component {
         return (
             <div
                 style={{
+                    /*
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
                     flexDirection: "column",
-                    height: '70vh'
+                    height: '100vh'
+                    */
                 }}
             >
                 {
-                this.state.show_sheet && 
-                <SideSheet
-                    isShown={() => {
-                        if (this.state.show_sheet) {
-                            return true
-                        } else {
-                            return false
-                        }
-                    }}
-                    onCloseComplete={() => {
-                        this.setState({ 
-                            show_sheet: false
-                        })
-                    }}
-                >
-                    Some introduction
-                </SideSheet>
+                    this.state.show_sheet && 
+                    <div>
+                        <BrowserView>
+                            <SideSheet
+                                isShown={() => {
+                                    if (this.state.show_sheet) {
+                                        return true
+                                    } else {
+                                        return false
+                                    }
+                                }}
+                                onCloseComplete={() => {
+                                    this.setState({ 
+                                        show_sheet: false
+                                    })
+                                }}
+                            >
+                                <Introduction 
+                                    alignItems="center"
+                                    height='100vh'
+                                ></Introduction>
+                            </SideSheet>
+                        </BrowserView>
+                        <MobileView>
+                            <Dialog
+                                isShown={() => {
+                                    if (this.state.show_sheet) {
+                                        return true
+                                    } else {
+                                        return false
+                                    }
+                                }}
+                                title="About yingshaoxo"
+                                onCloseComplete={() => {
+                                    this.setState({ 
+                                        show_sheet: false
+                                    })
+                                }}
+                                confirmLabel="You are genius"
+                                hasCancel={false}
+                            >
+                                <Introduction 
+                                    alignItems="left"
+                                    height=''
+                                ></Introduction>
+                            </Dialog>
+                        </MobileView>
+                    </div>
                 }
 
                 <Pane
+                    /*
                     display="flex"
                     justifyContent="center"
                     alignItems="center"
                     flexDirection="column"
-                    margin={24}
+                    */
                 >
                     <Avatar
                         src="https://avatars0.githubusercontent.com/u/17190829?s=460&v=4"
@@ -160,188 +321,98 @@ class Page_Center extends Component {
     }
 }
 
-class Foot_Buttons extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            sheet: null,
-            tab_size: 20
-        }
-
-        this.return_sheet_content = this.return_sheet_content.bind(this)
-    }
-
-    return_sheet_content(sheet_name) {
-        if (sheet_name == "books") {
-            return (
-                <Paragraph margin={40}>books</Paragraph>
-            )
-        } else if (sheet_name == "introduction") {
-            return (
-                <Paragraph margin={40}>introduction</Paragraph>
-            )
-        } else if (sheet_name == "projects") {
-            return (
-                <Paragraph margin={40}>projects</Paragraph>
-            )
-        }
-        return null
-    }
-
-    render() {
-        return (
-            <div>
-                {
-                this.state.sheet && 
-                <SideSheet
-                    isShown={() => {
-                        if (this.state.sheet) {
-                            return true
-                        } else {
-                            return false
-                        }
-                    }}
-                    onCloseComplete={() => {
-                        this.setState({ 
-                            sheet: null
-                        })
-                    }}
-                >
-                    {this.return_sheet_content(this.state.sheet)}
-                </SideSheet>
-                }
-
-                <Tablist
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        flexDirection: "row",
-                        height: '20vh'
-                    }}
-                >
-                    <Tab
-                        size={this.state.tab_size}
-                        onClick={() => {
-                            this.setState({
-                                sheet: "books"
-                            })
-                        }}
-                    >
-                        My Books
-                    </Tab>
-                    <Tab
-                        size={this.state.tab_size}
-                        onClick={() => {
-                            this.setState({
-                                sheet: "introduction"
-                            })
-                        }}
-                    >
-                        My Introduction
-                    </Tab>
-                    <Tab
-                        size={this.state.tab_size}
-                        onClick={() => {
-                            this.setState({
-                                sheet: "projects"
-                            })
-                        }}
-                    >
-                        My Projects
-                    </Tab>
-                </Tablist>
-            </div>
-        )
-    }
-}
 
 const styles = {
-  tabs: {
-    background: '#fff',
-  },
-  slide: {
-    padding: 15,
-    minHeight: 100,
-    color: '#fff',
-  },
-  slide1: {
-    backgroundColor: '#FEA900',
-  },
-  slide2: {
-    backgroundColor: '#B3DC4A',
-  },
-  slide3: {
-    backgroundColor: '#6AC0FF',
-  },
+    tabs: {
+        background: '#fff',
+    },
+    slide: {
+        padding: 15,
+        minHeight: 100,
+        color: '#fff',
+    },
+    slide1: {
+        backgroundColor: '#B3DC4A',
+    },
+    slide2: {
+        backgroundColor: '#6AC0FF',
+    },
+    slide3: {
+        backgroundColor: '#FEA900',
+    },
 };
 
-class My_Tabs extends React.Component {
-  state = {
-    index: 1,
-  };
+class Top_Tabs extends React.Component {
+    state = {
+        index: 1,
+    };
 
-  handleChange = (event, value) => {
-    this.setState({
-      index: value,
-    });
-  };
+    handleChange = (event, value) => {
+        this.setState({
+            index: value,
+        });
+    };
 
-  handleChangeIndex = index => {
-    this.setState({
-      index,
-    });
-  };
+    handleChangeIndex = index => {
+        this.setState({
+            index,
+        });
+    };
 
-  render() {
-    const { index } = this.state;
+    render() {
+        const { index } = this.state;
 
-    return (
-      <div>
-        <Tabs value={index} fullWidth onChange={this.handleChange} style={styles.tabs}>
-          <Tab label="My Books" />
-          <Tab label="My Introduction" />
-          <Tab label="My Projects" />
-        </Tabs>
-        <SwipeableViews index={index} onChangeIndex={this.handleChangeIndex}>
-          <div style={Object.assign({}, styles.slide, styles.slide1)}>
-          </div>
-          <div style={Object.assign({}, styles.slide, styles.slide2)}>
-            <div 
-                className="App"
-                style={{
-                    display: 'flex',
-                    flexDirection: "column",
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    height: '100vh',
-                }}
-            >
-                {
-                    /* 
-                    <Hello_Component>
-                    </Hello_Component>
-                    */
-                }
+        return (
+            <div>
+                <Tabs value={index} fullWidth onChange={this.handleChange} style={styles.tabs}>
+                    <Tab label="My Books" />
+                    <Tab label="My Introduction" />
+                    <Tab label="My Projects" />
+                </Tabs>
 
-                <Search_Bar></Search_Bar>
+                <SwipeableViews index={index} onChangeIndex={this.handleChangeIndex}>
+                    <div style={Object.assign({}, styles.slide, styles.slide1)}>
+                        Coming soon...
+                    </div>
 
-                <Page_Center></Page_Center>
+                    <div style={Object.assign({}, styles.slide, styles.slide2)}>
+                        <div
+                            className="App"
+                            style={{
+                                display: 'flex',
+                                flexDirection: "column",
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                height: '100vh',
+                            }}
+                        >
+                            {
+                                /* 
+                                <Hello_Component>
+                                </Hello_Component>
 
-                <Foot_Buttons></Foot_Buttons>
+                                <Search_Bar></Search_Bar>
+                                */
+                            }
+
+                            <Page_Center></Page_Center>
+                        </div>
+                    </div>
+
+                    <div style={Object.assign({}, styles.slide, styles.slide3)}>
+                        Coming soon...
+                    </div>
+                </SwipeableViews>
             </div>
-          </div>
-          <div style={Object.assign({}, styles.slide, styles.slide3)}>slide n°3</div>
-        </SwipeableViews>
-      </div>
-    );
-  }
+        );
+    }
 }
+
 
 class App extends Component {
     render() {
         return (
-            <My_Tabs></My_Tabs>
+            <Top_Tabs></Top_Tabs>
         )
     }
 }
