@@ -23,7 +23,7 @@ import {
     EmailIcon,
 } from 'react-share';
 
-import { Link } from 'evergreen-ui'
+import { Helmet } from 'react-helmet'
 
 class Hello_Component extends Component {
     constructor(props) {
@@ -411,12 +411,28 @@ class Top_Tabs extends React.Component {
 
 
 class App extends Component {
+    /*
     componentDidMount(){
         document.title = "yingshaoxo | 技术宅"
+        document.author = "yingshaoxo"
+        document.description = "yingshaoxo, born in 1998, love IT and AI. Want to be a great ML engineer. So I just keep learning and practice everyday."
+        document.keywords = "yingshaoxo, YS, 胡英杰, Python, AI, Keras, Tensorflow, React, Kivy, Javascript, C++, Kotlin, Java"
     }
+    */
+
     render() {
         return (
-            <Top_Tabs></Top_Tabs>
+            <div>
+                <Helmet>
+                    <meta charset="utf-8" />
+                    <title>yingshaoxo | 技术宅</title>
+                    <meta name="author" content="yingshaoxo" />
+                    <meta name="description" content="yingshaoxo, born in 1998, love IT and AI. Want to be a great ML engineer. So I just keep learning and practice everyday." />
+                    <meta name="keywords" content="yingshaoxo, YS, 胡英杰, Python, AI, Keras, Tensorflow, React, Javascript, Kotlin, C++" />
+                </Helmet>
+
+                <Top_Tabs></Top_Tabs>
+            </div>
         )
     }
 }
