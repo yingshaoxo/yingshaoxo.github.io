@@ -1,0 +1,70 @@
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/github-markdown.css">
+<title>Master FFmpeg</title>
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+        padding: 10px;
+    }
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+
+        font-size: 20px; 
+    }
+
+    @media (max-width: 767px) {
+        .markdown-body {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<article class="markdown-body">
+<h1>Master FFmpeg</h1>
+
+<h4>I just want to see my beautiful face</h4>
+
+<pre><code>ffplay -window_title "yingshaoxo" -vf hflip /dev/video0
+</code></pre>
+
+<hr />
+
+<h4>Maybe record my screen with my voice</h4>
+
+<pre><code>ffmpeg -y -f alsa -i hw:0 -f x11grab -framerate 30 -video_size 1920x1080 -i :0.0+0,0 -c:v libx264 -pix_fmt yuv420p -qp 0 -preset ultrafast ~/Videos/$(date +%F_%A_at_%H:%M:%S).mp4
+</code></pre>
+
+<hr />
+
+<h4>You got it, I couldn't record without my beautiful face</h4>
+
+<pre><code>ffmpeg -hide_banner -loglevel info -thread_queue_size 512 -y -f alsa -i hw:0 -thread_queue_size 512 -f x11grab -video_size 1920x1080 -i ":0.0" -thread_queue_size 512 -f v4l2 -video_size 320x240 -i "/dev/video0" -c:v libx264 -crf 30 -preset ultrafast -filter_complex 'overlay=main_w-overlay_w-10:main_h-overlay_h-10' -threads 0 ~/Videos/$(date +%F_%A_at_%H:%M:%S).mp4
+</code></pre>
+
+<hr />
+
+<h4>Maybe do something to my face (camera)</h4>
+
+<pre><code>ffmpeg -hide_banner -loglevel info -thread_queue_size 512 -y -f alsa -i hw:0 -itsoffset -1.266 -thread_queue_size 512 -f x11grab -video_size 1920x1080 -i ":0.0" -thread_queue_size 512 -f v4l2 -video_size 320x240 -i "/dev/video0" -c:v libx264 -crf 30 -preset ultrafast -filter_complex '[2:v]hflip[2:v];[1:v][2:v] overlay=W-w-10:H-h-10' -threads 0 ~/Videos/$(date +%F_%A_at_%H:%M:%S).mp4
+</code></pre>
+
+<hr />
+
+<h4>That was cool! Let's do more!</h4>
+
+<pre><code>ffmpeg -hide_banner -loglevel info -thread_queue_size 512 -y -f alsa -i hw:0 -itsoffset -1.266 -thread_queue_size 512 -f x11grab -video_size 1920x1080 -i ":0.0" -thread_queue_size 512 -f v4l2 -video_size 320x240 -i "/dev/video0" -c:v libx264 -crf 30 -preset ultrafast -filter_complex '[2:v]hflip[2:v]; [2:v]eq=brightness=0.04:saturation=0.7[2:v]; [1:v][2:v] overlay=W-w-10:H-h-10' -threads 0 ~/Videos/$(date +%F_%A_at_%H:%M:%S).mp4
+</code></pre>
+
+</article>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML">
+</script>
