@@ -446,25 +446,33 @@ class Top_Tabs extends React.Component {
 
                 <SwipeableViews index={index} onChangeIndex={this.handleChangeIndex}>
                     <div style={Object.assign({}, styles.slide, styles.slide1)}>
-                        <My_List
-                            data={[
-                                {
-                                    "title": "University Notes",
-                                    "description": "Some notes made by myself.",
-                                    "url": "https://yingshaoxo.gitbooks.io/artificial-intelligence-for-idiot/content/",
-                                },
-                                {
-                                    "title": "Artificial Intelligence for Idiot",
-                                    "description": "I'm a idiot, but I want to learn AI even before I getting start learning programming.",
-                                    "url": "https://yingshaoxo.gitbooks.io/university-notes/content/",
-                                },
-                                {
-                                    "title": "物质与思想",
-                                    "description": "初中积淀，高中完成，包含了我的所有价值观、世界观",
-                                    "url": "https://github.com/yingshaoxo/My-books/blob/master/%E3%80%8A%E7%89%A9%E8%B4%A8%E4%B8%8E%E6%80%9D%E6%83%B3%E3%80%8B.txt",
-                                },
-                            ]}
-                        ></My_List>
+                        <div
+                            style={{
+                                flexDirection: "column",
+                                alignItems: 'center',
+                                height: '100vh',
+                            }}
+                        >
+                            <My_List
+                                data={[
+                                    {
+                                        "title": "University Notes",
+                                        "description": "Some notes made by myself.",
+                                        "url": "https://yingshaoxo.gitbooks.io/artificial-intelligence-for-idiot/content/",
+                                    },
+                                    {
+                                        "title": "Artificial Intelligence for Idiot",
+                                        "description": "I'm a idiot, but I want to learn AI even before I getting start learning programming.",
+                                        "url": "https://yingshaoxo.gitbooks.io/university-notes/content/",
+                                    },
+                                    {
+                                        "title": "物质与思想",
+                                        "description": "初中积淀，高中完成，包含了我的所有价值观、世界观",
+                                        "url": "https://github.com/yingshaoxo/My-books/blob/master/%E3%80%8A%E7%89%A9%E8%B4%A8%E4%B8%8E%E6%80%9D%E6%83%B3%E3%80%8B.txt",
+                                    },
+                                ]}
+                            ></My_List>
+                        </div>
                     </div>
 
                     <div style={Object.assign({}, styles.slide, styles.slide2)}>
@@ -492,25 +500,33 @@ class Top_Tabs extends React.Component {
                     </div>
 
                     <div style={Object.assign({}, styles.slide, styles.slide3)}>
-                        <My_List
-                            data={[
-                                {
-                                    "title": "Github",
-                                    "description": "You know, I'm a open-minded person",
-                                    "url": "https://github.com/yingshaoxo",
-                                },
-                                {
-                                    "title": "Youtube",
-                                    "description": "If I could show you something magic, I will",
-                                    "url": "https://www.youtube.com/channel/UCbT9GDmkqf555ATReJor6ag",
-                                },
-                                {
-                                    "title": "Bilibili",
-                                    "description": "I love some extrordinary Chinese, too",
-                                    "url": "https://space.bilibili.com/28162384",
-                                },
-                            ]}
-                        ></My_List>
+                        <div
+                            style={{
+                                flexDirection: "column",
+                                alignItems: 'center',
+                                height: '100vh',
+                            }}
+                        >
+                            <My_List
+                                data={[
+                                    {
+                                        "title": "Github",
+                                        "description": "You know, I'm a open-minded person",
+                                        "url": "https://github.com/yingshaoxo",
+                                    },
+                                    {
+                                        "title": "Youtube",
+                                        "description": "If I could show you something magic, I will",
+                                        "url": "https://www.youtube.com/channel/UCbT9GDmkqf555ATReJor6ag",
+                                    },
+                                    {
+                                        "title": "Bilibili",
+                                        "description": "I love some extrordinary Chinese, too",
+                                        "url": "https://space.bilibili.com/28162384",
+                                    },
+                                ]}
+                            ></My_List>
+                        </div>
                     </div>
                 </SwipeableViews>
             </div>
