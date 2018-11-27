@@ -25,6 +25,19 @@ import {
 
 import { Helmet } from 'react-helmet'
 
+
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import Divider from '@material-ui/core/Divider';
+
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
+
+
 class Hello_Component extends Component {
     constructor(props) {
         super(props)
@@ -323,6 +336,77 @@ class Page_Center extends Component {
 }
 
 
+class My_Card extends Component {
+    render() {
+        return (
+            <Card
+                style={{
+                    width: "100vw"
+                }}
+            >
+                <CardActionArea
+                    onClick={() => {
+                        //toaster.success("hi")
+                        window.open(this.props.item.url, "_blank")
+                    }}
+                >
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            {this.props.item.title}
+                        </Typography>
+                        <Typography component="p">
+                            {this.props.item.description}
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+
+                <CardActions>
+                </CardActions>
+            </Card>
+        )
+    }
+}
+
+class My_List extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            data: [
+                {
+                    "title": "University Notes",
+                    "description": "Some notes made by myself.",
+                    "url": "https://yingshaoxo.gitbooks.io/artificial-intelligence-for-idiot/content/",
+                },
+                {
+                    "title": "Artificial Intelligence for Idiot",
+                    "description": "I'm a idiot, but I want to learn AI even before I getting start learning programming.",
+                    "url": "https://yingshaoxo.gitbooks.io/university-notes/content/",
+                }
+            ]
+        }
+    }
+
+    render() {
+        return(
+            <List>
+                {
+                    this.state.data.map((item) => {
+                        return (
+                            <ListItem button divider>
+                                <My_Card
+                                    item={item}
+                                >
+                                </My_Card>
+                            </ListItem>
+                        )
+                    })
+                }
+            </List>
+        )
+    }
+}
+
+
 const styles = {
     tabs: {
         background: '#fff',
@@ -345,7 +429,7 @@ const styles = {
 
 class Top_Tabs extends React.Component {
     state = {
-        index: 1,
+        index: 0,
     };
 
     handleChange = (event, value) => {
@@ -373,7 +457,7 @@ class Top_Tabs extends React.Component {
 
                 <SwipeableViews index={index} onChangeIndex={this.handleChangeIndex}>
                     <div style={Object.assign({}, styles.slide, styles.slide1)}>
-                        Coming soon...
+                        <My_List></My_List>
                     </div>
 
                     <div style={Object.assign({}, styles.slide, styles.slide2)}>
