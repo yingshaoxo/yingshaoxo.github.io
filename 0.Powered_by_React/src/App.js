@@ -341,7 +341,7 @@ class My_Card extends Component {
         return (
             <Card
                 style={{
-                    width: "100vw"
+                    width: "75vw"
                 }}
             >
                 <CardActionArea
@@ -381,7 +381,7 @@ class My_List extends Component {
                 {
                     this.state.data.map((item) => {
                         return (
-                            <ListItem button divider>
+                            <ListItem button>
                                 <My_Card
                                     item={item}
                                 >
@@ -448,7 +448,9 @@ class Top_Tabs extends React.Component {
                     <div style={Object.assign({}, styles.slide, styles.slide1)}>
                         <div
                             style={{
+                                display: 'flex',
                                 flexDirection: "column",
+                                justifyContent: 'center',
                                 alignItems: 'center',
                                 height: '100vh',
                             }}
@@ -502,7 +504,9 @@ class Top_Tabs extends React.Component {
                     <div style={Object.assign({}, styles.slide, styles.slide3)}>
                         <div
                             style={{
+                                display: 'flex',
                                 flexDirection: "column",
+                                justifyContent: 'center',
                                 alignItems: 'center',
                                 height: '100vh',
                             }}
