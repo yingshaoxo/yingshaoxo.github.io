@@ -329,6 +329,20 @@ class Page_Center extends Component {
                     >
                         Agree
                     </Button>
+                    <Button
+                        appearance="minimal"
+                        intent="danger"
+                        onClick={() => {
+                            toaster.danger("That's OK.", {
+                                duration: 2
+                            })
+                            setTimeout(() => {
+                                window.open("https://yingshaoxo.xyz/legacy_index.html", '_self');
+                            }, 2000)
+                        }}
+                    >
+                        Disagree
+                    </Button>
                 </Pane>
             </div>
         )
