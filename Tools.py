@@ -7,6 +7,11 @@ t = Terminal()
 
 class Tools():
     def push(self, comment):
+        t.run("""
+        cd 0.Powered_by_React/
+        ./Tools.py build
+        cd ..
+        """)
         t.run('git add .')
         t.run('git commit -m "{}"'.format(comment))
         t.run('git push origin')
