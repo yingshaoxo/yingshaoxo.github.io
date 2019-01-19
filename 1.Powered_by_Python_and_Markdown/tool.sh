@@ -15,16 +15,6 @@ push() {
     git push origin
 }
 
-publish() {
-    run
-    push
-    mkdir ../yingshaoxo.github.io/post
-    cp post/* ../yingshaoxo.github.io/post -fr
-    cd ../yingshaoxo.github.io
-    bash tool.sh push
-    cd ../ysblogger
-}
-
 show() {
     xdg-open post/index.html
 }
@@ -49,6 +39,6 @@ elif [ "$1" == "" ]; then
 show
 pull
 push
-publish"
+"
 
 fi
