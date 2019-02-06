@@ -13,6 +13,7 @@ push() {
     git add .
     git commit -m "update"
     git push origin
+    cp post ../post -fr
 }
 
 show() {

@@ -8,7 +8,7 @@ t = Terminal()
 class Tools():
     def push(self, comment):
         t.run("""
-        cd 0.Powered_by_React/
+        cd 2.Powered_by_React/
         ./Tools.py build
         cd ..
         """)

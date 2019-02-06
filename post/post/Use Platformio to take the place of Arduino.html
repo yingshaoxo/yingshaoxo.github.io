@@ -1,0 +1,82 @@
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/github-markdown.css">
+<title>Use Platformio to take the place of Arduino</title>
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+        padding: 10px;
+    }
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+
+        font-size: 20px; 
+    }
+
+    @media (max-width: 767px) {
+        .markdown-body {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<article class="markdown-body">
+<h1>Use Platformio to take the place of Arduino</h1>
+
+<ol>
+<li><p>Set up a python2 environment</p>
+
+<pre><code>cd your_project_path
+sudo pip install pipenv
+sudo pipenv --python 2.7
+sudo pipenv install platformio
+sudo pipenv shell
+</code></pre></li>
+<li><p>Find out your board name id</p>
+
+<pre><code>platformio boards your_board_name
+</code></pre>
+
+<p>https://platformio.org/boards</p>
+
+<p>http://docs.platformio.org/en/latest/quickstart.html</p></li>
+<li><p>Initialize your project</p>
+
+<p>If you got an <code>uno</code> board, you just have to run this: <code>platformio init --board uno</code></p></li>
+<li><p>Writing codes</p>
+
+<pre><code>mkdir src
+cd src
+</code></pre>
+
+<blockquote>
+  <p>Write the following codes into <code>main.cpp</code>:</p>
+</blockquote>
+
+<pre><code>#include "Arduino.h"
+
+void setup() {
+}
+
+void loop() {
+}
+</code></pre></li>
+<li><p>Run or Upload as you like</p>
+
+<p>Build your project: <code>platformio run</code></p>
+
+<p>Upload your codes into board: <code>platformio run --target upload</code></p></li>
+</ol>
+
+</article>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML">
+</script>

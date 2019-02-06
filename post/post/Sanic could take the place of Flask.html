@@ -1,0 +1,92 @@
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/github-markdown.css">
+<title>Sanic could take the place of Flask</title>
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+        padding: 10px;
+    }
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+
+        font-size: 20px; 
+    }
+
+    @media (max-width: 767px) {
+        .markdown-body {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<article class="markdown-body">
+<h1>Sanic could take the place of Flask</h1>
+
+<h4>Why Sanic?</h4>
+
+<ol>
+<li>Faster and More stable</li>
+<li><code>async</code> request handler</li>
+<li><code>WebSockets</code> support</li>
+</ol>
+
+<h4>For static files servering</h4>
+
+<pre><code>app.static('/static', './static')
+</code></pre>
+
+<h4>For jinja2 template rendering</h4>
+
+<pre><code>from jinja2 import Template
+from sanic import Sanic
+from sanic.response import text
+
+template = Template('Hello {{ name }}!')
+
+app = Sanic()
+
+@app.route("/")
+async def test(request):
+        data = request.json
+        return text(template.render(name=data["name"]))
+
+app.run(host="0.0.0.0", port=8000)
+</code></pre>
+
+<pre><code>from jinja2 import Template
+import os
+from sanic import Sanic
+from sanic.response import html
+
+def render_template(html_name, **args):
+    with open(os.path.join(os.path.dirname(__file__), 'templates', html_name), 'r') as f:
+        html_text = f.read()
+    template = Template(html_text)
+    return html(template.render(args))
+
+app = Sanic()
+
+@app.route("/")
+async def index(request):
+        return render_template('index.html', author='yingshaoxo', url='http://yingshaoxo.xyz')
+
+app.run(host="0.0.0.0", port=8000)
+</code></pre>
+
+<h4>For more infomation</h4>
+
+<p>https://sanic.readthedocs.io/en/latest/sanic/getting_started.html</p>
+
+</article>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML">
+</script>
