@@ -171,3 +171,11 @@ http {
     }
 }
 ```
+
+___
+
+https://dev.to/domysee/setting-up-a-reverse-proxy-with-nginx-and-docker-compose-29jg
+
+https://gist.github.com/soheilhy/8b94347ff8336d971ad0#step-9-optional----redirecting-based-on-host-name
+
+https://github.com/kevin-lxh/Reverse-Proxy-for-Google
