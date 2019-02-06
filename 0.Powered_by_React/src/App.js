@@ -5,6 +5,7 @@ import { Dialog, Text, Avatar, Paragraph, Pane } from 'evergreen-ui'
 import { Button, toaster } from 'evergreen-ui'
 import { TextInput, Autocomplete } from 'evergreen-ui'
 import { SideSheet } from 'evergreen-ui'
+import { Table } from 'evergreen-ui'
 
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -36,6 +37,9 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+
+
+var request = require('request');
 
 
 class Hello_Component extends Component {
@@ -410,6 +414,85 @@ class My_List extends Component {
 }
 
 
+class WorkingTable extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            selectedIndex: 0,
+            tabs: ['1', '2', '3'],
+            data: null,
+        }
+    }
+
+    componentDidMount() {
+        fetch("http://127.0.0.1:5000/WorkingTable")
+          .then(res => res.json())
+          .then(
+            (result) => {
+                this.setState({
+                    data: JSON.parse(result)
+                }) 
+            },
+          )
+    }
+
+    render() {
+        return(
+            <div
+                style={{
+                    width: '100%',
+                    height: '100vh',
+                }}
+            >
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: "column",
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        height: '100vh',
+                    }}
+                >
+                {
+                    (!this.state.data)? null: 
+                    <Table>
+                        <Table.Head>
+                            <Table.TextHeaderCell flexBasis={"44vw"} flexShrink={0} flexGrow={0}>
+                                day
+                            </Table.TextHeaderCell>
+                            <Table.TextHeaderCell>
+                                state
+                            </Table.TextHeaderCell>
+                        </Table.Head>
+                        <Table.Body height={"80vh"} width={"50vw"}>
+                            {
+                                this.state.data.map((item, index) => (
+                                    (item['state'] == 'idle')?
+                                        <Table.Row>
+                                            <Table.TextCell flexBasis={"44vw"} flexShrink={0} flexGrow={0}>
+                                                <h4 style={{color: 'red'}}>{item['day']}</h4>
+                                            </Table.TextCell>
+                                            <Table.TextCell>{item['state']}</Table.TextCell>
+                                        </Table.Row>
+                                    :
+                                        <Table.Row>
+                                            <Table.TextCell flexBasis={"44vw"} flexShrink={0} flexGrow={0}>
+                                                <h4 style={{color: 'black'}}>{item['day']}</h4>
+                                            </Table.TextCell>
+                                            <Table.TextCell>{item['state']}</Table.TextCell>
+                                        </Table.Row>
+                                ))
+                            }
+                        </Table.Body>
+                    </Table>
+                }
+                </div>
+            </div>
+        )
+    }
+}
+
+
 const styles = {
     tabs: {
         background: '#fff',
@@ -513,6 +596,10 @@ class Top_Tabs extends React.Component {
 
                             <Page_Center></Page_Center>
                         </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <WorkingTable></WorkingTable>
                     </div>
 
                     <div style={Object.assign({}, styles.slide, styles.slide3)}>
