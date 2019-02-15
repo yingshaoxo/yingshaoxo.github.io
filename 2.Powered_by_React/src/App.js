@@ -596,11 +596,7 @@ class Top_Tabs extends React.Component {
 
                             <Page_Center></Page_Center>
                         </div>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <WorkingTable></WorkingTable>
-                    </div>
+                   </div>
 
                     <div style={Object.assign({}, styles.slide, styles.slide3)}>
                         <div
