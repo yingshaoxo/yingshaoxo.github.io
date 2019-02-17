@@ -13,8 +13,8 @@ class Tools():
         content = content.replace("<title>React App</title>", """
                 <title>yingshaoxo | 技术宅</title>
                 <meta name="author" content="yingshaoxo" />
-                <meta name="description" content="yingshaoxo, born in 1998, love IT and AI. Want to be a great ML engineer. So I just keep learning and practice everyday." />
-                <meta name="keywords" content="yingshaoxo, YS, 胡英杰, Python, AI, Keras, Tensorflow, React, Javascript, Kotlin, C++" />
+                <meta name="description" content="yingshaoxo, born in 1998, love IT. Want to find out all those mysteries in this universe, especially how human thinks. So I embrace tech." />
+                <meta name="keywords" content="yingshaoxo, Python, Javascript, C++" />
                 """.replace("\n", "")
                 )
         io_.write("./build/index.html", content)
