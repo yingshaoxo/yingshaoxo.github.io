@@ -557,12 +557,12 @@ class Top_Tabs extends React.Component {
                                     {
                                         "title": "University Notes",
                                         "description": "Some notes made by myself",
-                                        "url": "https://yingshaoxo.gitbooks.io/university-notes/content/",
+                                        "url": "https://yingshaoxo.gitbook.io/university-notes",
                                     },
                                     {
                                         "title": "AI for Idiots",
                                         "description": "I'm a idiot, but I want to learn AI even before I getting start programming",
-                                        "url": "https://yingshaoxo.gitbooks.io/artificial-intelligence-for-idiot/content/",
+                                        "url": "https://yingshaoxo.gitbook.io/artificial-intelligence-for-idiot",
                                     },
                                     {
                                         "title": "物质与思想",
