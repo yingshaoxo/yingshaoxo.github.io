@@ -397,7 +397,7 @@ class My_List extends Component {
         return(
             <List
                 style={{
-                    height: '30vh',
+                    height: '40vh',
                     overflow: 'hidden',
                     overflowY: 'scroll'
                 }}
@@ -573,7 +573,7 @@ class Top_Tabs extends React.Component {
                                     {
                                         "title": "C/C++ tutorial for Pythoner",
                                         "description": "Make C/C++ simpler for Pythoner to learn, to enjoy.",
-                                        "url": "https://yingshaoxo.gitbook.io/c-cpp-tutorial-for-pythoner",
+                                        "url": "https://yingshaoxo.gitbook.io/c-c-tutorial-for-pythoner/",
                                     },
                                     {
                                         "title": "AI for Idiots",
