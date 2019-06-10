@@ -397,7 +397,7 @@ class My_List extends Component {
         return(
             <List
                 style={{
-                    height: '63.5vh',
+                    height: '30vh',
                     overflow: 'hidden',
                     overflowY: 'scroll'
                 }}
