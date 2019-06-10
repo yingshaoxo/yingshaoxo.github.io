@@ -395,7 +395,13 @@ class My_List extends Component {
 
     render() {
         return(
-            <List>
+            <List
+                style={{
+                    height: '63.5vh',
+                    overflow: 'hidden',
+                    overflowY: 'scroll'
+                }}
+            >
                 {
                     this.state.data.map((item) => {
                         return (
@@ -557,12 +563,22 @@ class Top_Tabs extends React.Component {
                                     {
                                         "title": "University Notes",
                                         "description": "Some notes made by myself",
-                                        "url": "https://yingshaoxo.gitbooks.io/university-notes",
+                                        "url": "https://yingshaoxo.xyz/books/University_Notes",
+                                    },
+                                    {
+                                        "title": "Go tutorial for Pythoner",
+                                        "description": "Help Python programmer to learn Go.",
+                                        "url": "https://yingshaoxo.xyz/books/Go_tutorial_for_Pythoner",
+                                    },
+                                    {
+                                        "title": "C/C++ tutorial for Pythoner",
+                                        "description": "Make C/C++ simpler for Pythoner to learn, to enjoy.",
+                                        "url": "https://yingshaoxo.gitbook.io/c-cpp-tutorial-for-pythoner",
                                     },
                                     {
                                         "title": "AI for Idiots",
                                         "description": "I'm a idiot, but I want to learn AI even before I getting start programming",
-                                        "url": "https://yingshaoxo.gitbooks.io/artificial-intelligence-for-idiot",
+                                        "url": "https://yingshaoxo.xyz/books/artificial-intelligence-for-idiots",
                                     },
                                     {
                                         "title": "物质与思想",
