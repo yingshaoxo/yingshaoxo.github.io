@@ -227,17 +227,7 @@ class Page_Center extends Component {
 
     render() {
         return (
-            <div
-                style={{
-                    /*
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    flexDirection: "column",
-                    height: '100vh'
-                    */
-                }}
-            >
+            <div>
                 {
                     this.state.show_sheet && 
                     <div>
@@ -289,14 +279,7 @@ class Page_Center extends Component {
                     </div>
                 }
 
-                <Pane
-                    /*
-                    display="flex"
-                    justifyContent="center"
-                    alignItems="center"
-                    flexDirection="column"
-                    */
-                >
+                <Pane>
                     <Avatar
                         src="https://avatars0.githubusercontent.com/u/17190829?s=460&v=4"
                         name="yingshaoxo"
@@ -359,7 +342,7 @@ class My_Card extends Component {
         return (
             <Card
                 style={{
-                    width: "75vw"
+                    width: "75vw",
                 }}
             >
                 <CardActionArea
@@ -397,7 +380,7 @@ class My_List extends Component {
         return(
             <List
                 style={{
-                    height: "42vh",
+                    height: "250px",
                     overflow: 'hidden',
                     overflowY: 'scroll'
                 }}
@@ -409,9 +392,6 @@ class My_List extends Component {
                                 key={index}
                             >
                                 <My_Card
-                                    style={{
-                                        height: "14vh",
-                                    }}
                                     item={item}
                                 >
                                 </My_Card>
@@ -658,15 +638,6 @@ class Top_Tabs extends React.Component {
 
 
 class App extends Component {
-    /*
-    componentDidMount(){
-        document.title = "yingshaoxo | 技术宅"
-        document.author = "yingshaoxo"
-        document.description = "yingshaoxo, born in 1998, love IT and AI. Want to be a great ML engineer. So I just keep learning and practice everyday."
-        document.keywords = "yingshaoxo, YS, 胡英杰, Python, AI, Keras, Tensorflow, React, Kivy, Javascript, C++, Kotlin, Java"
-    }
-    */
-
     render() {
         return (
             <div>

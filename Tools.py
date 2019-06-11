@@ -10,7 +10,7 @@ import os
 
 
 class Tools():
-    def book_generation(self):
+    def generate_books(self):
         if not t.exists("books"):
             print("You don't have book folder yet")
             t.run_command("mkdir book")
