@@ -397,7 +397,7 @@ class My_List extends Component {
         return(
             <List
                 style={{
-                    height: "48vh",
+                    height: "42vh",
                     overflow: 'hidden',
                     overflowY: 'scroll'
                 }}
@@ -410,7 +410,7 @@ class My_List extends Component {
                             >
                                 <My_Card
                                     style={{
-                                        height: "16vh",
+                                        height: "14vh",
                                     }}
                                     item={item}
                                 >
@@ -577,7 +577,7 @@ class Top_Tabs extends React.Component {
                                     },
                                     {
                                         "title": "C/C++ tutorial for Pythoner",
-                                        "description": "Make C/C++ simpler for Pythoner to learn, to enjoy.",
+                                        "description": "Make C/C++ simpler for learning.",
                                         "url": "https://yingshaoxo.gitbook.io/c-c-tutorial-for-pythoner/",
                                     },
                                     {
