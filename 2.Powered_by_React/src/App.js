@@ -389,7 +389,7 @@ class My_List extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            data: this.props.data
+            data: this.props.data,
         }
     }
 
@@ -397,16 +397,21 @@ class My_List extends Component {
         return(
             <List
                 style={{
-                    height: '41vh',
+                    height: "42vh",
                     overflow: 'hidden',
                     overflowY: 'scroll'
                 }}
             >
                 {
-                    this.state.data.map((item) => {
+                    this.state.data.map((item, index) => {
                         return (
-                            <ListItem button>
+                            <ListItem button
+                                key={index}
+                            >
                                 <My_Card
+                                    style={{
+                                        height: "14vh",
+                                    }}
                                     item={item}
                                 >
                                 </My_Card>
