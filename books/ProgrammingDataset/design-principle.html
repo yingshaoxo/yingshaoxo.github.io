@@ -132,20 +132,28 @@
                     <li class="active">Design Principle</li>
                 </ol>
                 <div class="faq-page">
-                <ol>
-<li><p>Use a database to save users data is better than using a JSON file (JSON was meant to be used in server-client communication)</p>
-</li>
+                <h3 id="important">Important</h3>
+<ul>
 <li><p>Make things done, don&apos;t let mess continuous. Also, never let a project(repository) unfinished.</p>
 </li>
+<li><p>Use <code>assert</code> whenever you can. Because you&apos;ll never know if it&apos;s what you think unless you give it a check.</p>
+</li>
+<li><p>Write tests for every function in your application. You don&apos;t want to check those function again and again by yourself. Just let the machine do that job for you.</p>
+</li>
+<li><p>Use a database to save users data is better than using a JSON file (JSON was meant to be used in server-client communication.</p>
+</li>
+</ul>
+<hr>
+<h3 id="less-important">Less important</h3>
+<ul>
+<li>Use a database to save users data is better than using a JSON file (JSON was meant to be used in server-client communication)</li>
 <li><p>If you could design a package with binary, don&apos;t do it with codes (unless it can compile to binary, like c, c++, golang, cython). You will gradually know that only binary file could be used at every platform or machine without much worry.</p>
 </li>
 <li><p>Write logs for your application instead of just print it out: the logs must contain every information from program start to program end.</p>
 </li>
-<li><p>Write tests for every function in your application. You don&apos;t want to check those function again and again by yourself. Just let the machine do that job for you. </p>
-</li>
 <li><p>Use <code>Pipe</code> for multiprocessing communication, use <code>queue</code> for multithreading communication.</p>
 </li>
-</ol>
+</ul>
 
                 </div>
             </div>
@@ -160,7 +168,7 @@
     
     <div class="faq-page-footer">
         <a href="https://www.gitbook.com" target="_blank">Published with GitBook</a> ·
-        <span>Last edit June 15th 2019</span>
+        <span>Last edit June 28th 2019</span>
     </div>
     
 
@@ -211,7 +219,7 @@
 
 <script>
 (function() {
-    gitbook.page.hasChanged({"page":{"title":"Design Principle","level":"1.5","depth":1,"previous":{"title":"Operating System","level":"1.4","depth":1,"path":"operating-system.md","ref":"operating-system.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-faq"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-faq":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"design-principle.md","mtime":"2019-06-14T16:28:44.470Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-20T05:48:23.809Z"},"basePath":".","book":{"language":""}})
+    gitbook.page.hasChanged({"page":{"title":"Design Principle","level":"1.5","depth":1,"previous":{"title":"Operating System","level":"1.4","depth":1,"path":"operating-system.md","ref":"operating-system.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-faq"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-faq":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"design-principle.md","mtime":"2019-06-27T16:03:18.214Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-30T11:42:34.240Z"},"basePath":".","book":{"language":""}})
 })();
 </script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
