@@ -291,7 +291,7 @@ class Page_Center extends Component {
                         size={800}
                         marginTop={20}
                     >
-                        现在我需要3个月的实习机会，remote或local都可以，南京、成都、上海优先。
+                        我需要3个月的实习机会(2020.2.1前有效)，remote或local都可以，南京、成都、上海优先。
                     </Paragraph>
                     <Paragraph
                         fontFamily='ui'
