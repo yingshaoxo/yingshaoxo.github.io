@@ -291,14 +291,14 @@ class Page_Center extends Component {
                         size={800}
                         marginTop={20}
                     >
-                        yingshaoxo thought he was the greatest man in this world.
+                        现在我需要3个月的实习机会，remote或local都可以，南京、成都、上海优先。
                     </Paragraph>
                     <Paragraph
                         fontFamily='ui'
                         size={800}
                         marginTop={10}
                     >
-                        How do you think?
+                        你能帮助我完成实习并顺利毕业吗？
                     </Paragraph>
                     <Button
                         appearance="minimal"
