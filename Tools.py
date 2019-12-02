@@ -36,7 +36,7 @@ class Tools():
     def push(self, comment):
         t.run("""
         cd 2.Powered_by_React/
-        sudo Tools.py build
+        sudo python3 Tools.py build
         cd ..
         """)
         t.run('git add .')
