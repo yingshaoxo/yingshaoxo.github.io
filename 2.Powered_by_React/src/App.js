@@ -291,14 +291,14 @@ class Page_Center extends Component {
                         size={800}
                         marginTop={20}
                     >
-                        我需要3个月的实习机会(最晚2020.2.1开始)，remote或local都可以，南京、成都、上海优先。
+                        School is not a place for smart people.
                     </Paragraph>
                     <Paragraph
                         fontFamily='ui'
                         size={800}
                         marginTop={10}
                     >
-                        你能帮助我完成实习并顺利毕业吗？
+                        --- Rick and Morty
                     </Paragraph>
                     <Button
                         appearance="minimal"
