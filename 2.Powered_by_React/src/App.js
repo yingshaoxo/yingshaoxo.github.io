@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 
-import { Dialog, Text, Avatar, Paragraph, Pane } from 'evergreen-ui'
+import { Icon, Dialog, Text, Avatar, Paragraph, Pane } from 'evergreen-ui'
 import { Button, toaster } from 'evergreen-ui'
 import { TextInput, Autocomplete } from 'evergreen-ui'
 import { SideSheet } from 'evergreen-ui'
@@ -10,6 +10,8 @@ import { Table } from 'evergreen-ui'
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import SwipeableViews from 'react-swipeable-views';
+
+import Iframe from 'react-iframe'
 
 import {
     BrowserView,
@@ -54,18 +56,18 @@ class Hello_Component extends Component {
         return (
             <div
                 style={{
-                    display: 'flex',  
-                    justifyContent:'center', 
-                    alignItems:'center', 
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
                     height: '10vh'
                 }}
             >
                 <Dialog
-                isShown={this.state.isShown}
-                title="A msg from yingshaoxo"
-                onCloseComplete={() => this.setState({ isShown: false })}
-                confirmLabel="Nice to see you"
-                hasCancel={false}
+                    isShown={this.state.isShown}
+                    title="A msg from yingshaoxo"
+                    onCloseComplete={() => this.setState({ isShown: false })}
+                    confirmLabel="Nice to see you"
+                    hasCancel={false}
                 >
                     <Text size={900}>Hello, welcome to my world!</Text>
                 </Dialog>
@@ -79,23 +81,23 @@ class Search_Bar extends Component {
         return (
             <div>
                 <Autocomplete
-                title="Fruits"
-                onChange={(changedItem) => console.log(changedItem)}
-                items={['Diary', 'Posts', 'QQ Number']}
+                    title="Fruits"
+                    onChange={(changedItem) => console.log(changedItem)}
+                    items={['Diary', 'Posts', 'QQ Number']}
                 >
-                {(props) => {
-                    const { getInputProps, getRef, inputValue } = props
-                    return (
-                    <TextInput
-                        height={32}
-                        width="30vw"
-                        placeholder="Tweets"
-                        value={inputValue}
-                        innerRef={getRef}
-                        {...getInputProps()}
-                    />
-                    )
-                }}
+                    {(props) => {
+                        const { getInputProps, getRef, inputValue } = props
+                        return (
+                            <TextInput
+                                height={32}
+                                width="30vw"
+                                placeholder="Tweets"
+                                value={inputValue}
+                                innerRef={getRef}
+                                {...getInputProps()}
+                            />
+                        )
+                    }}
                 </Autocomplete>
             </div>
         )
@@ -115,8 +117,8 @@ class My_Paragraph extends Component {
     render() {
         return (
             <Paragraph
-                size = {200}
-                marginBottom = {30}
+                size={200}
+                marginBottom={30}
             >
                 {this.state.children}
             </Paragraph>
@@ -129,7 +131,7 @@ class Icon_Container extends Component {
         return (
             <div
                 style={{
-                    margin:15
+                    margin: 15
                 }}
                 onClick={this.props.onClick}
             >
@@ -198,7 +200,7 @@ class Introduction extends Component {
                     <Icon_Container
                         onClick={() => {
                             toaster.success('yingshaoxo@gmail.com', {
-                                duration: 10 
+                                duration: 10
                             })
                         }}
                     >
@@ -229,7 +231,7 @@ class Page_Center extends Component {
         return (
             <div>
                 {
-                    this.state.show_sheet && 
+                    this.state.show_sheet &&
                     <div>
                         <BrowserView>
                             <SideSheet
@@ -241,12 +243,12 @@ class Page_Center extends Component {
                                     }
                                 }}
                                 onCloseComplete={() => {
-                                    this.setState({ 
+                                    this.setState({
                                         show_sheet: false
                                     })
                                 }}
                             >
-                                <Introduction 
+                                <Introduction
                                     alignItems="center"
                                     height='100vh'
                                 ></Introduction>
@@ -263,14 +265,14 @@ class Page_Center extends Component {
                                 }}
                                 title="About yingshaoxo"
                                 onCloseComplete={() => {
-                                    this.setState({ 
+                                    this.setState({
                                         show_sheet: false
                                     })
                                 }}
                                 confirmLabel="You are genius"
                                 hasCancel={false}
                             >
-                                <Introduction 
+                                <Introduction
                                     alignItems="left"
                                     height=''
                                 ></Introduction>
@@ -377,7 +379,7 @@ class My_List extends Component {
     }
 
     render() {
-        return(
+        return (
             <List
                 style={{
                     height: "250px",
@@ -417,18 +419,18 @@ class WorkingTable extends Component {
 
     componentDidMount() {
         fetch("http://127.0.0.1:5000/WorkingTable")
-          .then(res => res.json())
-          .then(
-            (result) => {
-                this.setState({
-                    data: JSON.parse(result)
-                }) 
-            },
-          )
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    this.setState({
+                        data: JSON.parse(result)
+                    })
+                },
+            )
     }
 
     render() {
-        return(
+        return (
             <div
                 style={{
                     width: '100%',
@@ -444,39 +446,39 @@ class WorkingTable extends Component {
                         height: '100vh',
                     }}
                 >
-                {
-                    (!this.state.data)? null: 
-                    <Table>
-                        <Table.Head>
-                            <Table.TextHeaderCell flexBasis={"44vw"} flexShrink={0} flexGrow={0}>
-                                day
+                    {
+                        (!this.state.data) ? null :
+                            <Table>
+                                <Table.Head>
+                                    <Table.TextHeaderCell flexBasis={"44vw"} flexShrink={0} flexGrow={0}>
+                                        day
                             </Table.TextHeaderCell>
-                            <Table.TextHeaderCell>
-                                state
+                                    <Table.TextHeaderCell>
+                                        state
                             </Table.TextHeaderCell>
-                        </Table.Head>
-                        <Table.Body height={"80vh"} width={"50vw"}>
-                            {
-                                this.state.data.map((item, index) => (
-                                    (item['state'] == 'idle')?
-                                        <Table.Row>
-                                            <Table.TextCell flexBasis={"44vw"} flexShrink={0} flexGrow={0}>
-                                                <h4 style={{color: 'red'}}>{item['day']}</h4>
-                                            </Table.TextCell>
-                                            <Table.TextCell>{item['state']}</Table.TextCell>
-                                        </Table.Row>
-                                    :
-                                        <Table.Row>
-                                            <Table.TextCell flexBasis={"44vw"} flexShrink={0} flexGrow={0}>
-                                                <h4 style={{color: 'black'}}>{item['day']}</h4>
-                                            </Table.TextCell>
-                                            <Table.TextCell>{item['state']}</Table.TextCell>
-                                        </Table.Row>
-                                ))
-                            }
-                        </Table.Body>
-                    </Table>
-                }
+                                </Table.Head>
+                                <Table.Body height={"80vh"} width={"50vw"}>
+                                    {
+                                        this.state.data.map((item, index) => (
+                                            (item['state'] == 'idle') ?
+                                                <Table.Row>
+                                                    <Table.TextCell flexBasis={"44vw"} flexShrink={0} flexGrow={0}>
+                                                        <h4 style={{ color: 'red' }}>{item['day']}</h4>
+                                                    </Table.TextCell>
+                                                    <Table.TextCell>{item['state']}</Table.TextCell>
+                                                </Table.Row>
+                                                :
+                                                <Table.Row>
+                                                    <Table.TextCell flexBasis={"44vw"} flexShrink={0} flexGrow={0}>
+                                                        <h4 style={{ color: 'black' }}>{item['day']}</h4>
+                                                    </Table.TextCell>
+                                                    <Table.TextCell>{item['state']}</Table.TextCell>
+                                                </Table.Row>
+                                        ))
+                                    }
+                                </Table.Body>
+                            </Table>
+                    }
                 </div>
             </div>
         )
@@ -597,7 +599,7 @@ class Top_Tabs extends React.Component {
 
                             <Page_Center></Page_Center>
                         </div>
-                   </div>
+                    </div>
 
                     <div style={Object.assign({}, styles.slide, styles.slide3)}>
                         <div
@@ -638,6 +640,10 @@ class Top_Tabs extends React.Component {
 
 
 class App extends Component {
+    state = {
+        show_down_icon: true
+    };
+
     render() {
         return (
             <div>
@@ -648,7 +654,34 @@ class App extends Component {
                     <meta name="keywords" content="yingshaoxo, YS, 胡英杰, Python, AI, Keras, Tensorflow, React, Javascript, Kotlin, C++" />
                 </Helmet>
 
-                <Top_Tabs></Top_Tabs>
+                <Top_Tabs
+                    className="section"
+                    ref={ (tabs) => { this.tabs_element = tabs } }
+                ></Top_Tabs>
+
+                <Iframe 
+                    className="section"
+                    url="https://yingshaoxo.blogspot.com"
+                    width="100%"
+                    height="100%"
+                    id="my iframe"
+                    display="initial"
+                    position="realtive" />
+
+                {
+                (!this.state.show_down_icon) ? null :
+                <Icon icon="chevron-down" color="selected" size={36}
+                    onClick= {() => {
+                        let visual_height_of_our_page = window.innerHeight
+                        let current_y = window.scrollY 
+                        if (current_y == 0) {
+                            this.setState({show_down_icon: false})
+                            window.scrollTo(0, visual_height_of_our_page*2)
+                        }
+                    }}
+                    className="floating-icon"
+                />
+                }
             </div>
         )
     }

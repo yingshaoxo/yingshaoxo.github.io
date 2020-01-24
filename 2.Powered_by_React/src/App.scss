@@ -2,15 +2,8 @@
   text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.no-x-bar {
+  overflow-x: hidden; //horizontal
 }
 
 @keyframes App-logo-spin {
@@ -19,5 +12,57 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.section {
+  height: 100vh;
+}
+
+/* For Mobile */
+@media screen and (max-width: 540px) {
+  .floating-icon {
+    position:fixed;
+
+    margin-left: 45vw;
+    margin-right: 50vw;
+
+    bottom:5px;
+  }
+}
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+  .floating-icon {
+    position:fixed;
+
+    margin-left: 46vw;
+    margin-right: 50vw;
+
+    bottom:5px;
+  }
+}
+
+/* For PC */
+@media screen and (min-width: 780px) and (max-width: 1250px) {
+  .floating-icon {
+    position:fixed;
+
+    margin-left: 47.5vw;
+    margin-right: 50vw;
+
+    bottom:5px;
+  }
+}
+
+/* For PC */
+@media screen and (min-width: 1250px) {
+  .floating-icon {
+    position:fixed;
+
+    margin-left: 48.7vw;
+    margin-right: 50vw;
+
+    bottom:5px;
   }
 }
