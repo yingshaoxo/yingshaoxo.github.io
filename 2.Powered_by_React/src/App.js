@@ -674,10 +674,8 @@ class App extends Component {
                     onClick= {() => {
                         let visual_height_of_our_page = window.innerHeight
                         let current_y = window.scrollY 
-                        if (current_y == 0) {
-                            this.setState({show_down_icon: false})
-                            window.scrollTo(0, visual_height_of_our_page*2)
-                        }
+                        this.setState({show_down_icon: false})
+                        window.scrollTo(0, visual_height_of_our_page*2)
                     }}
                     className="floating-icon"
                 />
