@@ -641,8 +641,16 @@ class Top_Tabs extends React.Component {
 
 class App extends Component {
     state = {
-        show_down_icon: true
+        show_down_icon: true,
+        show_blog: false
     };
+
+    componentDidMount() {
+        let isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+        if (isChrome) {
+            this.setState({show_blog: true})
+        } 
+    }
 
     render() {
         return (
@@ -659,12 +667,24 @@ class App extends Component {
                     ref={ (tabs) => { this.tabs_element = tabs } }
                 ></Top_Tabs>
 
+                {
+                (!this.state.show_blog) ? null :
                 <Iframe 
                     className="section"
-                    url="https://yingshaoxo.blogspot.com/"
+                    url="https://yingshaoxo.blogspot.com"
                     width="100%"
                     height="100%"
-                    id="my iframe"
+                    id="my_blog"
+                    display="initial"
+                    position="realtive" />
+                }
+
+                <Iframe 
+                    className="section"
+                    url="https://ai-tools-online.xyz"
+                    width="100%"
+                    height="100%"
+                    id="my_chat_box"
                     display="initial"
                     position="realtive" />
 
@@ -675,7 +695,7 @@ class App extends Component {
                         let visual_height_of_our_page = window.innerHeight
                         let current_y = window.scrollY 
                         this.setState({show_down_icon: false})
-                        window.scrollTo(0, visual_height_of_our_page*2)
+                        window.scrollTo(0, visual_height_of_our_page*4)
                     }}
                     className="floating-icon"
                 />
