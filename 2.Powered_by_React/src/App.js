@@ -661,7 +661,7 @@ class App extends Component {
 
                 <Iframe 
                     className="section"
-                    url="http://ai-tools-online.xyz:5000/"
+                    url="https://yingshaoxo.blogspot.com/"
                     width="100%"
                     height="100%"
                     id="my iframe"
