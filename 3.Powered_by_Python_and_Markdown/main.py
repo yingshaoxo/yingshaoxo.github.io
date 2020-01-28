@@ -49,4 +49,10 @@ class BlogTool():
         for article in articles:
             print(article)
 
+    def push(self, comment):
+        t.run('python3 generator.py')
+        t.run('git add .')
+        t.run('git commit -m "{}"'.format(comment))
+        t.run('git push origin')
+
 py.fire(BlogTool)

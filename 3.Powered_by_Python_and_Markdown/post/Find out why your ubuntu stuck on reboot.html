@@ -1,0 +1,62 @@
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/github-markdown.css">
+<title>Find out why your ubuntu stuck on reboot</title>
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+        padding: 10px;
+    }
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+
+        font-size: 20px; 
+    }
+
+    @media (max-width: 767px) {
+        .markdown-body {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<article class="markdown-body">
+<h1>Find out why your ubuntu stuck on reboot</h1>
+
+<h3>Let's show detail logs when we were rebooting</h3>
+
+<ol>
+<li><p>edit <code>/etc/default/grub</code>, change the line <code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"</code> to <code>GRUB_CMDLINE_LINUX_DEFAULT=""</code></p>
+
+<blockquote>
+  <p>quiet: this option tells the kernel to NOT produce any output. (If you add this, you'll see a screen of printed messages)</p>
+  
+  <p>splash: this option is used to start an eye-candy "loading" screen while all the core parts of the system are loaded in the background.</p>
+</blockquote></li>
+<li><p>run <code>update-grub2</code> or <code>update-grub</code> to reload the config</p></li>
+</ol>
+
+<h3>Can we just temporarily solve this problem?</h3>
+
+<ol>
+<li>edit <code>/etc/systemd/system.conf</code></li>
+<li>change a few lines of old config to: 
+<code>
+DefaultTimeoutStartSec=5s
+DefaultTimeoutStopSec=5s
+</code></li>
+<li>run <code>sudo systemctl daemon-reload</code></li>
+</ol>
+
+</article>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML">
+</script>
