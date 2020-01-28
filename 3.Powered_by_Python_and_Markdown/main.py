@@ -51,6 +51,7 @@ class BlogTool():
 
     def push(self, comment):
         t.run('python3 generator.py')
+        t.run('cp post/* ../posts -r')
         t.run('git add .')
         t.run('git commit -m "{}"'.format(comment))
         t.run('git push origin')
