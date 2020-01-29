@@ -1,5 +1,5 @@
 ### Let's show detail logs when we were rebooting
-1. edit `/etc/default/grub`, change the line `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"` to `GRUB_CMDLINE_LINUX_DEFAULT=""`
+1. edit `/etc/default/grub`, change the line `GRUB_CMDLINE_LINUX_DEFAULT="quiet"` to `GRUB_CMDLINE_LINUX_DEFAULT="splash"`
 
     > quiet: this option tells the kernel to NOT produce any output. (If you add this, you'll see a screen of printed messages)
 
