@@ -19,50 +19,54 @@
   height: 100vh;
 }
 
-/* For Mobile */
-@media screen and (max-width: 540px) {
-  .floating-icon {
-    position:fixed;
-
-    margin-left: 45vw;
-    margin-right: 50vw;
-
-    bottom:5px;
-  }
+.floating-icon {
+  position: absolute;
+  bottom:5px;
 }
-
-/* For Tablets */
-@media screen and (min-width: 540px) and (max-width: 780px) {
-  .floating-icon {
-    position:fixed;
-
-    margin-left: 46vw;
-    margin-right: 50vw;
-
-    bottom:5px;
-  }
-}
-
-/* For PC */
-@media screen and (min-width: 780px) and (max-width: 1250px) {
-  .floating-icon {
-    position:fixed;
-
-    margin-left: 47.5vw;
-    margin-right: 50vw;
-
-    bottom:5px;
-  }
-}
-
-/* For PC */
-@media screen and (min-width: 1250px) {
-  .floating-icon {
-    position:fixed;
-
-    margin-left: 48.7vw;
-    margin-right: 50vw;
-
-    bottom:5px;
-  }
-}
+///* For Mobile */
+//@media screen and (max-width: 540px) {
+//  .floating-icon {
+//    position:fixed;
+//
+//    margin-left: 45vw;
+//    margin-right: 50vw;
+//
+//    bottom:5px;
+//  }
+//}
+//
+///* For Tablets */
+//@media screen and (min-width: 540px) and (max-width: 780px) {
+//  .floating-icon {
+//    position:fixed;
+//
+//    margin-left: 46vw;
+//    margin-right: 50vw;
+//
+//    bottom:5px;
+//  }
+//}
+//
+///* For PC */
+//@media screen and (min-width: 780px) and (max-width: 1250px) {
+//  .floating-icon {
+//    position:fixed;
+//
+//    margin-left: 47.5vw;
+//    margin-right: 50vw;
+//
+//    bottom:5px;
+//  }
+//}
+//
+///* For PC */
+//@media screen and (min-width: 1250px) {
+//  .floating-icon {
+//    position:fixed;
+//
+//    margin-left: 48.7vw;
+//    margin-right: 50vw;
+//
+//    bottom:5px;
+//  }
+//}

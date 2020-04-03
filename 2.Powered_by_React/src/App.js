@@ -283,7 +283,7 @@ class Page_Center extends Component {
 
                 <Pane>
                     <Avatar
-                        src="https://avatars0.githubusercontent.com/u/17190829?s=460&v=4"
+                        src="me.jpg"
                         name="yingshaoxo"
                         size={200}
                     />
@@ -650,6 +650,17 @@ class App extends Component {
         if (isChrome) {
             this.setState({show_blog: true})
         } 
+
+
+        window.addEventListener('scroll', () => {
+            if (this.state.show_down_icon == true) {
+                //let visual_height_of_our_page = window.innerHeight
+                let current_y = window.scrollY 
+                if (current_y > 0) {
+                    this.setState({show_down_icon: false})
+                }
+            }
+        })
     }
 
     render() {
@@ -690,15 +701,24 @@ class App extends Component {
 
                 {
                 (!this.state.show_down_icon) ? null :
-                <Icon icon="chevron-down" color="selected" size={36}
-                    onClick= {() => {
-                        let visual_height_of_our_page = window.innerHeight
-                        let current_y = window.scrollY 
-                        this.setState({show_down_icon: false})
-                        window.scrollTo(0, visual_height_of_our_page*4)
-                    }}
-                    className="floating-icon"
-                />
+                <div style={{
+                    width:"100vw",
+                    display: "flex",
+                    justifyContent: "center",
+                }}>
+                    <Icon icon="chevron-down" color="selected" size={36}
+                        onClick= {() => {
+                            let visual_height_of_our_page = window.innerHeight
+                            let current_y = window.scrollY 
+                            //this.setState({show_down_icon: false})
+                            window.scrollTo(0, visual_height_of_our_page*4)
+                            setInterval(() => {
+                                window.scrollTo(0, visual_height_of_our_page*4)
+                            }, 10)
+                        }}
+                        className="floating-icon"
+                    />
+                </div>
                 }
             </div>
         )
