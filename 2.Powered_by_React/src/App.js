@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import React, { Component } from 'react';
 import './App.scss';
 
@@ -40,6 +41,11 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
+
+if (window.location.host == "yingshaoxo.xyz") {
+    ReactGA.initialize('UA-157005302-3');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+}
 
 var request = require('request');
 

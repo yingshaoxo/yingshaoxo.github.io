@@ -10,6 +10,7 @@
     "react": "^16.6.3",
     "react-device-detect": "^1.6.1",
     "react-dom": "^16.5.2",
+    "react-ga": "^2.7.0",
     "react-helmet": "^5.2.0",
     "react-iframe": "^1.8.0",
     "react-scripts": "2.0.5",
