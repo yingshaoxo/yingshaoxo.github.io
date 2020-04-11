@@ -688,7 +688,7 @@ class App extends Component {
                 (!this.state.show_blog) ? null :
                 <Iframe 
                     className="section"
-                    url="https://yingshaoxo.blogspot.com"
+                    url="https://blog.ai-tools-online.xyz"
                     width="100%"
                     height="100%"
                     id="my_blog"
@@ -698,7 +698,7 @@ class App extends Component {
 
                 <Iframe 
                     className="section"
-                    url="https://ai-tools-online.xyz"
+                    url="https://chat.ai-tools-online.xyz"
                     width="100%"
                     height="100%"
                     id="my_chat_box"

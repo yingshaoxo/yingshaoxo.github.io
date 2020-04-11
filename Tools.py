@@ -34,14 +34,14 @@ class Tools():
                 print(t.run_command(command, timeout=30000))
 
     def push(self, comment):
-        t.run("""
+        t.run(f"""
         cd 2.Powered_by_React/
         sudo python3 Tools.py build
         cd ..
+        sudo git add .
+        sudo git commit -m "{comment}"
+        sudo git push origin
         """)
-        t.run('git add .')
-        t.run('git commit -m "{}"'.format(comment))
-        t.run('git push origin')
 
     def pull(self):
         t.run("""
