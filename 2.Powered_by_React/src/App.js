@@ -630,9 +630,9 @@ class Top_Tabs extends React.Component {
                                         "url": "https://www.youtube.com/channel/UCbT9GDmkqf555ATReJor6ag",
                                     },
                                     {
-                                        "title": "AI tools",
-                                        "description": "This is a 10 year project",
-                                        "url": "https://ai-tools.xyz",
+                                        "title": "Blogger",
+                                        "description": "I wrote tech posts here",
+                                        "url": "https://yingshaoxo.blogspot.com/",
                                     },
                                 ]}
                             ></My_List>
