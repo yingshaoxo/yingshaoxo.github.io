@@ -562,6 +562,11 @@ class Top_Tabs extends React.Component {
                                         "url": "https://leanpub.com/usepythontobuildamoderncommunicationsystem",
                                     },
                                     {
+                                        "title": "AI for Idiots",
+                                        "description": "I'm a idiot, but I want to learn AI even before I getting start programming",
+                                        "url": "https://yingshaoxo.xyz/books/artificial-intelligence-for-idiots",
+                                    },
+                                    {
                                         "title": "University Notes",
                                         "description": "Some notes made by myself",
                                         "url": "https://yingshaoxo.xyz/books/University_Notes",
@@ -575,11 +580,6 @@ class Top_Tabs extends React.Component {
                                         "title": "C/C++ tutorial for Pythoner",
                                         "description": "Make C/C++ simpler for learning.",
                                         "url": "https://yingshaoxo.gitbook.io/c-c-tutorial-for-pythoner/",
-                                    },
-                                    {
-                                        "title": "AI for Idiots",
-                                        "description": "I'm a idiot, but I want to learn AI even before I getting start programming",
-                                        "url": "https://yingshaoxo.xyz/books/artificial-intelligence-for-idiots",
                                     },
                                     {
                                         "title": "物质与思想",
