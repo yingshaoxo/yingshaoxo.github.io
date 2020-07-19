@@ -495,6 +495,8 @@ class WorkingTable extends Component {
 const styles = {
     tabs: {
         background: '#fff',
+        display: "flex",
+        justifyContent: "center"
     },
     slide: {
         padding: 15,
@@ -534,7 +536,7 @@ class Top_Tabs extends React.Component {
 
         return (
             <div>
-                <Tabs value={index} fullWidth onChange={this.handleChange} style={styles.tabs}>
+                <Tabs value={index} centered fullWidth onChange={this.handleChange} style={styles.tabs}>
                     <Tab label="My Books" />
                     <Tab label="My Introduction" />
                     <Tab label="My Projects" />
@@ -549,6 +551,7 @@ class Top_Tabs extends React.Component {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 height: '100vh',
+                                width: '100vw',
                             }}
                         >
                             <My_List
@@ -592,6 +595,7 @@ class Top_Tabs extends React.Component {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 height: '100vh',
+                                width: '100vw',
                             }}
                         >
                             {
@@ -615,6 +619,7 @@ class Top_Tabs extends React.Component {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 height: '100vh',
+                                width: '100vw',
                             }}
                         >
                             <My_List
