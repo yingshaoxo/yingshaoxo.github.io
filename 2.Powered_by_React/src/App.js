@@ -557,6 +557,11 @@ class Top_Tabs extends React.Component {
                             <My_List
                                 data={[
                                     {
+                                        "title": "use-python-to-build-a-modern-communication-system",
+                                        "description": "This the first Ebook and first thesis I published.",
+                                        "url": "https://leanpub.com/usepythontobuildamoderncommunicationsystem",
+                                    },
+                                    {
                                         "title": "University Notes",
                                         "description": "Some notes made by myself",
                                         "url": "https://yingshaoxo.xyz/books/University_Notes",
