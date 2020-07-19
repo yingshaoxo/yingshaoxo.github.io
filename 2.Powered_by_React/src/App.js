@@ -696,15 +696,6 @@ class App extends Component {
                     position="realtive" />
                 }
 
-                <Iframe 
-                    className="section"
-                    url="https://chat.ai-tools-online.xyz"
-                    width="100%"
-                    height="100%"
-                    id="my_chat_box"
-                    display="initial"
-                    position="realtive" />
-
                 {
                 (!this.state.show_down_icon) ? null :
                 <div style={{
