@@ -2,6 +2,8 @@ import ReactGA from 'react-ga';
 import React, { Component } from 'react';
 import './App.scss';
 
+import Sound from 'react-sound';
+
 import { Icon, Dialog, Text, Avatar, Paragraph, Pane } from 'evergreen-ui'
 import { Button, toaster } from 'evergreen-ui'
 import { TextInput, Autocomplete } from 'evergreen-ui'
@@ -688,6 +690,14 @@ class App extends Component {
                     <meta name="description" content="yingshaoxo, born in 1998, love IT and AI. Want to be a great ML engineer. So I just keep learning and practice everyday." />
                     <meta name="keywords" content="yingshaoxo, YS, 胡英杰, Python, AI, Keras, Tensorflow, React, Javascript, Kotlin, C++" />
                 </Helmet>
+
+                <Sound 
+                    url="chosen.mp3"
+                    playStatus = {Sound.status.PLAYING}
+                    autoLoad = {true}
+                    volume = {15}
+                >
+                </Sound>
 
                 <Top_Tabs
                     className="section"
