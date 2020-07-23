@@ -125,7 +125,7 @@ class My_Paragraph extends Component {
     render() {
         return (
             <Paragraph
-                size={200}
+                size={500}
                 marginBottom={30}
             >
                 {this.state.children}
@@ -243,13 +243,9 @@ class Page_Center extends Component {
                     <div>
                         <BrowserView>
                             <SideSheet
-                                isShown={() => {
-                                    if (this.state.show_sheet) {
-                                        return true
-                                    } else {
-                                        return false
-                                    }
-                                }}
+                                isShown={
+                                    this.state.show_sheet
+                                }
                                 onCloseComplete={() => {
                                     this.setState({
                                         show_sheet: false
@@ -298,14 +294,14 @@ class Page_Center extends Component {
 
                     <Paragraph
                         fontFamily='ui'
-                        size={800}
+                        size={500}
                         marginTop={20}
                     >
                         School is not a place for smart people.
                     </Paragraph>
                     <Paragraph
                         fontFamily='ui'
-                        size={800}
+                        size={500}
                         marginTop={10}
                     >
                         --- Rick and Morty
@@ -538,7 +534,7 @@ class Top_Tabs extends React.Component {
 
         return (
             <div>
-                <Tabs value={index} centered fullWidth onChange={this.handleChange} style={styles.tabs}>
+                <Tabs value={index} centered onChange={this.handleChange} style={styles.tabs}>
                     <Tab label="My Books" />
                     <Tab label="My Introduction" />
                     <Tab label="My Projects" />
@@ -678,7 +674,6 @@ class App extends Component {
                 if (current_y > 0) {
                     this.setState({
                         show_down_icon: false,
-                        music_status: Sound.status.PLAYING
                     })
                 }
             }
@@ -733,9 +728,10 @@ class App extends Component {
                             let current_y = window.scrollY 
                             //this.setState({show_down_icon: false})
                             window.scrollTo(0, visual_height_of_our_page*4)
-                            setInterval(() => {
-                                window.scrollTo(0, visual_height_of_our_page*4)
-                            }, 10)
+
+                            this.setState({
+                                music_status: Sound.status.PLAYING
+                            })
                         }}
                         className="floating-icon"
                     />
