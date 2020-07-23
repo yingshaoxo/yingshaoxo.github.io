@@ -494,7 +494,7 @@ const styles = {
     tabs: {
         background: '#fff',
         display: "flex",
-        justifyContent: "center"
+        justifyContent: "center",
     },
     slide: {
         padding: 15,
@@ -549,7 +549,7 @@ class Top_Tabs extends React.Component {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 height: '100vh',
-                                width: '100vw',
+                                width: '100%',
                             }}
                         >
                             <My_List
@@ -622,7 +622,7 @@ class Top_Tabs extends React.Component {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 height: '100vh',
-                                width: '100vw',
+                                width: '100%',
                             }}
                         >
                             <My_List
