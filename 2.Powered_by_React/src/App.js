@@ -598,7 +598,7 @@ class Top_Tabs extends React.Component {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 height: '100vh',
-                                width: '100vw',
+                                width: '100%',
                             }}
                         >
                             {
