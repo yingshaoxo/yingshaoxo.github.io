@@ -660,7 +660,8 @@ class Top_Tabs extends React.Component {
 class App extends Component {
     state = {
         show_down_icon: true,
-        show_blog: false
+        show_blog: false,
+        music_status: Sound.status.STOPPED
     };
 
     componentDidMount() {
@@ -675,7 +676,10 @@ class App extends Component {
                 //let visual_height_of_our_page = window.innerHeight
                 let current_y = window.scrollY 
                 if (current_y > 0) {
-                    this.setState({show_down_icon: false})
+                    this.setState({
+                        show_down_icon: false,
+                        music_status: Sound.status.PLAYING
+                    })
                 }
             }
         })
@@ -693,9 +697,9 @@ class App extends Component {
 
                 <Sound 
                     url="chosen.mp3"
-                    playStatus = {Sound.status.PLAYING}
+                    playStatus = {this.state.music_status}
                     autoLoad = {true}
-                    volume = {15}
+                    volume = {10}
                 >
                 </Sound>
 
