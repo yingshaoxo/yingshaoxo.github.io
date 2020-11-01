@@ -8,7 +8,7 @@ io_ = IO()
 
 class Tools():
     def build(self):
-        t.run('sudo yarn build')
+        t.run('yarn build')
         content = io_.read("./build/index.html")
         content = content.replace("<title>React App</title>", """
                 <title>yingshaoxo | 技术宅</title>

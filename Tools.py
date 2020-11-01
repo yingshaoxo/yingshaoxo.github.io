@@ -36,11 +36,11 @@ class Tools():
     def push(self, comment):
         t.run(f"""
         cd 2.Powered_by_React/
-        sudo python3 Tools.py build
+        python3 Tools.py build
         cd ..
-        sudo git add .
-        sudo git commit -m "{comment}"
-        sudo git push origin
+        git add .
+        git commit -m "{comment}"
+        git push origin
         """)
 
     def pull(self):
