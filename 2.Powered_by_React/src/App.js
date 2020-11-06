@@ -1,3 +1,7 @@
+/*
+School is not a place for smart people.
+--- Rick and Morty
+*/
 import ReactGA from 'react-ga';
 import React, { Component } from 'react';
 import './App.scss';
@@ -297,14 +301,14 @@ class Page_Center extends Component {
                         size={500}
                         marginTop={20}
                     >
-                        School is not a place for smart people.
+                        Freelance isn't about having a free choice to work for someone.
                     </Paragraph>
                     <Paragraph
                         fontFamily='ui'
                         size={500}
                         marginTop={10}
                     >
-                        --- Rick and Morty
+                        It is about having the freedom to choose a direction, to make your product, to find a selling channel that makes money.
                     </Paragraph>
                     <Button
                         appearance="minimal"
