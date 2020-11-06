@@ -308,7 +308,7 @@ class Page_Center extends Component {
                         size={500}
                         marginTop={10}
                     >
-                        It is about having the freedom to choose a direction, to make your product, to find a selling channel that makes money.
+                        It's about having the freedom to choose a direction, to make your product, to find a selling channel that makes money.
                     </Paragraph>
                     <Button
                         appearance="minimal"
