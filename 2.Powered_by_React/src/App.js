@@ -170,10 +170,10 @@ class Introduction extends Component {
                 }}
             >
                 <My_Paragraph>
-                    Born in 1998, University Student Maybe.
+                    Born in 1998, individual developer.
                 </My_Paragraph>
                 <My_Paragraph>
-                    Interested in almost EVERYTHING about IT and AI.
+                    Interested in almost EVERYTHING about Programming and Deep Learning.
                 </My_Paragraph>
                 <My_Paragraph>
                     A So-called GEEK.
@@ -191,7 +191,7 @@ class Introduction extends Component {
                     Dream about building a great AI to make the world a better place.
                 </My_Paragraph>
                 <My_Paragraph>
-                    Exciting!
+                    If I failed, at least I could get some money to let myself lives better.
                 </My_Paragraph>
 
                 <div
