@@ -231,6 +231,70 @@ class Introduction extends Component {
     }
 }
 
+class Quotes extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            text: "",
+        }
+    }
+
+    get_random_one = () => {
+        const default_one = (
+                    <Paragraph
+                        fontFamily='ui'
+                        size={500}
+                        marginTop={20}
+                    >
+                    </Paragraph>
+            )
+        if (this.state.text) {
+            const array = this.state.text.split(/\n/)
+            let paragraphs = []
+            array.forEach((t,index) => {
+                paragraphs.push(
+                    <Paragraph
+                        fontFamily='ui'
+                        size={500}
+                        marginTop={20}
+                        key={index}
+                    >
+                        {t}
+                    </Paragraph>
+                )
+            })
+            return (
+                <div
+                    style={{
+                        maxHeight:'40vh',
+                        overflowY: "auto"
+                    }}
+                >
+                    {paragraphs}
+                </div>
+            )
+        } else {
+            return default_one
+        }
+    }
+
+    componentDidMount() {
+        fetch('data/mine.json')
+          .then(response => response.json())
+          .then(data => {
+                this.setState({
+                    text: data[Math.floor(Math.random() * data.length)][2]
+                })
+          });
+
+    }
+
+    render() {
+        return this.get_random_one()
+        
+    }
+}
+
 class Page_Center extends Component {
     constructor(props) {
         super(props)
@@ -296,20 +360,9 @@ class Page_Center extends Component {
                         size={200}
                     />
 
-                    <Paragraph
-                        fontFamily='ui'
-                        size={500}
-                        marginTop={20}
-                    >
-                        Freelance isn't about having a free choice to work for someone.
-                    </Paragraph>
-                    <Paragraph
-                        fontFamily='ui'
-                        size={500}
-                        marginTop={10}
-                    >
-                        It's about having the freedom to choose a direction, to make your product, to find a selling channel that makes money.
-                    </Paragraph>
+                    <Quotes>
+                    </Quotes>
+
                     <Button
                         appearance="minimal"
                         intent="success"
