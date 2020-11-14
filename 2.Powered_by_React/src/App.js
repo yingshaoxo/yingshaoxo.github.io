@@ -282,9 +282,26 @@ class Quotes extends Component {
         fetch('data/mine.json')
           .then(response => response.json())
           .then(data => {
-                this.setState({
-                    text: data[Math.floor(Math.random() * data.length)][2]
-                })
+                let storage_today = localStorage.getItem("today")
+                let this_day = new Date().toLocaleDateString()
+                if (storage_today == null) {
+                    localStorage.setItem("today", this_day)
+                    this.setState({
+                        text: data[Math.floor(Math.random() * data.length)][2]
+                    })
+                } else {
+                    if (this_day != storage_today) {
+                        this.setState({
+                            text: data[Math.floor(Math.random() * data.length)][2]
+                        })
+                        localStorage.setItem("today", this_day)
+                    } else {
+                        this.setState({
+                            text: `Love others, others would also love you.`
+                            //text: `You can never defeat a person who never gives up unless he has died.`
+                        })
+                    }
+                }
           });
 
     }
