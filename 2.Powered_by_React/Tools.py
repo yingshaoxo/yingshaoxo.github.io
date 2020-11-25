@@ -1,3 +1,4 @@
+#!/usr/bin/env /home/yingshaoxo/miniconda3/bin/python3
 #!/usr/bin/env /usr/bin/python3
  
 #!/usr/bin/env /usr/bin/python3

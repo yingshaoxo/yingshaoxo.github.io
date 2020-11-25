@@ -173,7 +173,7 @@ class Introduction extends Component {
                     Born in 1998, individual developer.
                 </My_Paragraph>
                 <My_Paragraph>
-                    Interested in almost EVERYTHING about Programming and Deep Learning.
+                    Interested in almost EVERYTHING about Programming and ML.
                 </My_Paragraph>
                 <My_Paragraph>
                     A So-called GEEK.
@@ -191,7 +191,7 @@ class Introduction extends Component {
                     Dream about building a great AI to make the world a better place.
                 </My_Paragraph>
                 <My_Paragraph>
-                    If I failed, at least I could get some money to let myself lives better.
+                    If I failed, at least I could get some money to let myself and my family lives better.
                 </My_Paragraph>
 
                 <div
@@ -220,7 +220,7 @@ class Introduction extends Component {
                     </Icon_Container>
                     <Icon_Container
                         onClick={() => {
-                            window.open("https://t.me/EasyProgrammingLanguage", "_blank")
+                            window.open("https://t.me/contact_yingshaoxo", "_blank")
                         }}
                     >
                         <TelegramIcon></TelegramIcon>
