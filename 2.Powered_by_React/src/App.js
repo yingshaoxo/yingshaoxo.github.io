@@ -241,17 +241,17 @@ class Quotes extends Component {
 
     get_random_one = () => {
         const default_one = (
-                    <Paragraph
-                        fontFamily='ui'
-                        size={500}
-                        marginTop={20}
-                    >
-                    </Paragraph>
-            )
+            <Paragraph
+                fontFamily='ui'
+                size={500}
+                marginTop={20}
+            >
+            </Paragraph>
+        )
         if (this.state.text) {
             const array = this.state.text.split(/\n/)
             let paragraphs = []
-            array.forEach((t,index) => {
+            array.forEach((t, index) => {
                 paragraphs.push(
                     <Paragraph
                         fontFamily='ui'
@@ -266,7 +266,7 @@ class Quotes extends Component {
             return (
                 <div
                     style={{
-                        maxHeight:'40vh',
+                        maxHeight: '40vh',
                         overflowY: "auto"
                     }}
                 >
@@ -280,35 +280,64 @@ class Quotes extends Component {
 
     componentDidMount() {
         fetch('data/mine.json')
-          .then(response => response.json())
-          .then(data => {
+            .then(response => response.json())
+            .then(data => {
                 let storage_today = localStorage.getItem("today")
                 let this_day = new Date().toLocaleDateString()
+
+                let is_english = (str) => {
+                    try {
+                        var string = str.replace(/[\n– »’`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '')
+                        var en = string.match(/[a-z]/ig)
+                        var cn = string.match(/[^ -~]/g)
+
+                        var en_length = en.length
+                        var cn_length = cn.length
+
+                        if ((en_length > cn_length) && (((en_length - cn_length) / cn_length) > 0.2)) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    }
+                    catch (err) {
+                        return false;
+                    }
+                }
+
+                let final_string = ""
+                while (1) {
+                    final_string = data[Math.floor(Math.random() * data.length)][2]
+                    if (is_english(final_string)) {
+                        break
+                    }
+                }
+
                 if (storage_today == null) {
                     localStorage.setItem("today", this_day)
                     this.setState({
-                        text: data[Math.floor(Math.random() * data.length)][2]
+                        text: final_string
                     })
                 } else {
                     if (this_day != storage_today) {
                         this.setState({
-                            text: data[Math.floor(Math.random() * data.length)][2]
+                            text: final_string
                         })
                         localStorage.setItem("today", this_day)
                     } else {
                         this.setState({
-                            text: `Love others, others would also love you.`
+                            text: `What you think is what you are.`
                             //text: `You can never defeat a person who never gives up unless he has died.`
                         })
                     }
                 }
-          });
+            });
 
     }
 
     render() {
         return this.get_random_one()
-        
+
     }
 }
 
@@ -737,14 +766,14 @@ class App extends Component {
     componentDidMount() {
         let isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
         if (isChrome) {
-            this.setState({show_blog: true})
-        } 
+            this.setState({ show_blog: true })
+        }
 
 
         window.addEventListener('scroll', () => {
             if (this.state.show_down_icon == true) {
                 //let visual_height_of_our_page = window.innerHeight
-                let current_y = window.scrollY 
+                let current_y = window.scrollY
                 if (current_y > 0) {
                     this.setState({
                         show_down_icon: false,
@@ -764,52 +793,52 @@ class App extends Component {
                     <meta name="keywords" content="yingshaoxo, YS, 胡英杰, Python, AI, Keras, Tensorflow, React, Javascript, Kotlin, C++" />
                 </Helmet>
 
-                <Sound 
+                <Sound
                     url="chosen.mp3"
-                    playStatus = {this.state.music_status}
-                    autoLoad = {true}
-                    volume = {10}
+                    playStatus={this.state.music_status}
+                    autoLoad={true}
+                    volume={10}
                 >
                 </Sound>
 
                 <Top_Tabs
                     className="section"
-                    ref={ (tabs) => { this.tabs_element = tabs } }
+                    ref={(tabs) => { this.tabs_element = tabs }}
                 ></Top_Tabs>
 
                 {
-                (!this.state.show_blog) ? null :
-                <Iframe 
-                    className="section"
-                    url="https://blog.ai-tools-online.xyz"
-                    width="100%"
-                    height="100%"
-                    id="my_blog"
-                    display="initial"
-                    position="realtive" />
+                    (!this.state.show_blog) ? null :
+                        <Iframe
+                            className="section"
+                            url="https://blog.ai-tools-online.xyz"
+                            width="100%"
+                            height="100%"
+                            id="my_blog"
+                            display="initial"
+                            position="realtive" />
                 }
 
                 {
-                (!this.state.show_down_icon) ? null :
-                <div style={{
-                    width:"100vw",
-                    display: "flex",
-                    justifyContent: "center",
-                }}>
-                    <Icon icon="chevron-down" color="selected" size={36}
-                        onClick= {() => {
-                            let visual_height_of_our_page = window.innerHeight
-                            let current_y = window.scrollY 
-                            //this.setState({show_down_icon: false})
-                            window.scrollTo(0, visual_height_of_our_page*4)
+                    (!this.state.show_down_icon) ? null :
+                        <div style={{
+                            width: "100vw",
+                            display: "flex",
+                            justifyContent: "center",
+                        }}>
+                            <Icon icon="chevron-down" color="selected" size={36}
+                                onClick={() => {
+                                    let visual_height_of_our_page = window.innerHeight
+                                    let current_y = window.scrollY
+                                    //this.setState({show_down_icon: false})
+                                    window.scrollTo(0, visual_height_of_our_page * 4)
 
-                            this.setState({
-                                music_status: Sound.status.PLAYING
-                            })
-                        }}
-                        className="floating-icon"
-                    />
-                </div>
+                                    this.setState({
+                                        music_status: Sound.status.PLAYING
+                                    })
+                                }}
+                                className="floating-icon"
+                            />
+                        </div>
                 }
             </div>
         )
