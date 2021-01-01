@@ -294,7 +294,14 @@ class Quotes extends Component {
                         var en_length = en.length
                         var cn_length = cn.length
 
+                        /*
                         if ((en_length > cn_length) && (((en_length - cn_length) / cn_length) > 0.2)) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                        */
+                        if (en_length / string.length > 0.8) {
                             return true;
                         } else {
                             return false;
