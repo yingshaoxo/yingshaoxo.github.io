@@ -1,5 +1,5 @@
-/*
-*/
+import anime from 'animejs/lib/anime.es.js';
+
 import ReactGA from 'react-ga';
 import React, { Component } from 'react';
 import './App.scss';
@@ -21,12 +21,11 @@ if (window.location.host == "yingshaoxo.xyz") {
 }
 
 
-
 class App extends Component {
     state = {
         show_down_icon: true,
         show_blog: false,
-        music_status: Sound.status.STOPPED
+        music_status: Sound.status.STOPPED,
     };
 
     componentDidMount() {
@@ -51,7 +50,9 @@ class App extends Component {
 
     render() {
         return (
-            <div>
+            <div
+                ref={this.state.darkdom}
+            >
                 <Helmet>
                     <title>yingshaoxo | Hero Hu</title>
                     <meta name="author" content="yingshaoxo" />

@@ -104,6 +104,7 @@ class Quotes extends Component {
                             "You can never defeat a person who never gives up.",
                             `School is not a place for smart people.
                             --- Rick and Morty`,
+                            `You know what, the difference between man and man is that some of them keep their promise, while others not. I'm the first kind.`,
                         ]
                         let randomElement = theList[Math.floor(Math.random() * theList.length)]
                         this.setState({
