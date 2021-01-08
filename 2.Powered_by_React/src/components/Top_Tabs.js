@@ -27,12 +27,120 @@ import Typography from '@material-ui/core/Typography';
 import { Quotes } from './Quotes'
 import { Introduction } from "./Introduction"
 
+import anime from 'animejs/lib/anime.es.js';
+import $ from "jquery";
+
 class Page_Center extends Component {
     constructor(props) {
         super(props)
         this.state = {
             show_sheet: false,
+            headRef: React.createRef(),
         }
+    }
+
+    componentDidMount() {
+        let theNode = this.state.headRef.current
+
+        // Given an object in Cartesian coordinates { x: …, y: … }
+        // compute its Polar coordiantes { r: …, theta: … } 
+        function cartesian_to_polar({ x, y }) {
+            return {
+                r: Math.sqrt(x * x + y * y),
+                theta: Math.atan2(y, x)
+            };
+        }
+
+        // Given an object in Polar coordiantes { r: …, theta: … } 
+        // compute its Cartesian coordinates { x: …, y: … }
+        function polar_to_cartesian({ r, theta }) {
+            return {
+                x: r * Math.cos(theta),
+                y: r * Math.sin(theta)
+            };
+        }
+
+        let centerX = $(document).width() / 2 * 0.985
+        let centerY = $(document).height() / 2 * 0.97
+
+        var demoContentEl = theNode
+        var fragment = document.createDocumentFragment();
+
+        var tl = anime.timeline({
+            easing: 'easeOutExpo',
+            loop: false,
+        });
+        let lines = [];
+
+        function createEasingDemo(length, i) {
+            var demoEl = document.createElement('div');
+            demoEl.classList.add('line');
+            let startPoint = { x: 100, y: 0 }
+            let polarPoint = cartesian_to_polar(startPoint)
+            polarPoint.theta = i * (360 / length)
+            let targetPoint = polar_to_cartesian(polarPoint)
+            setTimeout(() => {
+                $(demoEl).css({
+                    'transform': `rotate(${i * (360 / length)}deg)`,
+                    'position': 'absolute',
+                    'top': `${centerY}px`,
+                    'left': `${centerX}px`,
+                })
+
+                tl.add({
+                    targets: demoEl,
+                    translateX: [-0.2 * centerX, 0.2 * centerX],
+                    direction: 'alternate',
+                    rotate: i * (360 / length),
+                    scaleX: 5,
+                    duration: 150,
+                    delay: 50,
+                    endDelay: 50,
+                })
+            }, 10);
+            lines.push(demoEl);
+            fragment.appendChild(demoEl);
+        }
+
+        let numOfElements = 20
+        for (let i = 0; i < numOfElements; i++) {
+            createEasingDemo(numOfElements, i);
+        }
+
+        //demoContentEl.innerHTML = '';
+        //demoContentEl.appendChild(fragment);
+        document.body.appendChild(fragment);
+
+        setTimeout(() => {
+            let length = lines.length
+            lines.forEach((v, i) => {
+                tl.add({
+                    targets: v,
+                    direction: 'alternate',
+                    rotate: -i * (360 / length),
+                    scaleX: 10,
+                    translateX: [0, 0.1 * centerX],
+                    translateY: [0, 0.1 * centerX],
+                    duration: 1,
+                    delay: 1,
+                    endDelay: 50,
+                })
+            })
+        }, 100);
+
+        setTimeout(() => {
+            tl.add({
+                targets: ".line",
+                translateX: [-0.2 * centerX, 0.2 * centerX],
+                direction: 'alternate',
+                rotate: 360 * 2,
+                scaleX: 20,
+                duration: 3000,
+                delay: 50,
+                endDelay: 100,
+                opacity: .0,
+            })
+        }, 200);
     }
 
     render() {
@@ -90,6 +198,7 @@ class Page_Center extends Component {
                         src="me.jpg"
                         name="yingshaoxo"
                         size={200}
+                        ref={this.state.headRef}
                     />
 
                     <Quotes>

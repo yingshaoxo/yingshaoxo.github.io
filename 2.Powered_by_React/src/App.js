@@ -34,7 +34,6 @@ class App extends Component {
             this.setState({ show_blog: true })
         }
 
-
         window.addEventListener('scroll', () => {
             if (this.state.show_down_icon == true) {
                 //let visual_height_of_our_page = window.innerHeight
