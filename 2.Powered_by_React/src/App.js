@@ -67,6 +67,8 @@ class App extends Component {
         ></Top_Tabs>
 
         {
+          /*
+        {
           (!this.state.show_blog) ? null :
             <Iframe
               className="section"
@@ -99,6 +101,8 @@ class App extends Component {
                 className="floating-icon"
               />
             </div>
+        }
+        */
         }
       </div>
     );
