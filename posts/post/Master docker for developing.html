@@ -1,0 +1,99 @@
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/github-markdown.css">
+<title>Master docker for developing</title>
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+        padding: 10px;
+    }
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+
+        font-size: 20px; 
+    }
+
+    @media (max-width: 767px) {
+        .markdown-body {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<article class="markdown-body">
+<h1>Master docker for developing</h1>
+
+<h4>0. Read This</h4>
+
+<pre><code>FROM ubuntu:17.10
+
+ENV LANG C.UTF-8
+
+RUN apt-get update
+RUN apt-get install -y python3
+RUN apt-get install -y python3-pip
+RUN apt-get install -y python3.6-dev
+
+COPY ./requirements.txt /usr/src/Local_Show/requirements.txt
+RUN pip3 install --no-cache-dir -r /usr/src/Local_Show/requirements.txt
+
+COPY . /usr/src/Local_Show/
+
+RUN chmod +x /usr/src/Local_Show/tool.sh
+
+RUN mkdir -p /usr/src/Local_Show/files
+
+EXPOSE 2018
+
+CMD ["bash", "/usr/src/Local_Show/tool.sh", "docker_run"]
+</code></pre>
+
+<h4>1. Basic Things</h4>
+
+<p><code>FROM</code> indicates what image you are based on.</p>
+
+<p><code>ENV LANG C.UTF-8</code> sets what encoding your system will use, something will go wrong in Chinese without it</p>
+
+<p><code>RUN</code> represents every stage you are going, docker will store that stage every time after that line is executed</p>
+
+<p><code>COPY</code> is like <code>cp</code></p>
+
+<p>The important thing is: <strong><code>CMD</code> is always the final line of your docker file, that command should be running forever as long as docker container is running</strong> </p>
+
+<h4>2. The Principle</h4>
+
+<blockquote>
+  <p>Put those changeable things in the last, it allows you building docker image quicker</p>
+</blockquote>
+
+<h4>2-3. Buliding</h4>
+
+<pre><code>sudo docker build -t yingshaoxo/local_show:1.0 .
+</code></pre>
+
+<h4>3. Debug Stuff</h4>
+
+<pre><code>sudo docker logs local_show
+</code></pre>
+
+<p><code>sudo docker exec -i -t local_show /bin/bash</code> or <code>sudo docker run --name local_show -it yingshaoxo/local_show:1.0 /bin/bash</code></p>
+
+<h4>4. Come  and Push</h4>
+
+<p><a href="https://docs.docker.com/config/daemon/systemd/">set proxy</a></p>
+
+<pre><code>sudo docker commit local_show yingshaoxo/local_show:1.0
+</code></pre>
+
+</article>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML">
+</script>

@@ -1,0 +1,3206 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>KCL and KVL · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="superposition.html" />
+    
+    
+    <link rel="prev" href="the-circuit-rule.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../high-level-math.html">
+            
+                <a href="../../high-level-math.html">
+            
+                    
+                    High Level Math
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../high-level-math/function-limitation-and-continuity-of-function.html">
+            
+                <a href="../../high-level-math/function-limitation-and-continuity-of-function.html">
+            
+                    
+                    Function, limitation, and continuity
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../high-level-math/function-limitation-and-continuity-of-function/what-is-function.html">
+            
+                <a href="../../high-level-math/function-limitation-and-continuity-of-function/what-is-function.html">
+            
+                    
+                    What is function?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../high-level-math/function-limitation-and-continuity-of-function/two-kinds-of-infinity.html">
+            
+                <a href="../../high-level-math/function-limitation-and-continuity-of-function/two-kinds-of-infinity.html">
+            
+                    
+                    Two kinds of infinity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../high-level-math/function-limitation-and-continuity-of-function/the-limitation-of-a-function.html">
+            
+                <a href="../../high-level-math/function-limitation-and-continuity-of-function/the-limitation-of-a-function.html">
+            
+                    
+                    The limitation of a function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../high-level-math/function-limitation-and-continuity-of-function/a-model-for-getting-limitation.html">
+            
+                <a href="../../high-level-math/function-limitation-and-continuity-of-function/a-model-for-getting-limitation.html">
+            
+                    
+                    A model for getting limitation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../high-level-math/derivative-and-differential.html">
+            
+                <a href="../../high-level-math/derivative-and-differential.html">
+            
+                    
+                    Derivative and differential
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../high-level-math/derivative-and-differential/formulas-of-derivative.html">
+            
+                <a href="../../high-level-math/derivative-and-differential/formulas-of-derivative.html">
+            
+                    
+                    Formulas of derivative
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../high-level-math/derivative-and-differential/use-derivative-formula.html">
+            
+                <a href="../../high-level-math/derivative-and-differential/use-derivative-formula.html">
+            
+                    
+                    Use derivative formula
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../high-level-math/derivative-and-differential/goes-deeper.html">
+            
+                <a href="../../high-level-math/derivative-and-differential/goes-deeper.html">
+            
+                    
+                    Goes deeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../../high-level-math/derivative-and-differential/use-derivative.html">
+            
+                <a href="../../high-level-math/derivative-and-differential/use-derivative.html">
+            
+                    
+                    Use derivative
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.4.1" data-path="../../high-level-math/derivative-and-differential/function-analyzing-in-theory.html">
+            
+                <a href="../../high-level-math/derivative-and-differential/function-analyzing-in-theory.html">
+            
+                    
+                    Function analyzing in theory
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.4.1.1" data-path="../../high-level-math/derivative-and-differential/function-analyzing-in-theory/first-derivative.html">
+            
+                <a href="../../high-level-math/derivative-and-differential/function-analyzing-in-theory/first-derivative.html">
+            
+                    
+                    First derivative
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4.1.2" data-path="../../high-level-math/derivative-and-differential/function-analyzing-in-theory/second-derivative.html">
+            
+                <a href="../../high-level-math/derivative-and-differential/function-analyzing-in-theory/second-derivative.html">
+            
+                    
+                    Second derivative
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4.1.3" data-path="../../high-level-math/derivative-and-differential/function-analyzing-in-theory/domain-and-extreme-value.html">
+            
+                <a href="../../high-level-math/derivative-and-differential/function-analyzing-in-theory/domain-and-extreme-value.html">
+            
+                    
+                    Domain and Extreme Value
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4.1.4" data-path="../../high-level-math/derivative-and-differential/function-analyzing-in-theory/overall-change.html">
+            
+                <a href="../../high-level-math/derivative-and-differential/function-analyzing-in-theory/overall-change.html">
+            
+                    
+                    Overall change
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4.2" data-path="../../high-level-math/derivative-and-differential/derivative-use-in-reality.html">
+            
+                <a href="../../high-level-math/derivative-and-differential/derivative-use-in-reality.html">
+            
+                    
+                    Derivative use in reality
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../high-level-math/integration.html">
+            
+                <a href="../../high-level-math/integration.html">
+            
+                    
+                    Integration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../high-level-math/integration/indefinite-integral.html">
+            
+                <a href="../../high-level-math/integration/indefinite-integral.html">
+            
+                    
+                    Indefinite integral
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1.1" data-path="../../high-level-math/integration/basic-formulas.html">
+            
+                <a href="../../high-level-math/integration/basic-formulas.html">
+            
+                    
+                    Basic formulas 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.1.2" data-path="../../high-level-math/integration/use-formula.html">
+            
+                <a href="../../high-level-math/integration/use-formula.html">
+            
+                    
+                    Use formula
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.1.3" data-path="../../high-level-math/integration/goes-deeper.html">
+            
+                <a href="../../high-level-math/integration/goes-deeper.html">
+            
+                    
+                    Goes deeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.1.4" data-path="../../high-level-math/integration/integration-by-parts.html">
+            
+                <a href="../../high-level-math/integration/integration-by-parts.html">
+            
+                    
+                    Integration by parts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../high-level-math/integration/definite-integral.html">
+            
+                <a href="../../high-level-math/integration/definite-integral.html">
+            
+                    
+                    Definite integral
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.2.1" data-path="../../high-level-math/integration/definite-integral/properties-of-definite-integral.html">
+            
+                <a href="../../high-level-math/integration/definite-integral/properties-of-definite-integral.html">
+            
+                    
+                    Properties of definite integral
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2.2" data-path="../../high-level-math/integration/definite-integral/second-fundamental-theorem-of-calculus.html">
+            
+                <a href="../../high-level-math/integration/definite-integral/second-fundamental-theorem-of-calculus.html">
+            
+                    
+                    Second fundamental theorem of calculus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2.3" data-path="../../high-level-math/integration/definite-integral/multi-method-for-solving-definite-integral.html">
+            
+                <a href="../../high-level-math/integration/definite-integral/multi-method-for-solving-definite-integral.html">
+            
+                    
+                    Multi-method for solving definite integral
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../high-level-math/multivariable-calculus.html">
+            
+                <a href="../../high-level-math/multivariable-calculus.html">
+            
+                    
+                    Multivariable calculus
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../high-level-math/multivariable-calculus/limitation.html">
+            
+                <a href="../../high-level-math/multivariable-calculus/limitation.html">
+            
+                    
+                    Limitation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../../high-level-math/multivariable-calculus/partial-derivatives.html">
+            
+                <a href="../../high-level-math/multivariable-calculus/partial-derivatives.html">
+            
+                    
+                    Partial derivatives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../../high-level-math/differential.html">
+            
+                <a href="../../high-level-math/differential.html">
+            
+                    
+                    Differential
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../../high-level-math/multiple_integral.html">
+            
+                <a href="../../high-level-math/multiple_integral.html">
+            
+                    
+                    Multiple integral
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../series.html">
+            
+                <a href="../../series.html">
+            
+                    
+                    Series
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../linear_algebra.html">
+            
+                <a href="../../linear_algebra.html">
+            
+                    
+                    Linear algebra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../gaokao.html">
+            
+                <a href="../../gaokao.html">
+            
+                    
+                    GaoKao
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.7.1" data-path="../../1.html">
+            
+                <a href="../../1.html">
+            
+                    
+                    1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.2" data-path="../../the-road-for-starting.html">
+            
+                <a href="../../the-road-for-starting.html">
+            
+                    
+                    The road for starting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.3" data-path="../../polar-coordinates.html">
+            
+                <a href="../../polar-coordinates.html">
+            
+                    
+                    Polar Coordinates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.4" data-path="../../tangent-line.html">
+            
+                <a href="../../tangent-line.html">
+            
+                    
+                    Tangent Line
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../electrical-engineering.html">
+            
+                <a href="../../electrical-engineering.html">
+            
+                    
+                    Electrical Engineering
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../the-terminologys.html">
+            
+                <a href="../the-terminologys.html">
+            
+                    
+                    The Terminologys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../dc.html">
+            
+                <a href="../dc.html">
+            
+                    
+                    DC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="the-circuit-rule.html">
+            
+                <a href="the-circuit-rule.html">
+            
+                    
+                    The circuit rule
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2.2" data-path="kcl-and-kvl.html">
+            
+                <a href="kcl-and-kvl.html">
+            
+                    
+                    KCL and KVL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="superposition.html">
+            
+                <a href="superposition.html">
+            
+                    
+                    Superposition
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ac.html">
+            
+                <a href="../ac.html">
+            
+                    
+                    AC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../ac/intuition.html">
+            
+                <a href="../ac/intuition.html">
+            
+                    
+                    Intuition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../ac/resistor.html">
+            
+                <a href="../ac/resistor.html">
+            
+                    
+                    Resistor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../ac/inductor.html">
+            
+                <a href="../ac/inductor.html">
+            
+                    
+                    Inductor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../ac/capacitor.html">
+            
+                <a href="../ac/capacitor.html">
+            
+                    
+                    Capacitor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../ac/ac-circuit.html">
+            
+                <a href="../ac/ac-circuit.html">
+            
+                    
+                    AC circuit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="../ac/san-xiang-dian.html">
+            
+                <a href="../ac/san-xiang-dian.html">
+            
+                    
+                    三相电
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.6.1" data-path="../ac/xing-xing-lian-jie.html">
+            
+                <a href="../ac/xing-xing-lian-jie.html">
+            
+                    
+                    星形联结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6.2" data-path="../ac/san-jiao-xing-lian-jie.html">
+            
+                <a href="../ac/san-jiao-xing-lian-jie.html">
+            
+                    
+                    三角形联结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6.3" data-path="../ac/shi-ji-dian-lu.html">
+            
+                <a href="../ac/shi-ji-dian-lu.html">
+            
+                    
+                    实际电路
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../voltage-and-current-rule-in-circuit.html">
+            
+                <a href="../voltage-and-current-rule-in-circuit.html">
+            
+                    
+                    Voltage and Current Rule in Circuit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../response.html">
+            
+                <a href="../response.html">
+            
+                    
+                    Response
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../response/foundations.html">
+            
+                <a href="../response/foundations.html">
+            
+                    
+                    Foundations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../response/ling-shu-ru-xiang-ying.html">
+            
+                <a href="../response/ling-shu-ru-xiang-ying.html">
+            
+                    
+                    零输入响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../response/ling-zhuang-tai-xiang-ying.html">
+            
+                <a href="../response/ling-zhuang-tai-xiang-ying.html">
+            
+                    
+                    零状态响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="../response/yi-jie-dian-lu-de-quan-xiang-ying.html">
+            
+                <a href="../response/yi-jie-dian-lu-de-quan-xiang-ying.html">
+            
+                    
+                    一阶电路的全响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../analog-electronics.html">
+            
+                <a href="../../analog-electronics.html">
+            
+                    
+                    Analog Electronics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../technical-terms-1.html">
+            
+                <a href="../../technical-terms-1.html">
+            
+                    
+                    Technical terms 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong.html">
+            
+                <a href="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong.html">
+            
+                    
+                    DC stable source circuit 的分析与应用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/er-ji-guan-de-te-xing-yu-ying-yong.html">
+            
+                <a href="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/er-ji-guan-de-te-xing-yu-ying-yong.html">
+            
+                    
+                    二极管的特性与应用  
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.1" data-path="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/er-ji-guan-de-te-xing-yu-ying-yong/ban-dao-ti.html">
+            
+                <a href="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/er-ji-guan-de-te-xing-yu-ying-yong/ban-dao-ti.html">
+            
+                    
+                    半导体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2" data-path="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/er-ji-guan-de-te-xing-yu-ying-yong/pn-junction.html">
+            
+                <a href="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/er-ji-guan-de-te-xing-yu-ying-yong/pn-junction.html">
+            
+                    
+                    PN junction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3" data-path="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/er-ji-guan-de-te-xing-yu-ying-yong/diode.html">
+            
+                <a href="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/er-ji-guan-de-te-xing-yu-ying-yong/diode.html">
+            
+                    
+                    Diode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.4" data-path="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/er-ji-guan-de-te-xing-yu-ying-yong/ce-shi-er-ji-guan.html">
+            
+                <a href="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/er-ji-guan-de-te-xing-yu-ying-yong/ce-shi-er-ji-guan.html">
+            
+                    
+                    测试二极管
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/zheng-liu-lv-bo-dian-lu-de-fen-xi-yu-ying-yong.html">
+            
+                <a href="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/zheng-liu-lv-bo-dian-lu-de-fen-xi-yu-ying-yong.html">
+            
+                    
+                    整流滤波电路的分析与应用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.2.1" data-path="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/zheng-liu-lv-bo-dian-lu-de-fen-xi-yu-ying-yong/rectifier-circuit.html">
+            
+                <a href="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/zheng-liu-lv-bo-dian-lu-de-fen-xi-yu-ying-yong/rectifier-circuit.html">
+            
+                    
+                    Rectifier circuit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/zhi-liu-wen-ya-dian-lu-de-fen-xi.html">
+            
+                <a href="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/zhi-liu-wen-ya-dian-lu-de-fen-xi.html">
+            
+                    
+                    直流稳压电路的分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.3.1" data-path="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/zhi-liu-wen-ya-dian-lu-de-fen-xi/zener-diode.html">
+            
+                <a href="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/zhi-liu-wen-ya-dian-lu-de-fen-xi/zener-diode.html">
+            
+                    
+                    Zener diode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.2" data-path="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/zhi-liu-wen-ya-dian-lu-de-fen-xi/shunt-voltage-regulators.html">
+            
+                <a href="../../dc-stable-source-circuit-de-fen-xi-yu-ying-yong/zhi-liu-wen-ya-dian-lu-de-fen-xi/shunt-voltage-regulators.html">
+            
+                    
+                    Shunt voltage regulators
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../thyristor.html">
+            
+                <a href="../../thyristor.html">
+            
+                    
+                    Thyristor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../technical_terms_2.html">
+            
+                <a href="../../technical_terms_2.html">
+            
+                    
+                    Technical terms 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../amplifying-circuit.html">
+            
+                <a href="../../amplifying-circuit.html">
+            
+                    
+                    Amplifying circuit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../../amplifying-circuit/bipolar-junction-transistor.html">
+            
+                <a href="../../amplifying-circuit/bipolar-junction-transistor.html">
+            
+                    
+                    Bipolar Junction Transistor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../../common_emitter_configuration.html">
+            
+                <a href="../../common_emitter_configuration.html">
+            
+                    
+                    Common Emitter Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../../biasing.html">
+            
+                <a href="../../biasing.html">
+            
+                    
+                    Biasing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../../analysis.html">
+            
+                <a href="../../analysis.html">
+            
+                    
+                    Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" data-path="../../mess.html">
+            
+                <a href="../../mess.html">
+            
+                    
+                    Mess
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.6" data-path="../../negative-feedback_amplifier.html">
+            
+                <a href="../../negative-feedback_amplifier.html">
+            
+                    
+                    Negative-feedback amplifier
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.7" data-path="../../integrated_operational_amplifier.html">
+            
+                <a href="../../integrated_operational_amplifier.html">
+            
+                    
+                    Integrated Operational Amplifier
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../algorithms.html">
+            
+                <a href="../../algorithms.html">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="../../whats_the_ouput_of_a_voltage_regulator_circuit.html">
+            
+                <a href="../../whats_the_ouput_of_a_voltage_regulator_circuit.html">
+            
+                    
+                    What's the ouput of a voltage rectifier circuit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="../../pnp_or_npn.html">
+            
+                <a href="../../pnp_or_npn.html">
+            
+                    
+                    PNP or NPN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="../../judging_the_state_of_a_bjt.html">
+            
+                <a href="../../judging_the_state_of_a_bjt.html">
+            
+                    
+                    Judging the state of a BJT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.4" data-path="../../whats_common_in_bjt.html">
+            
+                <a href="../../whats_common_in_bjt.html">
+            
+                    
+                    What's common in BJT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.5" data-path="../../does_a_amplifying_circuit_normal.html">
+            
+                <a href="../../does_a_amplifying_circuit_normal.html">
+            
+                    
+                    Does a amplifying circuit normal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.6" data-path="../../whats_the_feedback_type.html">
+            
+                <a href="../../whats_the_feedback_type.html">
+            
+                    
+                    What's the feedback type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.7" data-path="../../what_kind_of_distortion_you_are_encounter.html">
+            
+                <a href="../../what_kind_of_distortion_you_are_encounter.html">
+            
+                    
+                    What kind of distortion you are encounter
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../digital-electronic-technology.html">
+            
+                <a href="../../digital-electronic-technology.html">
+            
+                    
+                    Digital Electronic Technology 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../logic-gate.html">
+            
+                <a href="../../logic-gate.html">
+            
+                    
+                    Logic Gate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../logic-expressions.html">
+            
+                <a href="../../logic-expressions.html">
+            
+                    
+                    Logic expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../karnaugh-map.html">
+            
+                <a href="../../karnaugh-map.html">
+            
+                    
+                    Karnaugh map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../number_system.html">
+            
+                <a href="../../number_system.html">
+            
+                    
+                    Number system
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../multiplexer.html">
+            
+                <a href="../../multiplexer.html">
+            
+                    
+                    Multiplexer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../flip-flop.html">
+            
+                <a href="../../flip-flop.html">
+            
+                    
+                    Flip-flop
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../principles-of-communications.html">
+            
+                <a href="../../principles-of-communications.html">
+            
+                    
+                    Principles of Communications
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../overviews.html">
+            
+                <a href="../../overviews.html">
+            
+                    
+                    Overviews
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../pcm.html">
+            
+                <a href="../../pcm.html">
+            
+                    
+                    PCM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../hdb3.html">
+            
+                <a href="../../hdb3.html">
+            
+                    
+                    HDB3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../modulations.html">
+            
+                <a href="../../modulations.html">
+            
+                    
+                    Modulations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../cyclic_code.html">
+            
+                <a href="../../cyclic_code.html">
+            
+                    
+                    Cyclic code
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../data-communications-and-networking.html">
+            
+                <a href="../../data-communications-and-networking.html">
+            
+                    
+                    Data Communications and Networking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../data-communications-and-networking/something-about-ipv4.html">
+            
+                <a href="../../data-communications-and-networking/something-about-ipv4.html">
+            
+                    
+                    Something about IPv4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../micro-control-system-51-series.html">
+            
+                <a href="../../micro-control-system-51-series.html">
+            
+                    
+                    Micro Control System 51 Series
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../micro-control-system-51-series/delay-function.html">
+            
+                <a href="../../micro-control-system-51-series/delay-function.html">
+            
+                    
+                    The Delay function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../micro-control-system-51-series/the-interrupt-function.html">
+            
+                <a href="../../micro-control-system-51-series/the-interrupt-function.html">
+            
+                    
+                    The Interrupt function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../maintenance-of-railway-optical-cable-lines.html">
+            
+                <a href="../../maintenance-of-railway-optical-cable-lines.html">
+            
+                    
+                    Maintenance of Railway Optical Cable Lines
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../maintenance-of-railway-optical-cable-lines/questions.html">
+            
+                <a href="../../maintenance-of-railway-optical-cable-lines/questions.html">
+            
+                    
+                    Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../maintenance-of-railway-optical-cable-lines/pictures.html">
+            
+                <a href="../../maintenance-of-railway-optical-cable-lines/pictures.html">
+            
+                    
+                    Pictures
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../mobile-communications.html">
+            
+                <a href="../../mobile-communications.html">
+            
+                    
+                    Mobile Communications
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../mobile-communications/concepts-about-mobile-communication.html">
+            
+                <a href="../../mobile-communications/concepts-about-mobile-communication.html">
+            
+                    
+                    Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../../mobile-communications/coding-and-modulation-of-mobile-communication.html">
+            
+                <a href="../../mobile-communications/coding-and-modulation-of-mobile-communication.html">
+            
+                    
+                    Coding and Modulation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../../mobile-communications/key-technologies-for-mobile-communications.html">
+            
+                <a href="../../mobile-communications/key-technologies-for-mobile-communications.html">
+            
+                    
+                    Key Technologies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../../mobile-communications/mobile-communication-network-structure.html">
+            
+                <a href="../../mobile-communications/mobile-communication-network-structure.html">
+            
+                    
+                    Mobile communication network structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../../mobile-communications/radio-wave-propagation-and-interference.html">
+            
+                <a href="../../mobile-communications/radio-wave-propagation-and-interference.html">
+            
+                    
+                    Radio wave Propagation and Interference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../../mobile-communications/gsm.html">
+            
+                <a href="../../mobile-communications/gsm.html">
+            
+                    
+                    GSM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../../mobile-communications/cdma.html">
+            
+                <a href="../../mobile-communications/cdma.html">
+            
+                    
+                    CDMA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../../mobile-communications/gprs.html">
+            
+                <a href="../../mobile-communications/gprs.html">
+            
+                    
+                    GPRS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../../mobile-communications/3g.html">
+            
+                <a href="../../mobile-communications/3g.html">
+            
+                    
+                    3G
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../../mobile-communications/4g.html">
+            
+                <a href="../../mobile-communications/4g.html">
+            
+                    
+                    4G
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../../mobile-communications/base-station-maintenance.html">
+            
+                <a href="../../mobile-communications/base-station-maintenance.html">
+            
+                    
+                    Base Station Maintenance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../multimedia-communication.html">
+            
+                <a href="../../multimedia-communication.html">
+            
+                    
+                    Multimedia Communication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../multimedia-communication/concept-of-multimedia.html">
+            
+                <a href="../../multimedia-communication/concept-of-multimedia.html">
+            
+                    
+                    Concept of Multimedia
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../../multimedia-communication/compression.html">
+            
+                <a href="../../multimedia-communication/compression.html">
+            
+                    
+                    Compression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../../multimedia-communication/lossless-compression.html">
+            
+                <a href="../../multimedia-communication/lossless-compression.html">
+            
+                    
+                    Lossless Compression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../../multimedia-communication/audio.html">
+            
+                <a href="../../multimedia-communication/audio.html">
+            
+                    
+                    Audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../../multimedia-communication/lossy-audio-coding.html">
+            
+                <a href="../../multimedia-communication/lossy-audio-coding.html">
+            
+                    
+                    Lossy Audio Coding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../../multimedia-communication/graph-compression.html">
+            
+                <a href="../../multimedia-communication/graph-compression.html">
+            
+                    
+                    Graph Compression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../../multimedia-communication/all-for-the-exam.html">
+            
+                <a href="../../multimedia-communication/all-for-the-exam.html">
+            
+                    
+                    All for the exam
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../power-system-for-communication-devices.html">
+            
+                <a href="../../power-system-for-communication-devices.html">
+            
+                    
+                    Power system for Communication Devices
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../power-system-for-communication-devices/overview.html">
+            
+                <a href="../../power-system-for-communication-devices/overview.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../power-system-for-communication-devices/ac-power-distribution-panel.html">
+            
+                <a href="../../power-system-for-communication-devices/ac-power-distribution-panel.html">
+            
+                    
+                    AC power Distribution Panel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../../power-system-for-communication-devices/ups.html">
+            
+                <a href="../../power-system-for-communication-devices/ups.html">
+            
+                    
+                    UPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../../power-system-for-communication-devices/switched-mode-power-supply.html">
+            
+                <a href="../../power-system-for-communication-devices/switched-mode-power-supply.html">
+            
+                    
+                    HF Switched-mode Power Supply
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../../power-system-for-communication-devices/battery.html">
+            
+                <a href="../../power-system-for-communication-devices/battery.html">
+            
+                    
+                    Battery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../../power-system-for-communication-devices/earthing-or-use-lightning-arrester.html">
+            
+                <a href="../../power-system-for-communication-devices/earthing-or-use-lightning-arrester.html">
+            
+                    
+                    Earthing or Use Lightning Arrester
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../../power-system-for-communication-devices/power-supply-monitoring-system.html">
+            
+                <a href="../../power-system-for-communication-devices/power-supply-monitoring-system.html">
+            
+                    
+                    Power Supply Monitoring System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../../power-system-for-communication-devices/all-for-the-exam.html">
+            
+                <a href="../../power-system-for-communication-devices/all-for-the-exam.html">
+            
+                    
+                    All for the exam
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    Optical fiber Communication system
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../../what-is-optical-fiber-communication-system.html">
+            
+                <a href="../../what-is-optical-fiber-communication-system.html">
+            
+                    
+                    What is Optical fiber Communication system
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1.1" data-path="../../what-is-optical-fiber-communication-system/optical-fiber.html">
+            
+                <a href="../../what-is-optical-fiber-communication-system/optical-fiber.html">
+            
+                    
+                    Prepare
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.2" data-path="../../what-is-optical-fiber-communication-system/something-about-optical-fiber.html">
+            
+                <a href="../../what-is-optical-fiber-communication-system/something-about-optical-fiber.html">
+            
+                    
+                    Something About Optical fiber
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.3" data-path="../../what-is-optical-fiber-communication-system/passive-optical-devices.html">
+            
+                <a href="../../what-is-optical-fiber-communication-system/passive-optical-devices.html">
+            
+                    
+                    Passive Optical Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.4" data-path="../../what-is-optical-fiber-communication-system/active-optical-devices.html">
+            
+                <a href="../../what-is-optical-fiber-communication-system/active-optical-devices.html">
+            
+                    
+                    Active Optical Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.5" data-path="../../what-is-optical-fiber-communication-system/optical-transmitter-test.html">
+            
+                <a href="../../what-is-optical-fiber-communication-system/optical-transmitter-test.html">
+            
+                    
+                    Optical transmitter Test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.6" data-path="../../what-is-optical-fiber-communication-system/optical-receiver-test.html">
+            
+                <a href="../../what-is-optical-fiber-communication-system/optical-receiver-test.html">
+            
+                    
+                    Optical receiver Test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.7" data-path="../../what-is-optical-fiber-communication-system/compose-an-optical-communication-system.html">
+            
+                <a href="../../what-is-optical-fiber-communication-system/compose-an-optical-communication-system.html">
+            
+                    
+                    Compose an Optical Communication System
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../../sdh-synchronous-digital-hierarchy.html">
+            
+                <a href="../../sdh-synchronous-digital-hierarchy.html">
+            
+                    
+                    SDH (Synchronous Digital Hierarchy)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.2.1" data-path="../../sdh-synchronous-digital-hierarchy/frame-structure-of-sdh.html">
+            
+                <a href="../../sdh-synchronous-digital-hierarchy/frame-structure-of-sdh.html">
+            
+                    
+                    Frame Structure of SDH
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.2" data-path="../../sdh-synchronous-digital-hierarchy/hardware-of-sdh-system.html">
+            
+                <a href="../../sdh-synchronous-digital-hierarchy/hardware-of-sdh-system.html">
+            
+                    
+                    SDH Equipments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.3" data-path="../../sdh-synchronous-digital-hierarchy/clock-system.html">
+            
+                <a href="../../sdh-synchronous-digital-hierarchy/clock-system.html">
+            
+                    
+                    Clock System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.4" data-path="../../sdh-synchronous-digital-hierarchy/zxonm-e300-practice.html">
+            
+                <a href="../../sdh-synchronous-digital-hierarchy/zxonm-e300-practice.html">
+            
+                    
+                    ZXONM E300 Practice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.5" data-path="../../sdh-synchronous-digital-hierarchy/sdh-protection.html">
+            
+                <a href="../../sdh-synchronous-digital-hierarchy/sdh-protection.html">
+            
+                    
+                    SDH protection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../../wdm-wavelength-division-multiplexing.html">
+            
+                <a href="../../wdm-wavelength-division-multiplexing.html">
+            
+                    
+                    WDM (Wavelength-Division Multiplexing)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../../otn-optical-transport-network.html">
+            
+                <a href="../../otn-optical-transport-network.html">
+            
+                    
+                    OTN (Optical Transport Network)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.4.1" data-path="../../otn-optical-transport-network/overhead-of-otn.html">
+            
+                <a href="../../otn-optical-transport-network/overhead-of-otn.html">
+            
+                    
+                    OverHead of OTN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4.2" data-path="../../otn-optical-transport-network/otn-alarms-and-errors.html">
+            
+                <a href="../../otn-optical-transport-network/otn-alarms-and-errors.html">
+            
+                    
+                    OTN Alarms & Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4.3" data-path="../../otn-optical-transport-network/do-it-again-whats-happened.html">
+            
+                <a href="../../otn-optical-transport-network/do-it-again-whats-happened.html">
+            
+                    
+                    Do it again, what's happened?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../communication-tech-english.html">
+            
+                <a href="../../communication-tech-english.html">
+            
+                    
+                    Communication Tech English
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../../communication-tech-english/fundamentals-of-electricity.html">
+            
+                <a href="../../communication-tech-english/fundamentals-of-electricity.html">
+            
+                    
+                    Fundamentals of Electricity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../../communication-tech-english/digital-communications.html">
+            
+                <a href="../../communication-tech-english/digital-communications.html">
+            
+                    
+                    Digital Communications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../../communication-tech-english/optical-communications.html">
+            
+                <a href="../../communication-tech-english/optical-communications.html">
+            
+                    
+                    Optical Communications
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../high-speed-railway-communication-technology.html">
+            
+                <a href="../../high-speed-railway-communication-technology.html">
+            
+                    
+                    High-speed railway Communication Technology
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../../high-speed-railway-communication-technology/overview.html">
+            
+                <a href="../../high-speed-railway-communication-technology/overview.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../../high-speed-railway-communication-technology/base-knowledge.html">
+            
+                <a href="../../high-speed-railway-communication-technology/base-knowledge.html">
+            
+                    
+                    Base Knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../../high-speed-railway-communication-technology/fh98.html">
+            
+                <a href="../../high-speed-railway-communication-technology/fh98.html">
+            
+                    
+                    FH98
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../../high-speed-railway-communication-technology/mds3400.html">
+            
+                <a href="../../high-speed-railway-communication-technology/mds3400.html">
+            
+                    
+                    MDS3400
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../../high-speed-railway-communication-technology/everything-is-for-the-exam.html">
+            
+                <a href="../../high-speed-railway-communication-technology/everything-is-for-the-exam.html">
+            
+                    
+                    Everything is for the exam
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../../gsm-for-railway.html">
+            
+                <a href="../../gsm-for-railway.html">
+            
+                    
+                    GSM for Railway
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../../gsm-for-railway/overview.html">
+            
+                <a href="../../gsm-for-railway/overview.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../../gsm-for-railway/wired-parts.html">
+            
+                <a href="../../gsm-for-railway/wired-parts.html">
+            
+                    
+                    Wired Parts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../../gsm-for-railway/digital-dispatch-communication-system.html">
+            
+                <a href="../../gsm-for-railway/digital-dispatch-communication-system.html">
+            
+                    
+                    Digital dispatch Communication System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../../gsm-for-railway/gsm-r.html">
+            
+                <a href="../../gsm-for-railway/gsm-r.html">
+            
+                    
+                    Basic Knowledge of GSM-R
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../../gsm-for-railway/key-technologies-for-gsm-r.html">
+            
+                <a href="../../gsm-for-railway/key-technologies-for-gsm-r.html">
+            
+                    
+                    Key technologies for GSM-R
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../../gsm-for-railway/structure-of-gsm-r.html">
+            
+                <a href="../../gsm-for-railway/structure-of-gsm-r.html">
+            
+                    
+                    Structure of GSM-R
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../../gsm-for-railway/gsm-r-network-mode.html">
+            
+                <a href="../../gsm-for-railway/gsm-r-network-mode.html">
+            
+                    
+                    GSM-R Network Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../../gsm-for-railway/wireless-channels-for-gsm-r.html">
+            
+                <a href="../../gsm-for-railway/wireless-channels-for-gsm-r.html">
+            
+                    
+                    Wireless Channels for GSM-R
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="../../gsm-for-railway/mobility-management.html">
+            
+                <a href="../../gsm-for-railway/mobility-management.html">
+            
+                    
+                    Mobility Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="../../gsm-for-railway/connection-management.html">
+            
+                <a href="../../gsm-for-railway/connection-management.html">
+            
+                    
+                    Connection Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.11" data-path="../../gsm-for-railway/security-management.html">
+            
+                <a href="../../gsm-for-railway/security-management.html">
+            
+                    
+                    Security Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.12" data-path="../../gsm-for-railway/gprs.html">
+            
+                <a href="../../gsm-for-railway/gprs.html">
+            
+                    
+                    GPRS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.13" data-path="../../gsm-for-railway/gsm-rgprs-wireless-access-platform.html">
+            
+                <a href="../../gsm-for-railway/gsm-rgprs-wireless-access-platform.html">
+            
+                    
+                    GSM-R/GPRS Wireless Access Platform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.14" data-path="../../gsm-for-railway/gsm-r-features.html">
+            
+                <a href="../../gsm-for-railway/gsm-r-features.html">
+            
+                    
+                    GSM-R Features
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.15" data-path="../../gsm-for-railway/gsm-r-numbering-plan.html">
+            
+                <a href="../../gsm-for-railway/gsm-r-numbering-plan.html">
+            
+                    
+                    GSM-R Numbering Plan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.16" data-path="../../gsm-for-railway/asci.html">
+            
+                <a href="../../gsm-for-railway/asci.html">
+            
+                    
+                    ASCI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../../network-configuration-training.html">
+            
+                <a href="../../network-configuration-training.html">
+            
+                    
+                    Network Configuration Training
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../../network-configuration-training/words-i-have-learned.html">
+            
+                <a href="../../network-configuration-training/words-i-have-learned.html">
+            
+                    
+                    Words I have learned
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../../broadband-access-technology.html">
+            
+                <a href="../../broadband-access-technology.html">
+            
+                    
+                    Broadband Access Technology
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../../broadband-access-technology/using-copper-line.html">
+            
+                <a href="../../broadband-access-technology/using-copper-line.html">
+            
+                    
+                    Using Copper Line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../../broadband-access-technology/using-optical-fiber.html">
+            
+                <a href="../../broadband-access-technology/using-optical-fiber.html">
+            
+                    
+                    Using Optical Fiber
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="../../broadband-access-technology/wireless.html">
+            
+                <a href="../../broadband-access-technology/wireless.html">
+            
+                    
+                    Wireless
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" data-path="../../broadband-access-technology/all-for-the-test.html">
+            
+                <a href="../../broadband-access-technology/all-for-the-test.html">
+            
+                    
+                    All for the test
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../../cir.html">
+            
+                <a href="../../cir.html">
+            
+                    
+                    CIR
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="../../cir/basci-knowledge.html">
+            
+                <a href="../../cir/basci-knowledge.html">
+            
+                    
+                    Basci Knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.2" data-path="../../cir/testing-equipment.html">
+            
+                <a href="../../cir/testing-equipment.html">
+            
+                    
+                    Testing Equipment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.3" data-path="../../cir/the-structure-of-cir.html">
+            
+                <a href="../../cir/the-structure-of-cir.html">
+            
+                    
+                    The Structure of CIR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.4" data-path="../../cir/all-for-the-exam.html">
+            
+                <a href="../../cir/all-for-the-exam.html">
+            
+                    
+                    All for the exam
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../../lte.html">
+            
+                <a href="../../lte.html">
+            
+                    
+                    LTE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../../script-for-chaoxing.html">
+            
+                <a href="../../script-for-chaoxing.html">
+            
+                    
+                    Script for ChaoXing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >KCL and KVL</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x6A21;&#x7CCA;&#x4EC5;&#x662F;&#x7B2C;&#x4E00;&#x9636;&#x6BB5;">&#x6A21;&#x7CCA;&#x4EC5;&#x662F;&#x7B2C;&#x4E00;&#x9636;&#x6BB5;</h3>
+<h4 id="&#x9898;&#x5916;&#x8BDD;">&#x9898;&#x5916;&#x8BDD;</h4>
+<p>&#x722C;&#x697C;&#x68AF;&#x539F;&#x7406;&#xFF1A;&#x8D8A;&#x5F80;&#x4E0A;&#x722C;&#x4EBA;&#x8D8A;&#x5C11;&#xFF0C;&#x56E0;&#x4E3A;&#x697C;&#x5C42;&#x8D8A;&#x9AD8;&#xFF0C;&#x4EBA;&#x8D8A;&#x4E0D;&#x60F3;&#x9891;&#x7E41;&#x4E0A;&#x4E0B;&#x697C;&#x3002;</p>
+<h4 id="&#x6CA1;&#x4EBA;&#x80FD;&#x8131;&#x79BB;&#x57FA;&#x7840;">&#x6CA1;&#x4EBA;&#x80FD;&#x8131;&#x79BB;&#x57FA;&#x7840;</h4>
+<p>&#x5728;&#x8BB2;&#x8FD9;&#x4E2A;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x60F3;&#x590D;&#x4E60;&#x4E00;&#x4E0B;&#x4EC0;&#x4E48;&#x662F;&#x7535;&#x6D41;</p>
+<blockquote>
+<p>Current is the flow of charge. (&#x7535;&#x6D41;&#x672C;&#x8D28;&#x5C31;&#x662F;&#x7535;&#x8377;&#x7684;&#x6D41;&#x52A8;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x6211;&#x4EEC;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x5355;&#x4F4D;&#x5B89;&#x57F9; &#x4EE3;&#x8868; &#x6BCF;&#x79D2;&#x6D41;&#x8FC7;&#x4E00;&#x6839;&#x5BFC;&#x7EBF;&#x7684;&#x6A2A;&#x622A;&#x9762;&#x7684;&#x7535;&#x8377;&#x6570;)
+<strong> &#x6CE8;&#x610F;&#x4EBA;&#x7C7B;&#x89C4;&#x5B9A;&#x7535;&#x6D41;&#x6C38;&#x8FDC;&#x4ECE;+&#x6781;&#x6D41;&#x5411;-&#x6781; </strong></p>
+</blockquote>
+<p>&#x518D;&#x590D;&#x4E60;&#x4E00;&#x4E0B;&#x4EC0;&#x4E48;&#x662F;&#x7535;&#x538B;</p>
+<blockquote>
+<p>&#x7535;&#x538B;&#x7B49;&#x4E8E;&#x67D0;&#x79CD;&#x795E;&#x79D8;&#x7684;&#x529B;&#x628A;&#x5355;&#x4F4D;&#x6B63;&#x7535;&#x8377;&#x4ECE;A&#x70B9;&#x79FB;&#x52A8;&#x5230;B&#x70B9;&#x6240;&#x505A;&#x7684;&#x529F;&#x3002;
+<strong> &#x6CE8;&#x610F;&#x4EBA;&#x7C7B;&#x89C4;&#x5B9A;&#x7535;&#x538B;&#x65B9;&#x5411;&#x6C38;&#x8FDC;&#x4ECE;+&#x6781;&#x5230;-&#x6781;&#xFF08;&#x9AD8;&#x538B;&#x5230;&#x4F4E;&#x538B;&#xFF09;&#xFF0C;&#x4E0D;&#x7136;&#x4F1A;&#x51FA;&#x73B0;&#x65E0;&#x7A77;&#x7684;&#x56F0;&#x60D1; </strong></p>
+</blockquote>
+<h4 id="kirchhoffs-current-lawkcl">Kirchhoff&apos;s Current Law(KCL)</h4>
+<p>&#x7531;&#x57FA;&#x7840;&#x77E5;&#xFF0C;&#x7535;&#x6D41;&#x5C31;&#x662F;&#x4E00;&#x5806;&#x53EF;&#x6D41;&#x52A8;&#x7684;&#x7535;&#x8377;&#x5728;&#x7535;&#x7EBF;&#x7C7B;&#x5BFC;&#x4F53;&#x7BA1;&#x9053;&#x91CC;&#x6D41;&#x52A8;&#xFF0C;&#x548C;&#x6C34;&#x6D41;&#x4E00;&#x6837;&#x3002;&#x4F46;&#x4E0D;&#x7BA1;&#x5B83;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x603B;&#x5F52;&#x662F;&#x7269;&#x8D28;&#xFF0C;&#x662F;&#x7269;&#x8D28;&#x5C31;&#x8981;&#x9075;&#x5B88;&#x7269;&#x8D28;&#x4E0E;&#x80FD;&#x91CF;&#x5B88;&#x6052;&#x5B9A;&#x5F8B;</p>
+<blockquote>
+<p>&#x80FD;&#x91CF;&#x4E0E;&#x7269;&#x8D28;&#x603B;&#x5728;&#x4E0D;&#x65AD;&#x8F6C;&#x6362;&#xFF0C;&#x4E0D;&#x53EF;&#x80FD;&#x51ED;&#x7A7A;&#x6D88;&#x5931;&#xFF0C;&#x4E5F;&#x4E0D;&#x53EF;&#x80FD;&#x51ED;&#x7A7A;&#x4EA7;&#x751F;&#x3002;</p>
+</blockquote>
+<p><strong> &#x6240;&#x4EE5;&#x5728;&#x7535;&#x8DEF;&#x4E2D;&#x7684;&#x67D0;&#x4E00;&#x70B9;&#xFF0C;<script type="math/tex; ">电路流进=电流流出</script>&#x3002; </strong></p>
+<h4 id="kirchhoffs-voltage-lawkvl">Kirchhoff&apos;s Voltage Law(KVL)</h4>
+<p>&#x5728;&#x4E00;&#x4E2A;&#x95ED;&#x5408;&#x7535;&#x8DEF;(&#x7C7B;&#x4F3C;&#x4E32;&#x8054;)&#xFF0C;&#x8BBE;&#x7535;&#x538B;&#x6E90;&#x4E3A;<code>U</code>&#xFF0C;&#x5404;&#x5730;&#x70B9;&#x7684;&#x7535;&#x538B;&#x7EDD;&#x5BF9;&#x503C;&#x4E3A;<code>i</code>&#xFF0C;&#x4ECE;&#x7535;&#x538B;&#x6B63;&#x6781;+&#x51FA;&#x53D1;&#xFF0C;&#x521D;&#x59CB;&#x7535;&#x538B;&#x53D8;&#x91CF;&#x4E3A;<code>x = 0</code>&#xFF0C;&#x9047;&#x5230;<code>&#x540C;&#x65B9;&#x5411;&#x7535;&#x6D41;(&#x7BAD;&#x5934;&#x671D;&#x8D1F;&#x6781;-&#x8D70;)&#x4EA7;&#x751F;&#x7684;&#x7535;&#x538B;</code>&#x6216;<code>+-&#x7535;&#x538B;</code>&#xFF0C;&#x5C31; <code>x = x + i</code> , &#x9047;&#x5230;<code>&#x9006;&#x65B9;&#x5411;&#x7535;&#x6D41;(&#x7BAD;&#x5934;&#x671D;&#x6B63;&#x6781;+&#x8D70;)&#x4EA7;&#x751F;&#x7684;&#x7535;&#x538B;</code>&#x6216;<code>-+&#x7535;&#x538B;</code>&#xFF0C;&#x5C31; <code>x = x - i</code>&#xFF0C;&#x6700;&#x7EC8; <code>U == x</code> &#x4E3A;&#x771F;&#x3002;</p>
+<p><strong> &#x5176;&#x5B9E;&#x5C31;&#x662F; </strong></p>
+<blockquote>
+<p>&#x7535;&#x538B;&#x503C;&#x4ECE;+a&#x5230;-a&#x7ED5;&#x95ED;&#x5408;&#x7EBF;&#x8DEF;&#x4E00;&#x5708;&#xFF0C;&#x5408;&#x4E3A;a&#x5904;&#x63D0;&#x4F9B;&#x7684;&#x7535;&#x538B;</p>
+</blockquote>
+<hr>
+<h3 id="&#x62D2;&#x7EDD;&#x840C;&#x903C;">&#x62D2;&#x7EDD;&#x840C;&#x903C;</h3>
+<p>&#x6839;&#x636E;&#x8001;&#x5E08;&#x8BB2;&#x7684;&#xFF0C;&#x6211;&#x518D;&#x6DF1;&#x5165;&#x5206;&#x6790;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<h5 id="&#x7535;&#x538B;&#x6709;&#x4E24;&#x79CD;">&#x7535;&#x538B;&#x6709;&#x4E24;&#x79CD;:</h5>
+<ul>
+<li><p>&#x5355;&#x70B9;&#x7535;&#x538B;</p>
+<blockquote>
+<p>&#x8BE5;&#x70B9;&#x5230;&#x53C2;&#x8003;&#x70B9;&#xFF08;&#x5982;&#x5927;&#x5730;&#xFF09;&#x95F4;&#x7684;&#x7535;&#x538B;&#x3002;</p>
+<blockquote>
+<p>&#x6700;&#x5E95;&#x5C42;&#x7684;&#x7535;&#x538B;&#x6982;&#x5FF5;&#xFF0C;&#x5982;&#x4E0A;&#x53E5;&#x7684;&#x201C;&#x7535;&#x538B;&#x201D;&#xFF0C;&#x6307;&#xFF1A;&#x67D0;&#x79CD;&#x795E;&#x79D8;&#x7684;&#x529B;&#x628A;&#x5355;&#x4F4D;&#x6B63;&#x7535;&#x8377;&#x4ECE;A&#x70B9;&#x79FB;&#x52A8;&#x5230;B&#x70B9;&#x6240;&#x505A;&#x7684;&#x529F;&#x3002;</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>&#x53CC;&#x70B9;&#x7535;&#x538B;</p>
+<blockquote>
+<p>&#x4E24;&#x4E2A;&#x5355;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x7535;&#x538B;&#xFF0C;&#x5982;&#x4E00;&#x4E2A;&#xFF08;&#x7535;&#x963B;&#xFF09;&#x5143;&#x4EF6;&#x7684;&#x4E24;&#x7AEF;&#x7684;&#x7535;&#x538B;&#x5DEE;</p>
+<blockquote>
+<p>&#x4E00;&#x4E2A;&#x4E8C;&#x7AEF;&#x5143;&#x4EF6;(&#x5982;&#x7535;&#x963B;)&#x7684;&#x4E24;&#x7AEF;<code>+</code> &#x4E0E;<code>-</code>&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x522B;&#x53EA;&#x5728;&#x4E8E;<script type="math/tex; ">`+`端的单点电压>`-`端的单点电压</script></p>
+<blockquote>
+<p>&#x901A;&#x4FD7;&#x7406;&#x89E3;&#xFF0C;<code>+</code>&#x662F;&#x9AD8;&#x7535;&#x538B;&#xFF0C;<code>-</code>&#x662F;&#x4F4E;&#x7535;&#x538B;&#xFF0C;&#x4E0D;&#x8FC7;&#x90FD;&#x662F;&#x76F8;&#x5BF9;&#x800C;&#x8A00;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<h5 id="example">Example</h5>
+<h6 id="a&#x70B9;----&#x7535;&#x538B;5v----&#x7535;&#x538B;3v----a&#x70B9;"><code>+a&#x70B9;</code> -&gt; <code>+-&#x7535;&#x538B;(5V)</code> -&gt; <code>+-&#x7535;&#x538B;(3V)</code> -&gt; <code>-a&#x70B9;</code></h6>
+<ul>
+<li>&#x6211;&#x95EE;&#x4F60;&#xFF0C;&#x4ECE;<code>+a&#x70B9;</code>&#x5230;<code>-a&#x70B9;</code>&#xFF0C;&#x7535;&#x538B;&#x4ECE;<code>+</code>&#x5230;<code>-</code>&#x964D;&#x4E86;&#x591A;&#x5C11;&#xFF1F; &#x7B54;&#x6848;&#x660E;&#x4E86;&#xFF0C;8V</li>
+<li><strong> &#x5047;&#x8BBE;a&#x4E3A;&#x7535;&#x538B;&#x6E90;&#xFF0C;&#x6709;+-&#x4E24;&#x7AEF;&#xFF0C;&#x4F60;&#x5C31;&#x5E94;&#x8BE5;&#x5F97;&#x51FA;&#x8FD9;&#x4E2A;&#x7535;&#x538B;&#x6E90;&#x63D0;&#x4F9B;&#x4E86;8V&#x7535;&#x538B;&#x8FD9;&#x4E2A;&#x7ED3;&#x8BBA; </strong></li>
+</ul>
+<h6 id="a&#x70B9;----&#x7535;&#x538B;5v----&#x7535;&#x538B;3v----a&#x70B9;"><code>+a&#x70B9;</code> -&gt; <code>+-&#x7535;&#x538B;(5V)</code> -&gt; <code>-+&#x7535;&#x538B;(3V)</code> -&gt; <code>-a&#x70B9;</code></h6>
+<ul>
+<li><strong> <script type="math/tex; ">U_a = 5 + (-3) = 2V</script> </strong></li>
+</ul>
+<p><strong> &#x5176;&#x5B9E;&#x8FD9;&#x5C31;&#x662F;&#x4E32;&#x8054;&#x7535;&#x538B;&#x7684;&#x57FA;&#x672C;&#x89C4;&#x5F8B; </strong></p>
+<blockquote>
+<p>&#x4ECE;+&#x65B9;&#x5411;&#x6570;&#x7535;&#x538B;&#xFF1B;&#x65B9;&#x5411;&#x76F8;&#x540C;(+-)&#xFF0C;&#x7535;&#x538B;&#x76F8;&#x52A0;; &#x65B9;&#x5411;&#x76F8;&#x53CD;(-+)&#xFF0C;&#x7535;&#x538B;&#x76F8;&#x51CF;&#xFF1B;&#x6700;&#x7EC8;&#x7B49;&#x4E8E;&#x8FD9;&#x6BB5;<code>&#x7535;&#x538B;&#x4E4B;&#x548C;</code></p>
+<blockquote>
+<p>&#x90A3;&#x6BB5;<code>&#x7535;&#x538B;&#x4E4B;&#x548C;</code>&#x53EF;&#x4EE5;&#x5F53;&#x88AB;&#x5F53;&#x6210;<code>ab&#x7AEF;&#x53E3;&#x7684;&#x7535;&#x538B;</code>&#xFF0C;&#x5373; <script type="math/tex; ">U_{ab}</script></p>
+<blockquote>
+<p><del>&#x4E0D;&#x77E5;&#x4E3A;&#x4F55;&#x8BF4;&#x662F; Kirchhoff&apos;s voltage law</del></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<h3 id="&#x5347;&#x534E;">&#x5347;&#x534E;</h3>
+<p>Procedure of adding element voltages around a loop:</p>
+<blockquote>
+<p>Step 1: Pick a starting node.</p>
+<p>Step 2: Pick a direction to travel around the loop (clockwise or counterclockwise).</p>
+<p>Step 3: Walk around the loop.</p>
+<blockquote>
+<p><strong>Include element voltages in a growing sum according to these rules:</strong></p>
+<ol>
+<li>When you encounter a new element, look at the voltage sign as you enter the element.</li>
+<li>If the sign is +plus, then there will be a voltage drop going through the element. Subtract the element voltage.</li>
+<li>If the sign is -minus, then there will be a voltage rise going through the element. Add the element voltage.</li>
+</ol>
+</blockquote>
+<p>Step 4: Continue around the loop until you reach the starting point, including element voltages all the way around.</p>
+</blockquote>
+<h5 id="state-kirchhoffs-voltage-law-in-another-way-the-sum-of-voltage-rises-equals-the-sum-of-voltage-drops-around-a-loop">State Kirchhoff&apos;s Voltage Law in another way: The sum of voltage rises equals the sum of voltage drops around a loop.</h5>
+<p>&#x4FD7;&#x79F0;<strong>&#x7535;&#x538B;&#x5347;&#x964D;&#x5E73;&#x8861;&#x3002;</strong></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="the-circuit-rule.html" class="navigation navigation-prev " aria-label="Previous page: The circuit rule">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="superposition.html" class="navigation navigation-next " aria-label="Next page: Superposition">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"KCL and KVL","level":"1.3.2.2","depth":3,"next":{"title":"Superposition","level":"1.3.2.3","depth":3,"path":"electrical-engineering/dc/superposition.md","ref":"electrical-engineering/dc/superposition.md","articles":[]},"previous":{"title":"The circuit rule","level":"1.3.2.1","depth":3,"path":"electrical-engineering/dc/the-circuit-rule.md","ref":"electrical-engineering/dc/the-circuit-rule.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax@https://github.com/OrgVue/gitbook-plugin-mathjax.git#speech-fix"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"electrical-engineering/dc/kcl-and-kvl.md","mtime":"2019-12-08T01:38:05.696Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-08T01:47:45.886Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

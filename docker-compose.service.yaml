@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  style_shop:
+    network_mode: "host"        
+    build: 
+      context: ./
+      dockerfile: ./Dockerfile
+    image: yingshaoxo/yingshaoxo_xyz
+    environment:
+      - ADMIN_EMAIL=yingshaoxo@gmail.com
+    volumes:
+      - "./:/root/html/"
+    restart: unless-stopped
