@@ -44,7 +44,10 @@ class Quotes extends Component {
       "You can never defeat a person who never gives up.",
       `School is not a place for smart people.
                             --- Rick and Morty`,
-      `You know what, the difference between man and man is that some of them keep their promise, while others not. I'm the first kind.`,
+      `Any platform that has report function, has censorship.
+                                              --- yingshaoxo`,
+      `Any platform that has no report function, has no censorship.
+                                              --- yingshaoxo`,
     ];
     let randomElement = theList[Math.floor(Math.random() * theList.length)];
     this.setState({
