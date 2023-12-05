@@ -87,10 +87,12 @@
             <div class="top_trust_and_untrust_layout">
                 <div class="trust_part">
                     <p style="font-weight: bold;">Trust Sites</p>
+                    <p>*<span class="reason_description">: <span class="red">Any platform that has no report function, has no censorship.</span></span></p>
                     <p>google.com<span class="reason_description">: No obvious censorship except copyrights.</span></p>
                 </div>
                 <div class="untrust_part">
                     <p style="font-weight: bold;">Un_trust Sites</p>
+                    <p>*<span class="reason_description">: <span class="red">Any platform that has report function, has censorship.</span></span></p>
                     <p>github.com<span class="reason_description">: Ban anyone they like, so others can only see 404 page in your home page. (For example, say 'fuck'.)</span></p>
                     <p>reddit.com<span class="reason_description">: Delete any post they like. (For example, in python community, say 'python does not have a linux binary release'.)</span></p>
                     <p>microsoft.com<span class="reason_description">: They use windows system to control your computer, use Amazon/AWS to control online_shopping, ebook and server, use python to control coding beginners. (For example, if your account get baned, can you still login the windows 11?)</span></p>
@@ -131,6 +133,14 @@
                                 class="my-link">
                                 <p>
                                     <i18n data-i18n="Visit my youtube">Want to visit my youtube?</i18n>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="i-link">
+                            <a href="https://ask.ai-tools-online.xyz/chat_page" target="_blank"
+                                class="my-link">
+                                <p>
+                                    <i18n data-i18n="Visit my youtube">Chat with me</i18n>
                                 </p>
                             </a>
                         </div>
@@ -445,12 +455,14 @@
     <script src="./yingshaoxo_files/js.js"></script>
     <style>
         .top_trust_and_untrust_layout {
+            /*
             position: absolute; 
             width: 100%;
             height: 100%;
-            z-index: 555;
+            */
         }
         .trust_part {
+            z-index: 555;
             position: absolute; 
             left: 0px;
             top: 0px;
@@ -462,6 +474,7 @@
             background-color: rgb(52, 199, 248);
         }
         .untrust_part {
+            z-index: 555;
             position: absolute; 
             right: 0px;
             top: 0px;
@@ -475,6 +488,10 @@
         .reason_description {
             color: rgb(238, 232, 232);
             /* user-select: none; */
+        }
+        .red {
+            color: rgb(255,0,0,0.9);
+            font-size: 105%;
         }
     </style>
 </body>
