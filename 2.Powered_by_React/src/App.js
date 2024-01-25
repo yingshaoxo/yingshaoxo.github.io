@@ -31,7 +31,7 @@ class App extends Component {
       // false for not mobile device
       // I'd love to redirect those people who use desktop browser to a different page
       console.log("desktop");
-      window.location.replace("https://yingshaoxo.xyz/legacy_index.html");
+      window.location.replace("http://yingshaoxo.xyz/legacy_index.html");
     }
 
     let isChrome =
