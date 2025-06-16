@@ -26,7 +26,10 @@
     <link rel="stylesheet" href="./yingshaoxo_files/font-awesome.min.css" />
 
     <script>
-        document.body.style.zoom = "100%"</script>
+        if (document.body) {
+            document.body.style.zoom = "100%"
+        }
+    </script>
 
     <noscript>
         <div style="text-align: center;">
@@ -36,28 +39,28 @@
 </head>
 
 <body class="home-showing">
-    <nav class="page-nav">
-        <a href="#!/h" class="nav-anchor nav-home">
+    <nav class="page-nav" >
+        <a href="#!/h" class="nav-anchor nav-home" id="navigation1">
             <p>
                 <i18n data-i18n="H">H</i18n>
             </p>
         </a>
-        <a href="#!/i" class="nav-anchor nav-i">
+        <a href="#!/i" class="nav-anchor nav-i" id="navigation2">
             <p>
                 <i18n data-i18n="A">A</i18n>
             </p>
         </a>
-        <a href="#!/s" class="nav-anchor nav-skill">
+        <a href="#!/s" class="nav-anchor nav-skill" id="navigation3">
             <p>
                 <i18n data-i18n="S">S</i18n>
             </p>
         </a>
-        <a href="#!/l" class="nav-anchor nav-link">
+        <a href="#!/l" class="nav-anchor nav-link" id="navigation4">
             <p>
                 <i18n data-i18n="F">F</i18n>
             </p>
         </a>
-        <a href="#!/w" class="nav-anchor nav-work">
+        <a href="#!/w" class="nav-anchor nav-work" id="navigation5">
             <p>
                 <i18n data-i18n="M">M</i18n>
             </p>
@@ -136,7 +139,7 @@
                         </div> -->
                         <div class="i-link">
                             <a href="https://www.youtube.com/channel/UCbT9GDmkqf555ATReJor6ag" target="_blank"
-                                class="my-link">
+                                class="my-link" id="youtube">
                                 <p>
                                     <i18n data-i18n="Visit my youtube">Want to visit my youtube?</i18n>
                                 </p>
@@ -151,7 +154,7 @@
                             </a>
                         </div>
                         <div class="i-link">
-                            <a href="#!/i" class="more-me">
+                            <a href="#!/i" class="more-me" id="more_me">
                                 <p>
                                     <i18n data-i18n="Learn more about me">Learn more about me</i18n>
                                 </p>
@@ -192,7 +195,7 @@
                     <i18n data-i18n="intro-l8">Keep working!</i18n>
                 </p>
             </div>
-            <img src="./yingshaoxo_files/captain.png" alt="Misaka" />
+            <img src="./yingshaoxo_files/captain.png" alt="Misaka" width="600px" />
             <div class="i-link">
                 <a href="#!/s" class="more-me page-next">
                     <p>
@@ -546,6 +549,105 @@
             font-size: 105%;
         }
     </style>
+
+    <script>
+        // IE6 detection and CSS fixes
+        (function() {
+            var isIE6 = false;
+            if (navigator.userAgent.match(/msie 6/i)) {
+                isIE6 = true;
+            }
+            
+            if (isIE6) {
+                // Apply IE6 specific styles
+                document.write('<style type="text/css">' + 
+                    '/* Hide all sections except section1 */' +
+                    '#section2, #section3, #section4, #section5 { display: none !important; }' +
+                    '#main { width: 100% !important; position: static !important; height: auto !important; }' +
+                    '#main #section1 { position: static !important; width: 100% !important; height: 100% !important; display: block !important; }' +
+                    '#more_me { display: none !important; }' +
+                    '#youtube { display: none !important; }' +
+                    '#navigation1 { display: none; !important; }' +
+                    '#navigation2 { display: none; !important; }' +
+                    '#navigation3 { display: none; !important; }' +
+                    '#navigation4 { display: none; !important; }' +
+                    '#navigation5 { display: none; !important; }' +
+                    
+                    '/* Center headline content */' +
+                    '.headline { ' +
+                    '    position: static !important;' +
+                    '    width: 90% !important;' +
+                    '    margin: 50px auto !important;' +
+                    '    text-align: center !important;' +
+                    '    padding: 20px !important;' +
+                    '    margin-top: 80px !important;' +
+                    '    margin-bottom: 1000px !important;' +
+                    '}' +
+                    
+                    '/* Fix image display */' +
+                    '.headline img { ' +
+                    '    width: 200px !important;' +
+                    '    height: 200px !important;' +
+                    '    margin: 0 auto !important;' +
+                    '    display: block !important;' +
+                    '}' +
+                    
+                    '/* Fix link list layout */' +
+                    '.maybe { ' +
+                    '    width: 90% !important;' +
+                    '    margin: 20px auto !important;' +
+                    '}' +
+                    
+                    '.link-list { ' +
+                    '    width: 100% !important;' +
+                    '    text-align: center !important;' +
+                    '    padding: 10px 0 !important;' +
+                    '}' +
+                    
+                    '.i-link { ' +
+                    '    display: block !important;' +
+                    '    margin: 10px auto !important;' +
+                    '    width: 200px !important;' +
+                    '}' +
+                    
+                    '.i-link a { ' +
+                    '    display: block !important;' +
+                    '    width: 100% !important;' +
+                    '    text-align: center !important;' +
+                    '    background-color: #fff !important;' +
+                    '    color: #000 !important;' +
+                    '    padding: 5px !important;' +
+                    '    text-decoration: none !important;' +
+                    '    border: 1px solid #000 !important;' +
+                    '}' +
+                    
+                    '/* Fix trust/untrust layout */' +
+                    '.top_trust_and_untrust_layout { display: none !important; }' +
+                    
+                    '/* Fix navigation */' +
+                    '.page-nav { display: none !important; }' +
+                    '.language { display: none !important; }' +
+                    
+                    '/* Basic page setup */' +
+                    'body { ' +
+                    '    background: #12D2F1 !important;' +
+                    '    margin: 0 !important;' +
+                    '    padding: 0 !important;' +
+                    '    width: 100% !important;' +
+                    '    text-align: center !important;' +
+                    '    overflow-x: hidden !important;' +
+                    '    overflow-y: scroll !important;' +
+                    '}' +
+
+                    '/* html page setup */' +
+                    'html { ' +
+                    '    overflow-y: hidden !important;' +
+                    '}' +
+
+                    '</style>');
+            }
+        })();
+    </script>
 </body>
 
 </html>
