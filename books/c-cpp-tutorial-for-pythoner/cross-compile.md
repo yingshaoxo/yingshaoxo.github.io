@@ -15,3 +15,5 @@ sudo apt install mingw-w64
 x86_64-w64-mingw32-gcc hello.c
 ```
 
+> I recommand use 'i32' or 'x86' or 'i386'.
+

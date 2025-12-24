@@ -2,7 +2,7 @@
 
 ## Common Values
 
-1. You can't declare an array without specify its size.
+1. You can't declare an array without specify its size. but if you know how to use 'malloc' function, that would be different.
 
 ## C
 

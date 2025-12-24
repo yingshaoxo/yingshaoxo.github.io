@@ -1,5 +1,7 @@
 # MSP430F169
 
+The bad part of this chip is: you have to buy a 'MSP-FET430UIF debugger' to upload or debug your program to the chip. Not as simple as 'pi pico' or 'arduino nano'.
+
 ## Pin Map
 
 ![Normal Case](../../.gitbook/assets/pin_map_of_msp430f169.png)

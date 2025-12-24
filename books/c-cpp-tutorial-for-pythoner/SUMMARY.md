@@ -7,6 +7,7 @@
 * [The Values in C/C++](the-values-in-c-c++.md)
 * [Cross Compile](cross-compile.md)
 * [Use Bazel and Gtest](use-bazel-and-gtest.md)
+* [Year_2025_C_Learning](the_2025_learning.md)
 * [MSP](msp/README.md)
   * [MSP430F169](msp/msp430f169/README.md)
     * [Hello World](msp/msp430f169/hello-world.md)

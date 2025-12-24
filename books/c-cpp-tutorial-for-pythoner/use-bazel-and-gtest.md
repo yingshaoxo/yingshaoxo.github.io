@@ -4,6 +4,8 @@
 
 Because `cmake` or `make` is too hard to learn.
 
+> from 2025: why not just import relative files like: `#include "../y_python.h"`. you can put all your c function in the single '.h' file, this importing would be simpler than cmake or make or bazel.
+
 ## How to learn Bazel?
 
 Follow its instruction on official website: 
