@@ -33,6 +33,7 @@
     * [MPU-6050](msp/msp430f169/mpu-6050.md)
     * [OpenSmart LCD](msp/msp430f169/opensmart-lcd.md)
     * [Abbreviations](msp/msp430f169/abbreviations.md)
+    * [year_2025_phone_project](msp/msp430f169/year_2025_phone_project.md)
   * [MSP430F5529](msp/msp430f5529/README.md)
     * [Preparing](msp/msp430f5529/preparing.md)
     * [Pinmaps](msp/msp430f5529/pinmaps.md)
